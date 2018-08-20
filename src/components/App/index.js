@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../Navigation/NavBar";
 import ContentRoute from "../Navigation/ContentRoute";
-import "./index.css";
+import "./App.css";
 import { FetchApi, mapThroughArray } from "./FetchApi";
 
 class App extends Component {
@@ -36,7 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="App">
         <h1>Hope this Works</h1>
         <NavBar getData={this.getData} />
         <ContentRoute
