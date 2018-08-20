@@ -1,19 +1,19 @@
 import axios from "axios";
+import { filmScrape } from "./DataCleaner";
 
 export const FetchApi = async url => {
   const response = await axios.get(`https://swapi.co/api/${url}/`);
-  console.log(response);
   const { results, next } = response.data;
-  const data = [results];
-  const completeList = await FetchNextPage(next, data);
-  return completeList;
+  return url === "films"
+    ? await filmScrape(results)
+    : await FetchNextPage(next, results);
 };
 
-const FetchNextPage = async (url, array) => {
+const FetchNextPage = async (url, prevResults) => {
   let nextUrl = url;
   const response = await axios.get(url);
   const { next, results } = response.data;
-  const data = [...array, results];
+  const data = [...prevResults, results];
   if (next) {
     nextUrl = next;
     FetchNextPage(nextUrl, data);
@@ -33,4 +33,9 @@ export const mapThroughArray = data => {
   //   };
   // });
   console.log(x);
+};
+
+export const fetchScrollText = async film => {
+  const response = await axios.get(`https://swapi.co/api/${film}/`);
+  console.log(response);
 };
