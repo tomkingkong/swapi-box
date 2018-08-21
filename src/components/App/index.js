@@ -3,7 +3,7 @@ import NavBar from "../Navigation/NavBar";
 import ContentRoute from "../Navigation/ContentRoute";
 import "./App.css";
 import { FetchApi, mapThroughArray } from "../Fetch/FetchApi";
-import BackgroundScroll from '../BackgroundScroll';
+import BackgroundScroll from "../BackgroundScroll";
 
 class App extends Component {
   constructor() {
@@ -16,16 +16,14 @@ class App extends Component {
     };
   }
 
-  // componentDidUpdate() {
-  //   console.log(this.state)
-  // }
-
-  componentDidMount() {
-    const backgroundScroll = { target: { textContent: "films" } };
-    this.getData(backgroundScroll);
-    // console.log(this.state.films);
-
+  componentDidUpdate() {
+    console.log(this.state);
   }
+
+  // componentDidMount() {
+  //   const backgroundScroll = { target: { textContent: "films" } };
+  //   this.getData(backgroundScroll);
+  // }
 
   getData = async event => {
     try {
@@ -44,10 +42,11 @@ class App extends Component {
 
   render() {
     const { films } = this.state;
-  
+    const currentFilms = films;
+
     return (
       <div className="App">
-       {films && <BackgroundScroll films={films} />}
+        {currentFilms && <BackgroundScroll films={currentFilms} />}
         <h1>Hope this Works</h1>
         <NavBar getData={this.getData} />
         <ContentRoute
