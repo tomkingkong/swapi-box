@@ -52,8 +52,8 @@ class App extends Component {
   
     return (
       <div className="App">
-       {films && <BackgroundScroll films={films} />}
-        <h1>Hope this Works</h1>
+        <h1 className="App__TITLE">SWAPI BOX</h1>
+       {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar getData={this.getData} />
         <ContentRoute
           markAsFavorite={this.markAsFavorite}
