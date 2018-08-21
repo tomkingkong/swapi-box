@@ -22,7 +22,14 @@ class App extends Component {
   async componentDidMount() {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
+    this.setRandomFilm();
+  }
 
+  setRandomFilm = () => {
+    const { films } = this.state
+    const randomFilmIndex = () => (Math.random()*films.length)+0.5<<0;
+    const backgroundFilm = films[randomFilmIndex()];
+    this.setState({ backgroundFilm });
   }
 
   getData = async event => {
