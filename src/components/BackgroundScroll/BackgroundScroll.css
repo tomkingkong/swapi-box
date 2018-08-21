@@ -16,6 +16,20 @@
   z-index: 1;
 }
 
+.Background__Scroll {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  height: 800px;
+  perspective: 400px;
+  text-align: justify;
 }
 
 .BACKGROUND_SCROLL__DATE {
