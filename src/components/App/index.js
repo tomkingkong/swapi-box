@@ -19,10 +19,6 @@ class App extends Component {
     };
   }
 
-<<<<<<< HEAD
-  componentDidUpdate() {
-    console.log(this.state);
-=======
   async componentDidMount() {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
@@ -34,7 +30,6 @@ class App extends Component {
     const randomFilmIndex = () => (Math.random()*films.length)+0.5<<0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
->>>>>>> landingpage
   }
 
   // componentDidMount() {
@@ -58,22 +53,12 @@ class App extends Component {
   };
 
   render() {
-<<<<<<< HEAD
-    const { films } = this.state;
-    const currentFilms = films;
-
-    return (
-      <div className="App">
-        {currentFilms && <BackgroundScroll films={currentFilms} />}
-        <h1>Hope this Works</h1>
-=======
     const { people, planets, vehicles, favorites, backgroundFilm } = this.state;
   
     return (
       <div className="App">
         <h1 className="App__TITLE">SWAPI BOX</h1>
        {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
->>>>>>> landingpage
         <NavBar getData={this.getData} />
         <ContentRoute
           favorites={favorites}
