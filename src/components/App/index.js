@@ -43,6 +43,8 @@ class App extends Component {
   };
 
   render() {
+    const { films } = this.state;
+  
     return (
       <div className="App">
         <h1>Hope this Works</h1>
