@@ -39,8 +39,23 @@
   animation: crawl 20s linear;
 }
   
+.Background__Crawl > .Background__Title {
+  font-size: 90%;
+  text-align: center;
 }
 
-.BACKGROUND_SCROLL__TITLE {
+.Background__Crawl > .Background__Title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
   
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% { 
+    top: -7000px;
+    transform: rotateX(25deg) translateZ(-3000px);
+  }
 }
