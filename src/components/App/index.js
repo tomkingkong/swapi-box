@@ -48,7 +48,7 @@ class App extends Component {
   };
 
   render() {
-    const { films } = this.state;
+    const { people, planets, vehicles, favorites, backgroundFilm } = this.state;
   
     return (
       <div className="App">
