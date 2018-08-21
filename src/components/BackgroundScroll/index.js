@@ -1,4 +1,7 @@
+import ReactDOM from "react-dom";
 import React from 'react'; 
+import PropTypes from 'prop-types';
+import './BackgroundScroll.css'
 
 const BackgroundScroll = ({episode, openingCrawl, releaseDate, title}) => {
   return (
@@ -13,6 +16,10 @@ const BackgroundScroll = ({episode, openingCrawl, releaseDate, title}) => {
       </div>
     </section>
   )
+}
+
+BackgroundScroll.propTypes = {
+  films: PropTypes.array
 }
 
 export default BackgroundScroll;
