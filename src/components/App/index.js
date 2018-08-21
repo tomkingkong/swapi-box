@@ -13,7 +13,9 @@ class App extends Component {
       backgroundFilm: null,
       planets: [],
       people: [],
-      vehicles: []
+      vehicles: [],
+      favorites: [],
+      errorStatus: ''
     };
   }
 
