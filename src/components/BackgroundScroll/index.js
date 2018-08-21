@@ -6,16 +6,19 @@ import './BackgroundScroll.css'
 const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
 
   return (
-    <section className="star-wars">
-      <div className="crawl">
-        <div className="title">
-          <p className="Background_Scroll__EPISODE">Episode {episode}</p>
-          <h1 className="Background_Scroll__TITLE">{title}</h1>
+    <div className="Background__Container">
+    <div className="Background__Fade"></div>
+      <section className="Background__Scroll">
+        <div className="Background__Crawl">
+          <div className="Background__Title">
+            <p>Episode {episode}</p>
+            <h1>{title}</h1>
         </div>
-        <p className="Background_Scroll__TEXT">{openingCrawl}</p>
-        <p className="Background_Scroll__DATE">{releaseDate}</p>
+          <p>{openingCrawl}</p>
+          <p>{releaseDate}</p>
       </div>
     </section>
+    </div>
   )
 }
 
