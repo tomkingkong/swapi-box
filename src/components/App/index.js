@@ -3,6 +3,7 @@ import NavBar from "../Navigation/NavBar";
 import ContentRoute from "../Navigation/ContentRoute";
 import "./App.css";
 import { FetchApi, mapThroughArray } from "../Fetch/FetchApi";
+import BackgroundScroll from '../BackgroundScroll';
 
 class App extends Component {
   constructor() {
