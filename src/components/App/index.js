@@ -47,6 +47,7 @@ class App extends Component {
   
     return (
       <div className="App">
+       {films && <BackgroundScroll films={films} />}
         <h1>Hope this Works</h1>
         <NavBar getData={this.getData} />
         <ContentRoute
