@@ -16,13 +16,15 @@ class App extends Component {
     };
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
+  // componentDidUpdate() {
+  //   console.log(this.state)
+  // }
 
   componentDidMount() {
     const backgroundScroll = { target: { textContent: "films" } };
     this.getData(backgroundScroll);
+    // console.log(this.state.films);
+
   }
 
   getData = async event => {
