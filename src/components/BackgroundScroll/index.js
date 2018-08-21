@@ -3,27 +3,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./BackgroundScroll.css";
 
-const BackgroundScroll = ({ films }) => {
-  const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
-  const currentFilm = films[randomFilmIndex()];
-  const { episode, openingCrawl, releaseDate, title } = currentFilm;
+const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
 
   return (
-    <section className="star-wars">
-      <div className="crawl">
-        <div className="title">
-          <p className="Background_Scroll__EPISODE">Episode {episode}</p>
-          <h1 className="Background_Scroll__TITLE">{title}</h1>
+    <div className="Background__Container">
+    <div className="Background__Fade"></div>
+      <section className="Background__Scroll">
+        <div className="Background__Crawl">
+          <div className="Background__Title">
+            <p>Episode {episode}</p>
+            <h1>{title}</h1>
+          </div>
+          <p>{openingCrawl}</p>
+          <p>{releaseDate}</p>
         </div>
-        <p className="Background_Scroll__TEXT">{openingCrawl}</p>
-        <p className="Background_Scroll__DATE">{releaseDate}</p>
-      </div>
-    </section>
-  );
-};
+      </section>
+    </div>
+  )
+}
 
 BackgroundScroll.propTypes = {
-  films: PropTypes.array
-};
+  episode: PropTypes.number, 
+  openingCrawl: PropTypes.string, 
+  releaseDate: PropTypes.string, 
+  title: PropTypes.string
+}
 
 export default BackgroundScroll;
