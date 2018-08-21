@@ -13,11 +13,11 @@ const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
           <div className="Background__Title">
             <p>Episode {episode}</p>
             <h1>{title}</h1>
-        </div>
+          </div>
           <p>{openingCrawl}</p>
           <p>{releaseDate}</p>
-      </div>
-    </section>
+        </div>
+      </section>
     </div>
   )
 }
