@@ -23,7 +23,10 @@ const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
 }
 
 BackgroundScroll.propTypes = {
-  films: PropTypes.array
+  episode: PropTypes.number, 
+  openingCrawl: PropTypes.string, 
+  releaseDate: PropTypes.string, 
+  title: PropTypes.string
 }
 
 export default BackgroundScroll;
