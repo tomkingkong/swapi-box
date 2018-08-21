@@ -3,10 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BackgroundScroll.css'
 
-const BackgroundScroll = ({films}) => {
-  const randomFilmIndex = () => (Math.random()*films.length)+0.5<<0;
-  const currentFilm = films[randomFilmIndex()];
-  const { episode, openingCrawl, releaseDate, title } = currentFilm;
+const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
 
   return (
     <section className="star-wars">
