@@ -19,11 +19,7 @@ class App extends Component {
     };
   }
 
-  // componentDidUpdate() {
-  //   console.log(this.state)
-  // }
-
-  componentDidMount() {
+  async componentDidMount() {
     const backgroundScroll = { target: { textContent: "films" } };
     this.getData(backgroundScroll);
     // console.log(this.state.films);
