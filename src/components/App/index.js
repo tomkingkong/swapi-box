@@ -56,10 +56,10 @@ class App extends Component {
        {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar getData={this.getData} />
         <ContentRoute
-          markAsFavorite={this.markAsFavorite}
-          people={this.state.people}
-          planets={this.state.planets}
-          vehicles={this.state.vehicles}
+          favorites={favorites}
+          people={people}
+          planets={planets}
+          vehicles={vehicles}
         />
       </div>
     );
