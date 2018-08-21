@@ -21,8 +21,7 @@ class App extends Component {
 
   async componentDidMount() {
     const backgroundScroll = { target: { textContent: "films" } };
-    this.getData(backgroundScroll);
-    // console.log(this.state.films);
+    await this.getData(backgroundScroll);
 
   }
 
