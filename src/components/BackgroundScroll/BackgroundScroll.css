@@ -38,7 +38,7 @@
   transform-origin: 50% 50%;
   animation: crawl 20s linear;
 }
-  
+
 .Background__Crawl > .Background__Title {
   font-size: 90%;
   text-align: center;
@@ -48,7 +48,7 @@
   margin: 0 0 100px;
   text-transform: uppercase;
 }
-  
+
 @keyframes crawl {
   0% {
     top: 0;
