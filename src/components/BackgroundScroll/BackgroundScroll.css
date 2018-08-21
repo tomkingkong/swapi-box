@@ -32,7 +32,12 @@
   text-align: justify;
 }
 
-.BACKGROUND_SCROLL__DATE {
+.Background__Crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 50%;
+  animation: crawl 20s linear;
+}
   
 }
 
