@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      films: [],
+      films: null,
       planets: [],
       people: [],
       vehicles: []
