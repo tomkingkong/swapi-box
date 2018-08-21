@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
-import React from 'react'; 
-import PropTypes from 'prop-types';
-import './BackgroundScroll.css'
+import React from "react";
+import PropTypes from "prop-types";
+import "./BackgroundScroll.css";
 
-const BackgroundScroll = ({films}) => {
-  const randomFilmIndex = () => (Math.random()*films.length)+0.5<<0;
+const BackgroundScroll = ({ films }) => {
+  const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
   const currentFilm = films[randomFilmIndex()];
   const { episode, openingCrawl, releaseDate, title } = currentFilm;
 
@@ -19,11 +19,11 @@ const BackgroundScroll = ({films}) => {
         <p className="Background_Scroll__DATE">{releaseDate}</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BackgroundScroll.propTypes = {
   films: PropTypes.array
-}
+};
 
 export default BackgroundScroll;

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ContentCard = ({ players }) => {
   return (
     <div>
-      <h1> {players} dsds</h1>
+      <h1> </h1>
     </div>
   );
 };

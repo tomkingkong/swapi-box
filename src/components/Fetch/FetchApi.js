@@ -1,41 +1,85 @@
-import axios from "axios";
-import { filmScrape } from "./DataCleaner";
+// import axios from "axios";
+import {
+  filmScrape,
+  peopleScrape,
+  planetScrape,
+  vehicleScrape
+} from "./DataCleaner";
+import { resolve } from "path";
 
 export const FetchApi = async url => {
-  const response = await axios.get(`https://swapi.co/api/${url}/`);
-  const { results, next } = response.data;
-  return url === "films"
-    ? await filmScrape(results)
-    : await FetchNextPage(next, results);
+  const fetchResponse = await fetch(`https://swapi.co/api/${url}/`);
+  const response = await fetchResponse.json();
+  const { results, next } = response;
+  const dataResults = results.map(result => {
+    return url === "films" ? filmScrape(result) : fetchSpecific(url, result);
+  });
+  return await Promise.all(dataResults);
 };
 
-const FetchNextPage = async (url, prevResults) => {
-  let nextUrl = url;
-  const response = await axios.get(url);
-  const { next, results } = response.data;
-  const data = [...prevResults, results];
-  if (next) {
-    nextUrl = next;
-    FetchNextPage(nextUrl, data);
+const fetchSpecific = async (url, result) => {
+  let compiledData;
+  switch (url) {
+    case "people":
+      const speciesResult = await fetch(result.species[0]);
+      const species = await speciesResult.json();
+      const homeworldResult = await fetch(result.homeworld);
+      const homeworld = await homeworldResult.json();
+      const peopleObj = await peopleScrape(result, species, homeworld);
+      compiledData = peopleObj;
+      break;
+
+    case "planets":
+      const residents = result.residents.map(async residentUrl => {
+        const resident = await fetchResidents(residentUrl);
+        return resident.name;
+      });
+      const resolvedResidents = await Promise.all(residents);
+      const planetObj = await planetScrape(result, resolvedResidents);
+      compiledData = planetObj;
+      break;
+
+    case "vehicles":
+      const vehicleObj = await vehicleScrape(result);
+      compiledData = vehicleObj;
+      break;
   }
-  return data;
+  return compiledData;
 };
 
-export const mapThroughArray = data => {
-  let mapped = data.forEach();
-  const x = [...data];
-  // return data.results.map(person => {
-  //   return {
-  //     name: person.name,
-  //     homeworld: person.homeworld.name,
-  //     species: person.species[0].name,
-  //     population: person.species[0].homeworld.population
-  //   };
-  // });
-  console.log(x);
+const fetchResidents = async url => {
+  const response = await fetch(url);
+  const resident = await response.json();
+  return resident;
 };
+
+// const FetchNextPage = async (url, prevResults) => {
+//   let nextUrl = url;
+//   const response = await axios.get(url);
+//   const { next, results } = response.data;
+//   const data = [...prevResults, results];
+//   if (next) {
+//     nextUrl = next;
+//     FetchNextPage(nextUrl, data);
+//   }
+//   return data;
+// };
+
+// export const mapThroughArray = data => {
+//   let mapped = data.forEach();
+//   const x = [...data];
+//   // return data.results.map(person => {
+//   //   return {
+//   //     name: person.name,
+//   //     homeworld: person.homeworld.name,
+//   //     species: person.species[0].name,
+//   //     population: person.species[0].homeworld.population
+//   //   };
+//   // });
+//   console.log(x);
+// };
 
 export const fetchScrollText = async film => {
-  const response = await axios.get(`https://swapi.co/api/${film}/`);
+  const response = await fetch(`https://swapi.co/api/${film}/`);
   console.log(response);
 };
