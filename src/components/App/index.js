@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       films: null,
+      backgroundFilm: null,
       planets: [],
       people: [],
       vehicles: []
