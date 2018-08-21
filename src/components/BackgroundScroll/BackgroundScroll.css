@@ -1,7 +1,10 @@
-.star-wars {
+.Background__Container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   position: absolute;
+  top: 0;
   z-index: -9999;
-  background-color: green;
 }
 
 .BACKGROUND_SCROLL__EPISODE {
