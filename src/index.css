@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'STJEDISE';
+  font-style: normal;
+  src: url('./fonts/STJEDISE.TTF');
+}
+
 body {
+  background: #000 url(./images/twinkling-stars.gif) no-repeat top / 100% ;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
