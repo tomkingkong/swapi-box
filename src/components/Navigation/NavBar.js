@@ -5,19 +5,19 @@ import "./Navigation.css";
 
 export default ({ getData }) => {
   return (
-    <div>
-      <div className="planets-nav">
-        <NavLink exact to="/planets" onClick={getData}>
+    <div className="navigation_bar">
+      <div className="planets__CONTAINER">
+        <NavLink className="planets__NAV" exact to="/planets" onClick={getData}>
           planets
         </NavLink>
       </div>
-      <div className="people">
-        <NavLink to="/people" onClick={getData}>
+      <div className="people__CONTAINER">
+        <NavLink className="people__NAV" to="/people" onClick={getData}>
           people
         </NavLink>
       </div>
-      <div className="vehicles-nav">
-        <NavLink to="/vehicles" onClick={getData}>
+      <div className="vehicles__CONTAINER">
+        <NavLink className="vehicles__NAV" to="/vehicles" onClick={getData}>
           vehicles
         </NavLink>
       </div>

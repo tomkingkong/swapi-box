@@ -1,0 +1,12 @@
+.planets__NAV,
+.people__NAV,
+.vehicles__NAV {
+  border: 0.2rem solid chartreuse;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.navigation_bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
