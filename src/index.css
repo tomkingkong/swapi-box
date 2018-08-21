@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'STJEDISE';
+  font-style: normal;
+  src: url('./fonts/STJEDISE.TTF');
+}
+
 body {
   margin: 0;
   padding: 0;
