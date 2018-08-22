@@ -11,7 +11,7 @@ export const FetchApi = async (type, page = "") => {
   const response = await fetch(url);
   const fetchResponse = await response.json();
   const { results, next, previous } = fetchResponse;
-  console.log(results);
+
   const dataResults = results.map(result => {
     return fetchSpecific(type, result);
   });
