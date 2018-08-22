@@ -84,10 +84,11 @@ class App extends Component {
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar getData={this.getData} pressed={activeButton} />
         <ContentRoute
-          favorites={favorites}
+          toggleFavorites={this.toggleFavorites}
           people={people}
           planets={planets}
           vehicles={vehicles}
+          favorites={favorites}
         />
       </div>
     );
