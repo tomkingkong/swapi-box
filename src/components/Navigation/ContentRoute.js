@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import { CardContainer } from "../CardContainer";
 
-export default ({ planets, people, vehicles, favorites }) => {
+export default ({ planets, people, vehicles, toggleFavorites, favorites }) => {
   return (
     <Switch>
       <Route
