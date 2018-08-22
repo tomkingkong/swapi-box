@@ -14,7 +14,9 @@ const ContentCard = ({ card, toggleFavorites }) => {
     );
   });
   return (
-    <article className="content_card">
+    <article
+      className={card.favorite ? "content_card favorite" : "content_card"}
+    >
       {content}
       <button>Favorite</button>{" "}
     </article>
