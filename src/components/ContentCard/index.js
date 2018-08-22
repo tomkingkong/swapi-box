@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./ContentCard.css";
-// import Button from './Button'
 
-const ContentCard = ({ card, toggleFavorites }) => {
+export const ContentCard = ({ card, toggleFavorites }) => {
   const content = Object.keys(card).map((key, index) => {
     if (key !== "favorite") {
       return key === "name" ? (
@@ -25,4 +24,7 @@ const ContentCard = ({ card, toggleFavorites }) => {
   );
 };
 
-export default ContentCard;
+// ContentCard.propTypes = {
+//   card: ProptTypes.object, 
+//   toggleFavorites: PropTypes.func
+// }

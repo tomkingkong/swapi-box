@@ -1,8 +1,7 @@
 import React from "react";
-import Reac from "react";
 import PropTypes from "prop-types";
 import "./CardContainer.css";
-import ContentCard from "../ContentCard";
+import { ContentCard } from "../ContentCard";
 
 export const CardContainer = ({
   data,
@@ -27,3 +26,10 @@ export const CardContainer = ({
     </section>
   );
 };
+
+CardContainer.propTypes = {
+  data: PropTypes.array,
+  savedFavorites: PropTypes.array,
+  toggleFavorites: PropTypes.func,
+  handlePage: PropTypes.func
+}

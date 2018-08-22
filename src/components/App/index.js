@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import NavBar from "../Navigation/NavBar";
-import ContentRoute from "../Navigation/ContentRoute";
-import "./App.css";
+import { NavBar } from "../Navigation/NavBar";
+import { ContentRoute } from "../Navigation/ContentRoute";
 import { FetchApi } from "../Fetch/FetchApi";
-import BackgroundScroll from "../BackgroundScroll";
+import { BackgroundScroll } from "../BackgroundScroll";
+import "./App.css";
 
 class App extends Component {
   constructor() {

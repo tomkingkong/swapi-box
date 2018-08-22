@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./BackgroundScroll.css";
 
-const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
+export const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
 
   return (
     <div className="Background__Container">
@@ -28,5 +28,3 @@ BackgroundScroll.propTypes = {
   releaseDate: PropTypes.string, 
   title: PropTypes.string
 }
-
-export default BackgroundScroll;
