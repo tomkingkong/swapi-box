@@ -1,11 +1,11 @@
-export const filmScrape = data => {
-  const modifiedObj = {
-    title: data.title,
-    openingCrawl: data.opening_crawl,
-    episode: data.episode_id,
-    releaseDate: data.release_date
-  };
-  return modifiedObj;
+export const filmScrape = film => {
+    const modifiedObj = {
+      title: film.title,
+      openingCrawl: film.opening_crawl,
+      episode: film.episode_id,
+      releaseDate: film.release_date
+    };
+    return modifiedObj;
 };
 
 export const peopleScrape = (result, species, homeworld) => {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "../Navigation/NavBar";
 import ContentRoute from "../Navigation/ContentRoute";
 import "./App.css";
-import { FetchApi, mapThroughArray } from "../Fetch/FetchApi";
+import { FetchApi } from "../Fetch/FetchApi";
 import BackgroundScroll from "../BackgroundScroll";
 
 class App extends Component {
@@ -32,19 +32,13 @@ class App extends Component {
     this.setState({ backgroundFilm });
   };
 
-  // componentDidMount() {
-  //   const backgroundScroll = { target: { textContent: "films" } };
-  //   this.getData(backgroundScroll);
-  // }
-
   getData = async event => {
     try {
       let selectedData = event.target.textContent;
       const result = await FetchApi(selectedData);
-      // const scrapeData = mapThroughArray(result);
       this.setState({ [selectedData]: result });
     } catch (error) {
-      console.log(error);
+      this.setState({ errorStatus: error.message })
     }
   };
 
