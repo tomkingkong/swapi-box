@@ -1,9 +1,26 @@
 .planets__NAV,
 .people__NAV,
-.vehicles__NAV {
-  border: 0.2rem solid chartreuse;
+.vehicles__NAV,
+.favorites__NAV {
+  border: 0.1rem solid rgb(111, 118, 104);
+  padding: 4px;
+  border-radius: 3px;
   text-decoration: none;
   font-size: 2rem;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.planets__NAV:hover {
+  background-color: rgb(92, 59, 59);
+}
+
+.people__NAV:hover {
+  background-color: rgb(92, 59, 59);
+}
+
+.vehicles__NAV:hover {
+  background-color: rgb(92, 59, 59);
 }
 
 .navigation_bar {
