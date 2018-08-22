@@ -24,6 +24,7 @@ class App extends Component {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
     this.setRandomFilm();
+    this.setFavoritesFromStorage();
   }
 
   setRandomFilm = () => {
