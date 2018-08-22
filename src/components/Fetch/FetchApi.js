@@ -7,11 +7,11 @@ import {
 
 export const FetchApi = async (url, page = "") => {
   debugger;
-  const fetchResponse = await fetch(
+  const response = await fetch(
     `https://swapi.co/api/${url}/?page=${page}`
   );
-  const response = await fetchResponse.json();
-  const { results, next, previous } = response;
+  const fetchResponse = await response.json();
+  const { results, next, previous } = fetchResponse;
   console.log(results);
   const dataResults = results.map(result => {
     return fetchSpecific(url, result);
