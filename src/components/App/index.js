@@ -9,6 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      activeButton: "",
       films: null,
       backgroundFilm: null,
       planets: null,
