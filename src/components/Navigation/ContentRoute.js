@@ -1,6 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-
+// import PlanetsList from "../PlanetList/PlanetList";
+// import PeopleList from "../PeopleList/PeopleList";
+// import VehicleList from "../VehicleList/VehicleList";
 import { CardContainer } from "../CardContainer";
 
 export default ({ planets, people, vehicles, favorites }) => {
@@ -9,23 +11,17 @@ export default ({ planets, people, vehicles, favorites }) => {
       <Route
         exact
         path="/planets"
-        render={() => (
-          <PlanetsList planets={planets} markAsFavorite={markAsFavorite} />
-        )}
+        render={() => <CardContainer data={planets} favorites={favorites} />}
       />
       <Route
         exact
-        path="/players"
-        render={() => (
-          <PeopleList players={players} markAsFavorite={markAsFavorite} />
-        )}
+        path="/people"
+        render={() => <CardContainer data={people} favorites={favorites} />}
       />
       <Route
         exact
         path="/vehicles"
-        render={() => (
-          <VehicleList vehicles={vehicles} markAsFavorite={markAsFavorite} />
-        )}
+        render={() => <CardContainer data={vehicles} favorites={favorites} />}
       />
     </Switch>
   );
