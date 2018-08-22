@@ -49,6 +49,13 @@ class App extends Component {
   buttonPressed = string => {
     this.setState({ activeButton: string });
   };
+
+  toggleFavorites = cardData => {
+    const toggleCard = cardData;
+    toggleCard.favorite = !toggleCard.favorite;
+    this.handleFavorites(toggleCard);
+  };
+
   };
 
   render() {
