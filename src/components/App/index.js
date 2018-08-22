@@ -56,6 +56,16 @@ class App extends Component {
     this.handleFavorites(toggleCard);
   };
 
+  handleFavorites = cardData => {
+    let favorites;
+    if (cardData.favorite) {
+      favorites = [...this.state.favorites, cardData];
+    } else {
+      favorites = this.state.favorites.filter(
+        card => card.name !== cardData.name
+      );
+    }
+    this.setState({ favorites });
   };
 
   render() {
