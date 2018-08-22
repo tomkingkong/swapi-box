@@ -49,4 +49,9 @@ describe('App', () => {
     //   }))
     // });
 
+    it('should call FetchApi', async () => {
+      await wrapper.instance().getData(mockEvent)
+      expect(fetch).toHaveBeenCalled();
+    });
+
 });
