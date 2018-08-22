@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 import "./CardContainer.css";
 import ContentCard from "../ContentCard";
 
-export const CardContainer = ({ data, toggleFavorites }) => {
-  console.log(data);
+export const CardContainer = ({ data, toggleFavorites, savedFavorites }) => {
   if (!data) return <section>nada</section>;
-  console.log(data);
-  const cards = data.map((card, index) => (
-    <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
-  ));
+  const cards = data.map((card, index) => {
+    card.favorite = savedFavorites.includes(card.name);
+    return <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
+  });
 
   return <section className="card_container"> {cards && cards}</section>;
 };

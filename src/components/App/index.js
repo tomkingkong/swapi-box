@@ -24,6 +24,7 @@ class App extends Component {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
     this.setRandomFilm();
+    this.setFavoritesFromStorage();
   }
 
   setRandomFilm = () => {
@@ -65,7 +66,13 @@ class App extends Component {
       );
     }
     this.setState({ favorites });
+    localStorage.setItem('favorites', JSON.stringify(favorites))
   };
+
+  setFavoritesFromStorage = () => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    this.setState({ favorites });
+  }
 
   render() {
     const {
