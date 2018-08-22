@@ -5,23 +5,21 @@ import {
   vehicleScrape
 } from "./DataCleaner";
 
-export const FetchApi = async (url, page = "") => {
-  debugger;
-  const response = await fetch(
-    `https://swapi.co/api/${url}/?page=${page}`
-  );
+export const FetchApi = async (type, page = "") => {
+  const url = `https://swapi.co/api/${type}/?page=${page}`
+  const response = await fetch(url);
   const fetchResponse = await response.json();
   const { results, next, previous } = fetchResponse;
   console.log(results);
   const dataResults = results.map(result => {
-    return fetchSpecific(url, result);
+    return fetchSpecific(type, result);
   });
   return await Promise.all(dataResults);
 };
 
-const fetchSpecific = async (url, result) => {
+const fetchSpecific = async (type, result) => {
   let compiledData;
-  switch (url) {
+  switch (type) {
     case "films":
       const films = await filmScrape(result);
       compiledData = films;
