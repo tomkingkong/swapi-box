@@ -1,0 +1,13 @@
+h1 {
+  color: white;
+}
+
+p {
+  color: antiquewhite;
+}
+
+.content_card {
+  background-color: red;
+  margin: 0.5rem;
+  width: 15rem;
+}
