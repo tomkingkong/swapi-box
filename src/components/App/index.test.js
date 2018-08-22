@@ -71,4 +71,15 @@ describe('App', () => {
       wrapper.instance().getData(mockEvent);      
       expect(wrapper.instance().setButtonPressed).toHaveBeenCalled()
     });
+
+    it.skip('should run fetch only if state is empty or not null', async () => {
+      const people = [{}, {}];
+      wrapper.setState({ people})
+      expect(wrapper.state('people').length).toEqual(2);
+      await wrapper.instance().getData(mockEvent);
+      expect(wrapper.state('people').length).toEqual(2);      
+    });
+
+  });
+
 });
