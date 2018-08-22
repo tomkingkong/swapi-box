@@ -3,11 +3,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./BackgroundScroll.css";
 
-const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
-
+export const BackgroundScroll = ({
+  episode,
+  openingCrawl,
+  releaseDate,
+  title
+}) => {
   return (
     <div className="Background__Container">
-    <div className="Background__Fade"></div>
+      <div className="Background__Fade" />
       <section className="Background__Scroll">
         <div className="Background__Crawl">
           <div className="Background__Title">
@@ -19,14 +23,12 @@ const BackgroundScroll = ({ episode, openingCrawl, releaseDate, title }) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 BackgroundScroll.propTypes = {
-  episode: PropTypes.number, 
-  openingCrawl: PropTypes.string, 
-  releaseDate: PropTypes.string, 
+  episode: PropTypes.number,
+  openingCrawl: PropTypes.string,
+  releaseDate: PropTypes.string,
   title: PropTypes.string
-}
-
-export default BackgroundScroll;
+};
