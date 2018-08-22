@@ -42,7 +42,7 @@ class App extends Component {
       const result = await FetchApi(selectedData);
       this.setState({ [selectedData]: result });
     } catch (error) {
-      this.setState({ errorStatus: error.message })
+      this.setState({ errorStatus: error.message });
     }
   };
 
