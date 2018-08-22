@@ -66,4 +66,9 @@ describe('App', () => {
       expect(wrapper.state('errorStatus')).toEqual('failed');
     });
 
+    it('should call setButtonPressed', () => {
+      wrapper.instance().setButtonPressed = jest.fn()
+      wrapper.instance().getData(mockEvent);      
+      expect(wrapper.instance().setButtonPressed).toHaveBeenCalled()
+    });
 });
