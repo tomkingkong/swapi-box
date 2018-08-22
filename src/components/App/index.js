@@ -36,23 +36,13 @@ class App extends Component {
     this.setState({ backgroundFilm });
   };
 
-<<<<<<< HEAD
   getData = async (event, page) => {
     const newPage = page;
     let selectedData = event.target.textContent;
-    this.buttonPressed(selectedData);
-    if (this.state[selectedData] !== null || this.state[selectedData]) return;
-    try {
-      const result = await FetchApi(selectedData, newPage);
-=======
-  getData = async event => {
-    const selectedData = event.target.textContent;
     this.setButtonPressed(selectedData);
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
-      const result = await FetchApi(selectedData);
-      console.log(result)
->>>>>>> testing
+      const result = await FetchApi(selectedData, newPage);
       this.setState({ [selectedData]: result });
     } catch (error) {
       this.setState({ errorStatus: error.message });
