@@ -3,11 +3,12 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Navigation.css";
 
-export default ({ getData, pressed, favorites }) => {
+export default ({ getData, pressed, favorites, activeButton }) => {
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
         <NavLink
+          name="planets"
           className={
             pressed === "planets" ? "planets__NAV pressed" : "planets__NAV"
           }
@@ -20,6 +21,7 @@ export default ({ getData, pressed, favorites }) => {
       </div>
       <div className="people__CONTAINER">
         <NavLink
+          name="people"
           className={
             pressed === "people" ? "people__NAV pressed" : "people__NAV"
           }
@@ -31,6 +33,7 @@ export default ({ getData, pressed, favorites }) => {
       </div>
       <div className="vehicles__CONTAINER">
         <NavLink
+          name="vehicles"
           className={
             pressed === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
           }
