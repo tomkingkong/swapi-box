@@ -59,4 +59,11 @@ describe('App', () => {
       // console.log(wrapper.state())
       expect(wrapper.state('people').length).toEqual(3);
     });
+
+    it('should set correct error state if value returns failed fetch', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.reject(new Error('failed')));
+      await wrapper.instance().getData(mockEvent);
+      expect(wrapper.state('errorStatus')).toEqual('failed');
+    });
+
 });
