@@ -5,10 +5,14 @@ import {
   vehicleScrape
 } from "./DataCleaner";
 
-export const FetchApi = async url => {
-  const fetchResponse = await fetch(`https://swapi.co/api/${url}/`);
+export const FetchApi = async (url, page = "") => {
+  debugger;
+  const fetchResponse = await fetch(
+    `https://swapi.co/api/${url}/?page=${page}`
+  );
   const response = await fetchResponse.json();
   const { results, next, previous } = response;
+  console.log(results);
   const dataResults = results.map(result => {
     return fetchSpecific(url, result);
   });

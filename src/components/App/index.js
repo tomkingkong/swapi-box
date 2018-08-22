@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       activeButton: "",
+      pageCounter: 0,
       films: null,
       backgroundFilm: null,
       planets: null,
@@ -34,12 +35,13 @@ class App extends Component {
     this.setState({ backgroundFilm });
   };
 
-  getData = async event => {
+  getData = async (event, page) => {
+    const newPage = page;
     let selectedData = event.target.textContent;
     this.buttonPressed(selectedData);
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
-      const result = await FetchApi(selectedData);
+      const result = await FetchApi(selectedData, newPage);
       this.setState({ [selectedData]: result });
     } catch (error) {
       this.setState({ errorStatus: error.message });
@@ -66,13 +68,26 @@ class App extends Component {
       );
     }
     this.setState({ favorites });
-    localStorage.setItem('favorites', JSON.stringify(favorites))
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  };
+
+  handlePage = async boolean => {
+    const { pageCounter, activeButton } = this.state;
+    const pageContent = { target: { textContent: activeButton } };
+
+    let pageCount = pageCounter;
+
+    boolean ? pageCount++ : pageCount--;
+
+    if (pageCount <= 0) return;
+    this.setState({ pageCounter: pageCount });
+    await this.getData(pageContent, pageCount);
   };
 
   setFavoritesFromStorage = () => {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     this.setState({ favorites });
-  }
+  };
 
   render() {
     const {
@@ -99,6 +114,7 @@ class App extends Component {
           planets={planets}
           vehicles={vehicles}
           favorites={favorites}
+          handlePage={this.handlePage}
         />
       </div>
     );

@@ -3,7 +3,14 @@ import { Switch, Route } from "react-router-dom";
 
 import { CardContainer } from "../CardContainer";
 
-export default ({ planets, people, vehicles, toggleFavorites, favorites }) => {
+export default ({
+  planets,
+  people,
+  vehicles,
+  toggleFavorites,
+  favorites,
+  handlePage
+}) => {
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
     <Switch>
@@ -11,28 +18,47 @@ export default ({ planets, people, vehicles, toggleFavorites, favorites }) => {
         exact
         path="/planets"
         render={() => (
-          <CardContainer data={planets} toggleFavorites={toggleFavorites} savedFavorites={savedFavorites}/>
+          <CardContainer
+            data={planets}
+            handlePage={handlePage}
+            toggleFavorites={toggleFavorites}
+            savedFavorites={savedFavorites}
+          />
         )}
       />
       <Route
         exact
         path="/people"
         render={() => (
-          <CardContainer data={people} toggleFavorites={toggleFavorites} savedFavorites={savedFavorites}/>
+          <CardContainer
+            data={people}
+            handlePage={handlePage}
+            toggleFavorites={toggleFavorites}
+            savedFavorites={savedFavorites}
+          />
         )}
       />
       <Route
         exact
         path="/vehicles"
         render={() => (
-          <CardContainer data={vehicles} toggleFavorites={toggleFavorites} savedFavorites={savedFavorites}/>
+          <CardContainer
+            data={vehicles}
+            handlePage={handlePage}
+            toggleFavorites={toggleFavorites}
+            savedFavorites={savedFavorites}
+          />
         )}
       />
       <Route
         exact
         path="/favorites"
         render={() => (
-          <CardContainer data={favorites} toggleFavorites={toggleFavorites} savedFavorites={savedFavorites}/>
+          <CardContainer
+            data={favorites}
+            toggleFavorites={toggleFavorites}
+            savedFavorites={savedFavorites}
+          />
         )}
       />
       <Route
