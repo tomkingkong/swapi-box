@@ -34,8 +34,7 @@ class App extends Component {
   };
 
   getData = async event => {
-    try {
-      let selectedData = event.target.textContent;
+    let selectedData = event.target.textContent;
     this.buttonPressed(selectedData);
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
