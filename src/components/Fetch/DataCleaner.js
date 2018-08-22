@@ -1,5 +1,4 @@
-export const filmScrape = data => {
-  return data.map(film => {
+export const filmScrape = film => {
     const modifiedObj = {
       title: film.title,
       openingCrawl: film.opening_crawl,
@@ -7,7 +6,6 @@ export const filmScrape = data => {
       releaseDate: film.release_date
     };
     return modifiedObj;
-  });
 };
 
 export const peopleScrape = (result, species, homeworld) => {
