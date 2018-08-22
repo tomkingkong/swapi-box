@@ -69,6 +69,11 @@ class App extends Component {
     localStorage.setItem('favorites', JSON.stringify(favorites))
   };
 
+  setFavoritesFromStorage = () => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    this.setState({ favorites });
+  }
+
   render() {
     const {
       people,
