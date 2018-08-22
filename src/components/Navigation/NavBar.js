@@ -43,6 +43,18 @@ export default ({ getData, pressed }) => {
           vehicles
         </NavLink>
       </div>
+      <div className="favorites__CONTAINER">
+        <NavLink
+          className={
+            pressed === "favorites"
+              ? "favorites__NAV pressed"
+              : "favorites__NAV"
+          }
+          to="/favorites"
+        >
+          Favorites
+        </NavLink>
+      </div>
     </div>
   );
 };
