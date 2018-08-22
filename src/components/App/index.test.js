@@ -54,4 +54,9 @@ describe('App', () => {
       expect(fetch).toHaveBeenCalled();
     });
 
+    it('should set correct state with the value passed', async () => {
+      await wrapper.instance().getData(mockEvent);
+      // console.log(wrapper.state())
+      expect(wrapper.state('people').length).toEqual(3);
+    });
 });
