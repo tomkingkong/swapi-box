@@ -11,11 +11,11 @@ class App extends Component {
     this.state = {
       films: null,
       backgroundFilm: null,
-      planets: [],
-      people: [],
-      vehicles: [],
-      favorites: [],
-      errorStatus: ''
+      planets: null,
+      people: null,
+      vehicles: null,
+      favorites: null,
+      errorStatus: ""
     };
   }
 
