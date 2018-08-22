@@ -20,10 +20,9 @@ export const CardContainer = ({
 
   return (
     <section className="card_container">
-      {" "}
       {cards && cards}
-      <button onClick={() => handlePage(true)}>Next Page</button>
       <button onClick={() => handlePage(false)}>Previous Page</button>
+      <button onClick={() => handlePage(true)}>Next Page</button>
     </section>
   );
 };
