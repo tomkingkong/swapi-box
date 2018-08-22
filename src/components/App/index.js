@@ -24,7 +24,7 @@ class App extends Component {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
     this.setRandomFilm();
-    this.setFavoritesFromStorage();
+    // this.setFavoritesFromStorage();
   }
 
   setRandomFilm = () => {
@@ -41,6 +41,7 @@ class App extends Component {
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
       const result = await FetchApi(selectedData);
+      console.log(result)
       this.setState({ [selectedData]: result });
     } catch (error) {
       this.setState({ errorStatus: error.message });
