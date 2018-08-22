@@ -1,9 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import { CardContainer } from "../CardContainer";
 
-export default ({
+export const ContentRoute = ({
   planets,
   people,
   vehicles,
@@ -71,3 +72,12 @@ export default ({
     </Switch>
   );
 };
+
+ContentRoute.propTypes = {
+  people: PropTypes.array,
+  planets: PropTypes.array,
+  vehicles: PropTypes.array,
+  favorites: PropTypes.array,
+  handlePage: PropTypes.func,
+  toggleFavorites: PropTypes.func
+}

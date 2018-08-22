@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Navigation.css";
 
-export default ({ getData, pressed, favorites, activeButton }) => {
+export const NavBar = ({ getData, pressed, favorites }) => {
+
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
@@ -67,4 +68,10 @@ export default ({ getData, pressed, favorites, activeButton }) => {
       </div>
     </div>
   );
+};
+
+NavBar.propTypes = {
+  getData: PropTypes.func, 
+  pressed: PropTypes.string, 
+  favorites: PropTypes.array
 };

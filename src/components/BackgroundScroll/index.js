@@ -9,6 +9,7 @@ export const BackgroundScroll = ({
   releaseDate,
   title
 }) => {
+
   return (
     <div className="Background__Container">
       <div className="Background__Fade" />

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import NavBar from "../Navigation/NavBar";
-import ContentRoute from "../Navigation/ContentRoute";
-import "./App.css";
+import { NavBar } from "../Navigation/NavBar";
+import { ContentRoute } from "../Navigation/ContentRoute";
 import { FetchApi } from "../Fetch/FetchApi";
 import { BackgroundScroll } from "../BackgroundScroll";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -83,8 +83,20 @@ class App extends Component {
   handlePage = async boolean => {
     const { pageCounter, activeButton } = this.state;
     const pageContent = { target: { name: activeButton } };
-
     let pageCount = pageCounter;
+    
+    if (boolean && (pageCount === "" || pageCount === 1)) {
+      pageCount = 2;
+    } else if (!boolean && pageCount === 2) {
+      pageCount = "";
+    } else if (boolean) {
+      pageCount++;
+    } else if (!boolean && pageCount >= 1) {
+      pageCount--;
+    } else {
+      return;
+    }
+
     if (boolean && (pageCount === "" || pageCount === 1)) {
       pageCount = 2;
     } else if (!boolean && pageCount === 2) {
