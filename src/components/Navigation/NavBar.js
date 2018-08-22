@@ -10,17 +10,36 @@ export default ({ getData, pressed }) => {
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
-        <NavLink className="planets__NAV" exact to="/planets" onClick={getData}>
+        <NavLink
+          className={
+            pressed === "planets" ? "planets__NAV pressed" : "planets__NAV"
+          }
+          exact
+          to="/planets"
+          onClick={getData}
+        >
           planets
         </NavLink>
       </div>
       <div className="people__CONTAINER">
-        <NavLink className="people__NAV" to="/people" onClick={getData}>
+        <NavLink
+          className={
+            pressed === "people" ? "people__NAV pressed" : "people__NAV"
+          }
+          to="/people"
+          onClick={getData}
+        >
           people
         </NavLink>
       </div>
       <div className="vehicles__CONTAINER">
-        <NavLink className="vehicles__NAV" to="/vehicles" onClick={getData}>
+        <NavLink
+          className={
+            pressed === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
+          }
+          to="/vehicles"
+          onClick={getData}
+        >
           vehicles
         </NavLink>
       </div>
