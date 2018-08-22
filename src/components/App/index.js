@@ -66,6 +66,7 @@ class App extends Component {
       );
     }
     this.setState({ favorites });
+    localStorage.setItem('favorites', JSON.stringify(favorites))
   };
 
   render() {
