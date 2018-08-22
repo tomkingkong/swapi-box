@@ -3,20 +3,22 @@ import PropTypes from "prop-types";
 import "./ContentCard.css";
 // import Button from './Button'
 
-const ContentCard = ({ card }) => {
-  const content = Object.keys(card).map(key => {
+const ContentCard = ({ card, toggleFavorites }) => {
+  const content = Object.keys(card).map((key, index) => {
     return key === "name" ? (
-      <h1>{card[key]}</h1>
+      <h1 key={key + index}>{card[key]}</h1>
     ) : (
-      <p>
+      <p key={key + index}>
         {key}: {card[key]}
       </p>
     );
   });
   return (
-    <article className="content_card">
+    <article
+      className={card.favorite ? "content_card favorite" : "content_card"}
+    >
       {content}
-      <button>Favorite</button>{" "}
+      <button onClick={() => toggleFavorites(card)}>Favorite</button>
     </article>
   );
 };

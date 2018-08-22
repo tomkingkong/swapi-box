@@ -9,12 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      activeButton: "",
       films: null,
       backgroundFilm: null,
       planets: null,
       people: null,
       vehicles: null,
-      favorites: null,
+      favorites: [],
       errorStatus: ""
     };
   }
@@ -33,32 +34,60 @@ class App extends Component {
   };
 
   getData = async event => {
+    let selectedData = event.target.textContent;
+    this.buttonPressed(selectedData);
+    if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
-      let selectedData = event.target.textContent;
       const result = await FetchApi(selectedData);
       this.setState({ [selectedData]: result });
     } catch (error) {
-      this.setState({ errorStatus: error.message })
+      this.setState({ errorStatus: error.message });
     }
   };
 
-  markAsFavorite = () => {
-    console.log("favorited");
+  buttonPressed = string => {
+    this.setState({ activeButton: string });
+  };
+
+  toggleFavorites = cardData => {
+    const toggleCard = cardData;
+    toggleCard.favorite = !toggleCard.favorite;
+    this.handleFavorites(toggleCard);
+  };
+
+  handleFavorites = cardData => {
+    let favorites;
+    if (cardData.favorite) {
+      favorites = [...this.state.favorites, cardData];
+    } else {
+      favorites = this.state.favorites.filter(
+        card => card.name !== cardData.name
+      );
+    }
+    this.setState({ favorites });
   };
 
   render() {
-    const { people, planets, vehicles, favorites, backgroundFilm } = this.state;
+    const {
+      people,
+      planets,
+      vehicles,
+      favorites,
+      backgroundFilm,
+      activeButton
+    } = this.state;
 
     return (
       <div className="App">
         <h1 className="App__TITLE">SWAPI BOX</h1>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
-        <NavBar getData={this.getData} />
+        <NavBar getData={this.getData} pressed={activeButton} />
         <ContentRoute
-          favorites={favorites}
+          toggleFavorites={this.toggleFavorites}
           people={people}
           planets={planets}
           vehicles={vehicles}
+          favorites={favorites}
         />
       </div>
     );

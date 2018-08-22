@@ -1,11 +1,12 @@
 export const filmScrape = film => {
-    const modifiedObj = {
-      title: film.title,
-      openingCrawl: film.opening_crawl,
-      episode: film.episode_id,
-      releaseDate: film.release_date
-    };
-    return modifiedObj;
+  const modifiedObj = {
+    title: film.title,
+    openingCrawl: film.opening_crawl,
+    episode: film.episode_id,
+    releaseDate: film.release_date,
+    favorite: false
+  };
+  return modifiedObj;
 };
 
 export const peopleScrape = (result, species, homeworld) => {
@@ -13,7 +14,8 @@ export const peopleScrape = (result, species, homeworld) => {
     name: result.name,
     species: species.name,
     homeworld: homeworld.name,
-    population: homeworld.population
+    population: homeworld.population,
+    favorite: false
   };
   return modifiedObj;
 };
@@ -24,7 +26,8 @@ export const planetScrape = (result, residents) => {
     populaton: result.population,
     terrain: result.terrain,
     climate: result.climate,
-    residents: residents
+    residents: residents,
+    favorite: false
   };
   return modifiedObj;
 };
