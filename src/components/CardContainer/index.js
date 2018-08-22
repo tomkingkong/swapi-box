@@ -12,5 +12,5 @@ export const CardContainer = ({ data, toggleFavorites }) => {
     <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
   ));
 
-  return <section className="card_container">{cards && cards}</section>;
+  return <section className="card_container"> {cards && cards}</section>;
 };
