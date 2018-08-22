@@ -36,8 +36,8 @@ class App extends Component {
   };
 
   getData = async event => {
-    let selectedData = event.target.textContent;
-    this.buttonPressed(selectedData);
+    const selectedData = event.target.textContent;
+    this.setButtonPressed(selectedData);
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
       const result = await FetchApi(selectedData);
@@ -47,7 +47,7 @@ class App extends Component {
     }
   };
 
-  buttonPressed = string => {
+  setButtonPressed = string => {
     this.setState({ activeButton: string });
   };
 
