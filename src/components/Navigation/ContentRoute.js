@@ -9,17 +9,23 @@ export default ({ planets, people, vehicles, toggleFavorites, favorites }) => {
       <Route
         exact
         path="/planets"
-        render={() => <CardContainer data={planets} favorites={favorites} />}
+        render={() => (
+          <CardContainer data={planets} toggleFavorites={toggleFavorites} />
+        )}
       />
       <Route
         exact
         path="/people"
-        render={() => <CardContainer data={people} favorites={favorites} />}
+        render={() => (
+          <CardContainer data={people} toggleFavorites={toggleFavorites} />
+        )}
       />
       <Route
         exact
         path="/vehicles"
-        render={() => <CardContainer data={vehicles} favorites={favorites} />}
+        render={() => (
+          <CardContainer data={vehicles} toggleFavorites={toggleFavorites} />
+        )}
       />
     </Switch>
   );
