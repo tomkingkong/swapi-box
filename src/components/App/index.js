@@ -26,11 +26,11 @@ class App extends Component {
   }
 
   setRandomFilm = () => {
-    const { films } = this.state
-    const randomFilmIndex = () => (Math.random()*films.length)+0.5<<0;
+    const { films } = this.state;
+    const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
-  }
+  };
 
   // componentDidMount() {
   //   const backgroundScroll = { target: { textContent: "films" } };
