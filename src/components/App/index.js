@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       activeButton: "",
-      pageCounter: 0,
+      pageCounter: 1,
       films: null,
       backgroundFilm: null,
       planets: null,
@@ -21,16 +21,19 @@ class App extends Component {
     };
   }
 
+  componentDidUpdate() {
+    console.log(this.state.pageCounter);
+  }
+
   async componentDidMount() {
-    const backgroundScroll = { target: { textContent: "films" } };
+    const backgroundScroll = { target: { name: "films" } };
     await this.getData(backgroundScroll);
     this.setRandomFilm();
-    // this.setFavoritesFromStorage();
+    this.setFavoritesFromStorage();
   }
 
   setRandomFilm = () => {
     const { films } = this.state;
-    if (!films) return
     const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
@@ -38,9 +41,17 @@ class App extends Component {
 
   getData = async (event, page) => {
     const newPage = page;
-    let selectedData = event.target.textContent;
+    let selectedData = event.target.name;
     this.setButtonPressed(selectedData);
-    if (this.state[selectedData] !== null || this.state[selectedData]) return;
+    let alreadyHasData =
+      this.state[selectedData] !== null || this.state[selectedData]
+        ? true
+        : false;
+    if (page !== 1) {
+      alreadyHasData = false;
+    }
+
+    if (alreadyHasData) return;
     try {
       const result = await FetchApi(selectedData, newPage);
       this.setState({ [selectedData]: result });
@@ -74,13 +85,21 @@ class App extends Component {
 
   handlePage = async boolean => {
     const { pageCounter, activeButton } = this.state;
-    const pageContent = { target: { textContent: activeButton } };
+    const pageContent = { target: { name: activeButton } };
 
     let pageCount = pageCounter;
+    if (boolean && (pageCount === "" || pageCount === 1)) {
+      pageCount = 2;
+    } else if (!boolean && pageCount === 2) {
+      pageCount = "";
+    } else if (boolean) {
+      pageCount++;
+    } else if (!boolean && pageCount >= 1) {
+      pageCount--;
+    } else {
+      return;
+    }
 
-    boolean ? pageCount++ : pageCount--;
-
-    if (pageCount <= 0) return;
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
@@ -108,6 +127,7 @@ class App extends Component {
           getData={this.getData}
           pressed={activeButton}
           favorites={favorites}
+          activeButton={activeButton}
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
