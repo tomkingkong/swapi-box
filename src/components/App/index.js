@@ -25,16 +25,18 @@ class App extends Component {
     const backgroundScroll = { target: { textContent: "films" } };
     await this.getData(backgroundScroll);
     this.setRandomFilm();
-    this.setFavoritesFromStorage();
+    // this.setFavoritesFromStorage();
   }
 
   setRandomFilm = () => {
     const { films } = this.state;
+    if (!films) return
     const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
   };
 
+<<<<<<< HEAD
   getData = async (event, page) => {
     const newPage = page;
     let selectedData = event.target.textContent;
@@ -42,13 +44,22 @@ class App extends Component {
     if (this.state[selectedData] !== null || this.state[selectedData]) return;
     try {
       const result = await FetchApi(selectedData, newPage);
+=======
+  getData = async event => {
+    const selectedData = event.target.textContent;
+    this.setButtonPressed(selectedData);
+    if (this.state[selectedData] !== null || this.state[selectedData]) return;
+    try {
+      const result = await FetchApi(selectedData);
+      console.log(result)
+>>>>>>> testing
       this.setState({ [selectedData]: result });
     } catch (error) {
       this.setState({ errorStatus: error.message });
     }
   };
 
-  buttonPressed = string => {
+  setButtonPressed = string => {
     this.setState({ activeButton: string });
   };
 
