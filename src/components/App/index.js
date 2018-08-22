@@ -46,8 +46,9 @@ class App extends Component {
     }
   };
 
-  markAsFavorite = () => {
-    console.log("favorited");
+  buttonPressed = string => {
+    this.setState({ activeButton: string });
+  };
   };
 
   render() {
