@@ -32,12 +32,14 @@ export const planetScrape = (result, residents) => {
   return modifiedObj;
 };
 
-export const vehicleScrape = result => {
+export const vehicleScrape = vehicle => {
   const modifiedObj = {
-    name: result.name,
-    model: result.model,
-    class: result.vehicle_class,
-    numberof_passengers: result.passengers
+    name: vehicle.name,
+    model: vehicle.model,
+    class: vehicle.vehicle_class,
+    numberof_passengers: vehicle.passengers
   };
   return modifiedObj;
 };
+
+

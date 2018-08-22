@@ -22,6 +22,7 @@ const fetchSpecific = async (url, result) => {
       const films = await filmScrape(result);
       compiledData = films;
       break;
+      
     case "people":
       const speciesResult = await fetch(result.species[0]);
       const species = await speciesResult.json();
