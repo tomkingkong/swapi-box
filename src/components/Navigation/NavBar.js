@@ -3,7 +3,10 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Navigation.css";
 
-export default ({ getData }) => {
+export default ({ getData, pressed }) => {
+  const handleData = () => {
+    getData();
+  };
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
