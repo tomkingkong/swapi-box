@@ -1,4 +1,4 @@
-export const mockPlayers = {
+export const mockPeople = {
   count: 87,
   next: "https://swapi.co/api/people/?page=2",
   previous: null,

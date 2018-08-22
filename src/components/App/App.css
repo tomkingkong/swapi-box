@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
 
 .App {
-
 }
 
 .App__TITLE {
-  border: 0.2rem solid #9C816B;
+  border: 0.2rem solid #9c816b;
   border-radius: 0.4rem;
-  color: #9C816B;
+  color: #9c816b;
   font-size: 3rem;
-  font-family: 'Cinzel', 'STJEDISE', serif;
+  font-family: "Cinzel", "STJEDISE", serif;
   margin: 2rem auto;
   padding: 1rem;
   width: 16.5rem;

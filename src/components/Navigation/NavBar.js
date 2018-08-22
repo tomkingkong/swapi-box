@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 import "./Navigation.css";
 
 export const NavBar = ({ getData, pressed, favorites }) => {
+
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
         <NavLink
+          name="planets"
           className={
             pressed === "planets" ? "planets__NAV pressed" : "planets__NAV"
           }
@@ -20,6 +22,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
       </div>
       <div className="people__CONTAINER">
         <NavLink
+          name="people"
           className={
             pressed === "people" ? "people__NAV pressed" : "people__NAV"
           }
@@ -31,6 +34,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
       </div>
       <div className="vehicles__CONTAINER">
         <NavLink
+          name="vehicles"
           className={
             pressed === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
           }
@@ -70,4 +74,4 @@ NavBar.propTypes = {
   getData: PropTypes.func, 
   pressed: PropTypes.string, 
   favorites: PropTypes.array
-}
+};
