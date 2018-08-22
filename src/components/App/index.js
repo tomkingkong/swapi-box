@@ -54,11 +54,11 @@ class App extends Component {
 
   render() {
     const { people, planets, vehicles, favorites, backgroundFilm } = this.state;
-  
+
     return (
       <div className="App">
         <h1 className="App__TITLE">SWAPI BOX</h1>
-       {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
+        {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar getData={this.getData} />
         <ContentRoute
           favorites={favorites}
