@@ -75,12 +75,37 @@ class App extends Component {
   handlePage = async boolean => {
     const { pageCounter, activeButton } = this.state;
     const pageContent = { target: { textContent: activeButton } };
-
     let pageCount = pageCounter;
 
-    boolean ? pageCount++ : pageCount--;
+    // switch(boolean) {
+    //   case true:
+    //   (pageCount === "" || pageCount === 1) ? pageCount = 2 : pageCount++;
+    //   break;
+    //   case false:
+    //   if (pageCount === 2) {
+    //     pageCount = "";
+    //   } else if (pageCount >= 1) {
+    //     pageCount--;
+    //   }
+    //   break;
+    //   default:
+    //   return;
+    // }
 
-    if (pageCount <= 0) return;
+    if (boolean && (pageCount === "" || pageCount === 1)) {
+      pageCount = 2;
+    } else if (!boolean && pageCount === 2) {
+      pageCount = "";
+    } else if (boolean) {
+      pageCount++;
+    } else if (!boolean && pageCount >= 1) {
+      pageCount--;
+    } else {
+      return;
+    }
+    // boolean ? pageCount++ : pageCount--;
+
+    // if (pageCount <= 0) return;
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
