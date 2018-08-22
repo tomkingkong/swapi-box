@@ -6,9 +6,10 @@ import {
 } from "./DataCleaner";
 
 export const FetchApi = async url => {
-  const fetchResponse = await fetch(`https://swapi.co/api/${url}/`);
-  const response = await fetchResponse.json();
-  const { results, next, previous } = response;
+  const response = await fetch(`https://swapi.co/api/${url}/`);
+  const fetchResponse = await response.json();
+  const { results, next, previous } = fetchResponse;
+  console.log(results)
   const dataResults = results.map(result => {
     return fetchSpecific(url, result);
   });
