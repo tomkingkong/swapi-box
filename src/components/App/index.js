@@ -3,7 +3,7 @@ import NavBar from "../Navigation/NavBar";
 import ContentRoute from "../Navigation/ContentRoute";
 import "./App.css";
 import { FetchApi } from "../Fetch/FetchApi";
-import BackgroundScroll from "../BackgroundScroll";
+import { BackgroundScroll } from "../BackgroundScroll";
 
 class App extends Component {
   constructor() {
@@ -21,10 +21,6 @@ class App extends Component {
     };
   }
 
-  componentDidUpdate() {
-    console.log(this.state.pageCounter);
-  }
-
   async componentDidMount() {
     const backgroundScroll = { target: { name: "films" } };
     await this.getData(backgroundScroll);
@@ -34,6 +30,7 @@ class App extends Component {
 
   setRandomFilm = () => {
     const { films } = this.state;
+    if (!films) return;
     const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
@@ -105,8 +102,11 @@ class App extends Component {
   };
 
   setFavoritesFromStorage = () => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    this.setState({ favorites });
+    if (localStorage.getItem("favorites")) {
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      this.setState({ favorites });
+    }
+    return;
   };
 
   render() {
