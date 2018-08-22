@@ -8,7 +8,7 @@ import {
 export const FetchApi = async url => {
   const fetchResponse = await fetch(`https://swapi.co/api/${url}/`);
   const response = await fetchResponse.json();
-  const { results, next } = response;
+  const { results, next, previous } = response;
   const dataResults = results.map(result => {
     return fetchSpecific(url, result);
   });
@@ -22,7 +22,7 @@ const fetchSpecific = async (url, result) => {
       const films = await filmScrape(result);
       compiledData = films;
       break;
-      
+
     case "people":
       const speciesResult = await fetch(result.species[0]);
       const species = await speciesResult.json();

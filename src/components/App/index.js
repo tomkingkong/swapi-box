@@ -81,7 +81,11 @@ class App extends Component {
       <div className="App">
         <h1 className="App__TITLE">SWAPI BOX</h1>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
-        <NavBar getData={this.getData} pressed={activeButton} />
+        <NavBar
+          getData={this.getData}
+          pressed={activeButton}
+          favorites={favorites}
+        />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
           people={people}

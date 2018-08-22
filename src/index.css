@@ -1,12 +1,26 @@
 @font-face {
-  font-family: 'STJEDISE';
-  font-style: normal;
-  src: url('./fonts/STJEDISE.TTF');
+  font-family: "STJEDISE";
+  src: url("./fonts/STJEDISE.TTF");
+}
+
+@font-face {
+  font-family: equinox-bold;
+  src: url("./fonts/Equinox Bold.otf");
+}
+
+@font-face {
+  font-family: equinox;
+  src: url("./fonts/Equinox Regular.otf");
 }
 
 body {
-  background: #000 url(./images/twinkling-stars.gif) no-repeat top / 100% ;
+  background: #000
+    url(http://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/11/home-page-gohtrailer-desktop.jpg.adapt.crop16x9.1920w.jpg)
+    no-repeat top / 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: equinox-bold;
+  background-position-y: 90%;
 }
