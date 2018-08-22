@@ -6,7 +6,8 @@ import {
 } from "./DataCleaner";
 
 export const FetchApi = async (type, page = "") => {
-  const url = `https://swapi.co/api/${type}/?page=${page}`
+  const newPage = page;
+  const url = `https://swapi.co/api/${type}/?page=${newPage}`;
   const response = await fetch(url);
   const fetchResponse = await response.json();
   const { results, next, previous } = fetchResponse;
@@ -14,6 +15,7 @@ export const FetchApi = async (type, page = "") => {
   const dataResults = results.map(result => {
     return fetchSpecific(type, result);
   });
+
   return await Promise.all(dataResults);
 };
 
