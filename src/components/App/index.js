@@ -29,6 +29,7 @@ class App extends Component {
 
   setRandomFilm = () => {
     const { films } = this.state;
+    if (!films) return
     const randomFilmIndex = () => (Math.random() * films.length + 0.5) << 0;
     const backgroundFilm = films[randomFilmIndex()];
     this.setState({ backgroundFilm });
