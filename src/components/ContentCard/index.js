@@ -8,7 +8,7 @@ const ContentCard = ({ card, toggleFavorites }) => {
     return key === "name" ? (
       <h1 key={key + index}>{card[key]}</h1>
     ) : (
-      <p>
+      <p key={key + index}>
         {key}: {card[key]}
       </p>
     );
