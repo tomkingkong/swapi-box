@@ -52,8 +52,8 @@ describe("ContentCard", () => {
 
   it("should match snapshot with planet data object passed", () => {
     wrapper = shallow(
-    <ContentCard 
-      key={0} 
+      <ContentCard
+        key={0}
         card={mockPlanetData}
         toggleFavorites={mockToggleFavorites}
       />
@@ -83,7 +83,7 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with Planet favorite status true", () => {
+  it("should match snapshot with Person favorite status true", () => {
     mockPlanetData = {
       climate: "temperate",
       favorite: true,
@@ -104,7 +104,7 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with Vehicle favorite status true", () => {
+  it("should match snapshot with Person favorite status true", () => {
     mockVehicleData = {
       name: "Sand Crawler",
       model: "Digger Crawler",
@@ -122,19 +122,7 @@ describe("ContentCard", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("should call toggleFavorites on click", () => {
-    mockToggleFavorites = jest.fn();
-    wrapper = shallow(
-      <ContentCard
-        toggleFavorites={mockToggleFavorites}
-        card={mockPersonData}
-        key={"0"}
-      />
-    );
-    wrapper.find("button").simulate("click");
-    expect(mockToggleFavorites).toHaveBeenCalled();
-  });
-});
+
   it("should call toggleFavorites on click", () => {
     mockToggleFavorites = jest.fn();
     wrapper = shallow(
