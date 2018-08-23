@@ -18,11 +18,13 @@ exports[`CardContainer should match snapshot with data object passed 1`] = `
     toggleFavorites={[Function]}
   />
   <button
+    className="previous-page-button"
     onClick={[Function]}
   >
     Previous Page
   </button>
   <button
+    className="next-page-button"
     onClick={[Function]}
   >
     Next Page
@@ -48,11 +50,13 @@ exports[`CardContainer should match snapshot without data object passed 1`] = `
     toggleFavorites={[Function]}
   />
   <button
+    className="previous-page-button"
     onClick={[Function]}
   >
     Previous Page
   </button>
   <button
+    className="next-page-button"
     onClick={[Function]}
   >
     Next Page

@@ -22,11 +22,6 @@ exports[`ContentRoute should match snapshot with data object passed 1`] = `
     path="/favorites"
     render={[Function]}
   />
-  <Route
-    exact={true}
-    path="/next-Page-"
-    render={[Function]}
-  />
 </Switch>
 `;
 
@@ -192,16 +187,6 @@ exports[`NavBar should match snapshot with data passed 1`] = `
       Favorites: 
       0
     </NavLink>
-  </div>
-  <div
-    className="next_page__CONTAINER"
-  >
-    <NavLink
-      activeClassName="active"
-      aria-current="page"
-      className="favorites__NAV"
-      to="/favorites"
-    />
   </div>
 </div>
 `;
