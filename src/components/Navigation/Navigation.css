@@ -1,3 +1,17 @@
+.navigation_bar {
+  display: flex;
+  background: rgba(61, 61, 61, 0.6);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: sticky;
+  top: 0rem;
+  z-index: 10;
+}
+
+.CONTAINER {
+  margin: 1rem 0;
+}
+
 .NAV {
   color: white;
   background: rgba(255, 255, 255, 0.6);
