@@ -62,14 +62,14 @@ describe("FetchApi", () => {
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
 
-    it('returns a vehicle object people when provided vehicle type and result from fetch', async () => {
-      const initialFetch = await fetchSpecific('vehicles', mockResultVehicle);
+    it("returns a vehicle object people when provided vehicle type and result from fetch", async () => {
+      const initialFetch = await fetchSpecific("vehicles", mockResultVehicle);
       const expectedObjectPromise = { 
-        name: 'Sand Crawler',
-        model: 'Digger Crawler',
-        class: 'wheeled',
-        numberof_passengers: '30' 
-      }
+        name: "Sand Crawler",
+        model: "Digger Crawler",
+        class: "wheeled",
+        numberof_passengers: "30"
+      };
 
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
