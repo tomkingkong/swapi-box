@@ -24,7 +24,7 @@ export const ContentCard = ({ card, toggleFavorites }) => {
   );
 };
 
-// ContentCard.propTypes = {
-//   card: ProptTypes.object, 
-//   toggleFavorites: PropTypes.func
-// }
+ContentCard.propTypes = {
+  card: PropTypes.object, 
+  toggleFavorites: PropTypes.func
+}
