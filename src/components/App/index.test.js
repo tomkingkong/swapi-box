@@ -149,7 +149,7 @@ describe("App", () => {
           wrapper.instance().handleFavorites(mockCard);
           const expected = JSON.parse(localStorage.getItem('favorites')).length;
           expect(expected).toEqual(4);
-  });
+        });
 
         it("setFavoritesFromStorage retreive favorites from localStorage and set to state", () => {
           localStorage.setItem('favorites', JSON.stringify(favorites))
@@ -175,4 +175,23 @@ describe("App", () => {
           expect(wrapper.state('pageCounter')).toEqual(3);
         });
 
+        it("should decrement state's pageCount by one if pageCounter not the first page", () => {
+          wrapper = shallow(<App />);
+          
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2);
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');
+
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual(3);
+        });
+
+      });
+  });
 });
