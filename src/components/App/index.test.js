@@ -1,11 +1,7 @@
 import React from "react";
 
-import NavBar from "../Navigation/NavBar";
-import ContentRoute from "../Navigation/ContentRoute";
-import { FetchApi } from "../Fetch/FetchApi";
-import BackgroundScroll from "../BackgroundScroll";
 import App from "./index.js";
-import { mockPeople } from "../../MockData/MockPeople";
+import { mockPeople } from "../../MockData/MockData";
 
 describe("App", () => {
   let wrapper;
