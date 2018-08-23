@@ -72,7 +72,14 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with data object passed", () => {
+  it("should match snapshot with Person favorite status true", () => {
+    mockPersonData = {
+      name: "Luke Skywalker",
+      species: "Human",
+      homeworld: "Tatooine",
+      population: "200000",
+      favorite: true
+    };
     expect(wrapper).toMatchSnapshot();
   });
 
