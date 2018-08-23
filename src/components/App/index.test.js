@@ -108,5 +108,6 @@ describe("App", () => {
       });
     });
 
+    describe('setButtonPressed', () => {
   });
 });
