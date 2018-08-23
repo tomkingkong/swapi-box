@@ -21,3 +21,12 @@ describe("NavBar", () => {
     />)
   })
   
+  it("should match snapshot with data passed", () => {
+
+    expect(navWrapper).toMatchSnapshot();
+  });
+
+  it.skip("should match snapshot without data passed", () => {
+
+    expect(navWrapper).toMatchSnapshot();
+  });
