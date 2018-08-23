@@ -63,13 +63,6 @@ export const ContentRoute = ({
           />
         )}
       />
-      <Route
-        exact
-        path="/next-Page-"
-        render={() => (
-          <CardContainer data={favorites} toggleFavorites={toggleFavorites} />
-        )}
-      />
     </Switch>
   );
 };

@@ -40,6 +40,15 @@
     grid-template-columns: none;
     display: flex;
     flex-wrap: wrap;
-    width: 30rem;
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card_container {
+    grid-template-columns: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 20rem;
   }
 }
