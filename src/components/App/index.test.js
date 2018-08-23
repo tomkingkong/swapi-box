@@ -115,6 +115,13 @@ describe("App", () => {
         expect(wrapper.state('activeButton')).toEqual('people')
       });
     });
+
       describe('handleFavorites and toggleFavorites and setFavoritesFromStorage', () => {
+        let favorites;
+        beforeEach(() => {
+          wrapper = shallow(<App />);
+          favorites = [{name: 'one', favorite: true}, {name: 'two', favorite: true}, {name: 'three', favorite: true}]
+        })
+
   });
 });
