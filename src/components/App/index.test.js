@@ -91,7 +91,13 @@ describe("App", () => {
         expect(setRandomFilm).toHaveBeenCalled()
       });
 
-    // it.skip("should ", () => {});
+      it("should set state backgroundFilm of single film from the films array in state", () => {
+        wrapper = shallow(<App />);
+        const films = [{},{},{}]
+        wrapper.setState({ films })
+        wrapper.instance().setRandomFilm()
+        expect(wrapper.state('backgroundFilm')).toEqual({})
+      });
 
     // it.skip("should ", () => {});
   });
