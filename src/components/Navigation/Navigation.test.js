@@ -36,3 +36,30 @@ describe("NavBar", () => {
     expect(navWrapper).toMatchSnapshot();
   });
 });
+
+describe("ContentRoute", () => {
+  let contentWrapper;
+  let toggleFavorites;
+  let people;
+  let planets;
+  let vehicles;
+  let favorites;
+  let handlePage;
+
+  beforeEach(() => {
+    toggleFavorites = jest.fn();
+    people = []
+    planets = []
+    vehicles = []
+    favorites = []
+    handlePage = jest.fn();
+    contentWrapper = shallow(
+    <ContentRoute
+      toggleFavorites={toggleFavorites}
+      people={people}
+      planets={planets}
+      vehicles={vehicles}
+      favorites={favorites}
+      handlePage={handlePage}
+    />)
+  })
