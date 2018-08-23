@@ -83,8 +83,24 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot without data object passed", () => {
-    mockData = []
+  it("should match snapshot with Person favorite status true", () => {
+    mockPlanetData = {
+      climate: "temperate",
+      favorite: true,
+      name: "Alderaan",
+      populaton: "2000000000",
+      residents: ["Leia Organa", "Bail Prestor Organa", "Raymus Antilles"],
+      terrain: "grasslands, mountains"
+    };
+
+    wrapper = shallow(
+      <ContentCard
+        key={0}
+        card={mockPlanetData}
+        toggleFavorites={mockToggleFavorites}
+      />
+    );
+
     expect(wrapper).toMatchSnapshot();
   });
 
