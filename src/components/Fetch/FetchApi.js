@@ -50,6 +50,8 @@ export const fetchSpecific = async (type, result) => {
       const vehicleObj = await vehicleScrape(result);
       compiledData = vehicleObj;
       break;
+    default:
+    return
   }
   return compiledData;
 };
