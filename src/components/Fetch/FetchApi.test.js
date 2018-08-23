@@ -17,16 +17,14 @@ describe("FetchApi", () => {
     });
   });
 
-  it('should call fetch with the correct params', async () => {
-    const expected = [
-      'https://swapi.co/api/people/?page='
-    ]
-    await FetchApi('people', '');
-    expect(window.fetch).toHaveBeenCalledWith(...expected)
+  it("should call fetch with the correct params", async () => {
+    const expected = ["https://swapi.co/api/people/?page="];
+    await FetchApi("people", "");
+    expect(window.fetch).toHaveBeenCalledWith(...expected);
   });
 
-  it('returns an array if the response is okay', async () => {
-    const initialFetch = await FetchApi('people', '');
+  it("returns an array if the response is okay", async () => {
+    const initialFetch = await FetchApi("people", "");
     const expectedLength = Object.keys(mockPeople.results).length;
     expect(initialFetch.length).toEqual(expectedLength);
   });
