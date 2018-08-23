@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 
 .App {
-  grid-template-rows: 2fr 1fr 7fr;
+  margin: 0;
+  position: absolute;
 }
 
 .App__TITLE {
