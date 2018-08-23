@@ -24,17 +24,19 @@ describe("CardContainer", () => {
     handlePage = jest.fn();
 
     wrapper = shallow(
-    <CardContainer 
-      data={mockData}
-      handlePage={handlePage} 
-      toggleFavorites={toggleFavorites}
-      savedFavorites={savedFavorites}
-    />);
+      <CardContainer
+        data={mockData}
+        handlePage={handlePage}
+        toggleFavorites={toggleFavorites}
+        savedFavorites={savedFavorites}
+      />
+    );
+  });
 
   it("should match snapshot with data object passed", () => {
     expect(wrapper).toMatchSnapshot();
   });
-    
+
   it("should match snapshot without data object passed", () => {
     mockData = null;
     wrapper = shallow(
@@ -59,5 +61,29 @@ describe("CardContainer", () => {
       />
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should call handlePage on click", () => {
+    let mockHandlePage = jest.fn();
+
+    wrapper = shallow(
+      <CardContainer
+        data={mockData}
+        handlePage={mockHandlePage}
+        toggleFavorites={toggleFavorites}
+        savedFavorites={savedFavorites}
+      />
+    );
+    wrapper
+      .find(".previous-page-button")
+      .first()
+      .simulate("click");
+    expect(mockHandlePage).toHaveBeenCalled();
+
+    wrapper
+      .find(".next-page-button")
+      .first()
+      .simulate("click");
+    expect(mockHandlePage).toHaveBeenCalled();
   });
 });
