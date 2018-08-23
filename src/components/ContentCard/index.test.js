@@ -61,7 +61,16 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  })
+  it("should match snapshot with vehicle data object passed", () => {
+    wrapper = shallow(
+      <ContentCard
+        key={0}
+        card={mockVehicleData}
+        toggleFavorites={mockToggleFavorites}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should match snapshot with data object passed", () => {
     expect(wrapper).toMatchSnapshot();
