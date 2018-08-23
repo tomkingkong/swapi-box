@@ -22,11 +22,6 @@ exports[`ContentRoute should match snapshot with data object passed 1`] = `
     path="/favorites"
     render={[Function]}
   />
-  <Route
-    exact={true}
-    path="/next-Page-"
-    render={[Function]}
-  />
 </Switch>
 `;
 
@@ -52,15 +47,10 @@ exports[`ContentRoute should match snapshot without data object passed 1`] = `
     path="/favorites"
     render={[Function]}
   />
-  <Route
-    exact={true}
-    path="/next-Page-"
-    render={[Function]}
-  />
 </Switch>
 `;
 
-exports[`NavBar should match snapshot with activeButton types 1`] = `
+exports[`NavBar should match snapshot when activeButton is favorites 1`] = `
 <div
   className="navigation_bar"
 >
@@ -85,7 +75,7 @@ exports[`NavBar should match snapshot with activeButton types 1`] = `
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV pressed"
+      className="people__NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -113,27 +103,17 @@ exports[`NavBar should match snapshot with activeButton types 1`] = `
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="favorites__NAV"
+      className="favorites__NAV pressed"
       to="/favorites"
     >
       Favorites: 
       0
     </NavLink>
-  </div>
-  <div
-    className="next_page__CONTAINER"
-  >
-    <NavLink
-      activeClassName="active"
-      aria-current="page"
-      className="favorites__NAV"
-      to="/favorites"
-    />
   </div>
 </div>
 `;
 
-exports[`NavBar should match snapshot with data passed 1`] = `
+exports[`NavBar should match snapshot when activeButton is people 1`] = `
 <div
   className="navigation_bar"
 >
@@ -192,21 +172,11 @@ exports[`NavBar should match snapshot with data passed 1`] = `
       Favorites: 
       0
     </NavLink>
-  </div>
-  <div
-    className="next_page__CONTAINER"
-  >
-    <NavLink
-      activeClassName="active"
-      aria-current="page"
-      className="favorites__NAV"
-      to="/favorites"
-    />
   </div>
 </div>
 `;
 
-exports[`NavBar should match snapshot without data passed 1`] = `
+exports[`NavBar should match snapshot when activeButton is planets 1`] = `
 <div
   className="navigation_bar"
 >
@@ -216,7 +186,7 @@ exports[`NavBar should match snapshot without data passed 1`] = `
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="planets__NAV"
+      className="planets__NAV pressed"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -231,7 +201,7 @@ exports[`NavBar should match snapshot without data passed 1`] = `
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV pressed"
+      className="people__NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -266,15 +236,68 @@ exports[`NavBar should match snapshot without data passed 1`] = `
       0
     </NavLink>
   </div>
+</div>
+`;
+
+exports[`NavBar should match snapshot when activeButton is vehicles 1`] = `
+<div
+  className="navigation_bar"
+>
   <div
-    className="next_page__CONTAINER"
+    className="planets__CONTAINER"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="planets__NAV"
+      exact={true}
+      name="planets"
+      onClick={[Function]}
+      to="/planets"
+    >
+      planets
+    </NavLink>
+  </div>
+  <div
+    className="people__CONTAINER"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="people__NAV"
+      name="people"
+      onClick={[Function]}
+      to="/people"
+    >
+      people
+    </NavLink>
+  </div>
+  <div
+    className="vehicles__CONTAINER"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="vehicles__NAV pressed"
+      name="vehicles"
+      onClick={[Function]}
+      to="/vehicles"
+    >
+      vehicles
+    </NavLink>
+  </div>
+  <div
+    className="favorites__CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
       className="favorites__NAV"
       to="/favorites"
-    />
+    >
+      Favorites: 
+      0
+    </NavLink>
   </div>
 </div>
 `;
