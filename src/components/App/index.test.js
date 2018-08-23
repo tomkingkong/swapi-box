@@ -209,7 +209,7 @@ describe("App", () => {
           expect(wrapper.state('pageCounter')).toEqual(2); 
           
           wrapper.instance().handlePage(false);
-          expect(wrapper.state('pageCounter')).toEqual(1);  
+          expect(wrapper.state('pageCounter')).toEqual('');  
           wrapper.instance().handlePage(false);
           expect(wrapper.state('pageCounter')).toEqual('');  
 
