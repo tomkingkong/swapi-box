@@ -25,3 +25,13 @@ describe("CardContainer", () => {
 
   })
 
+  it("should match snapshot with data object passed", () => {
+    
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match snapshot without data object passed", () => {
+    mockData = []
+    expect(wrapper).toMatchSnapshot();
+  });
+});
