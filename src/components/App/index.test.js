@@ -150,4 +150,12 @@ describe("App", () => {
           const expected = JSON.parse(localStorage.getItem('favorites')).length;
           expect(expected).toEqual(4);
   });
+
+        it("setFavoritesFromStorage retreive favorites from localStorage and set to state", () => {
+          localStorage.setItem('favorites', JSON.stringify(favorites))
+          wrapper.instance().setFavoritesFromStorage();
+          let expected = JSON.parse(localStorage.getItem('favorites')).length
+          expect(expected).toEqual(3);
+        });
+
 });
