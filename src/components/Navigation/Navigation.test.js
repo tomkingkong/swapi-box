@@ -63,3 +63,14 @@ describe("ContentRoute", () => {
       handlePage={handlePage}
     />)
   })
+
+  it("should match snapshot with data object passed", () => {
+    expect(contentWrapper).toMatchSnapshot();
+  });
+
+  it.skip("should match snapshot without data object passed", () => {
+    
+    expect(contentWrapper).toMatchSnapshot();
+  });
+
+});
