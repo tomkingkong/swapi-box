@@ -5,7 +5,7 @@ describe('FetchApi', () => {
   beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
-        json: () => Promise.resolve(mockResults)
+        json: () => Promise.resolve(mockPeople)
       })
     })
   })
