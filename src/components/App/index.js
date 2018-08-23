@@ -124,9 +124,8 @@ class App extends Component {
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}
-          pressed={activeButton}
-          favorites={favorites}
           activeButton={activeButton}
+          favorites={favorites}
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
