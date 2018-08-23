@@ -104,8 +104,22 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with favorite status true", () => {
-    mockData = {name: "Luke Skywalker", species: "Human", homeworld: "Tatooine", population: "200000", favorite: true}
+  it("should match snapshot with Vehicle favorite status true", () => {
+    mockVehicleData = {
+      name: "Sand Crawler",
+      model: "Digger Crawler",
+      class: "wheeled",
+      numberof_passengers: "30",
+      favorite: true
+    };
+
+    wrapper = shallow(
+      <ContentCard
+        key={0}
+        card={mockVehicleData}
+        toggleFavorites={mockToggleFavorites}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
