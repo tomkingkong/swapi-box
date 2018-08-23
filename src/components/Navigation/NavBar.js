@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Navigation.css";
 
-export const NavBar = ({ getData, pressed, favorites }) => {
+export const NavBar = ({ getData, activeButton, favorites }) => {
 
   return (
     <div className="navigation_bar">
@@ -11,7 +11,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
         <NavLink
           name="planets"
           className={
-            pressed === "planets" ? "planets__NAV pressed" : "planets__NAV"
+            activeButton === "planets" ? "planets__NAV pressed" : "planets__NAV"
           }
           exact
           to="/planets"
@@ -24,7 +24,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
         <NavLink
           name="people"
           className={
-            pressed === "people" ? "people__NAV pressed" : "people__NAV"
+            activeButton === "people" ? "people__NAV pressed" : "people__NAV"
           }
           to="/people"
           onClick={getData}
@@ -36,7 +36,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
         <NavLink
           name="vehicles"
           className={
-            pressed === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
+            activeButton === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
           }
           to="/vehicles"
           onClick={getData}
@@ -47,7 +47,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
       <div className="favorites__CONTAINER">
         <NavLink
           className={
-            pressed === "favorites"
+            activeButton === "favorites"
               ? "favorites__NAV pressed"
               : "favorites__NAV"
           }
@@ -59,7 +59,7 @@ export const NavBar = ({ getData, pressed, favorites }) => {
       <div className="next_page__CONTAINER">
         <NavLink
           className={
-            pressed === "favorites"
+            activeButton === "favorites"
               ? "favorites__NAV pressed"
               : "favorites__NAV"
           }
