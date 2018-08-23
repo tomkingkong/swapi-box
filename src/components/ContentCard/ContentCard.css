@@ -20,7 +20,14 @@
   background-color: aqua;
 }
 
-@keyframes bazinga {
+.favorite button {
+  background: url('../../Icons/deathstar-black.svg') no-repeat;
+}
+
+.favorite button:hover {
+  background: url('../../Icons/deathstar-white.svg') no-repeat;
+}
+
   from {
     opacity: 0;
   }
