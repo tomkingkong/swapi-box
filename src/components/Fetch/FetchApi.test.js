@@ -8,14 +8,14 @@ import {
   mockResultFilm
 } from "../../MockData/MockData";
 
-describe('FetchApi', () => {
+describe("FetchApi", () => {
   beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         json: () => Promise.resolve(mockPeople)
-      })
-    })
-  })
+      });
+    });
+  });
 
   it('should call fetch with the correct params', async () => {
     const expected = [
