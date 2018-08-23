@@ -31,10 +31,20 @@ describe("CardContainer", () => {
       savedFavorites={savedFavorites}
     />);
 
-  })
-
   it("should match snapshot with data object passed", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
     
+  it("should match snapshot without data object passed", () => {
+    mockData = null;
+    wrapper = shallow(
+      <CardContainer
+        data={mockData}
+        handlePage={handlePage}
+        toggleFavorites={toggleFavorites}
+        savedFavorites={savedFavorites}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
