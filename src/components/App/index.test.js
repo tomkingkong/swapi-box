@@ -27,26 +27,6 @@ describe("App", () => {
     beforeEach(() => {
       wrapper = shallow(<App />);
       mockEvent = { target: { name: "people" } };
-      mockResults = [
-        {
-          name: "Luke Skywalker",
-          species: "Human",
-          homeworld: "Tatooine",
-          population: "200000"
-        },
-        {
-          name: "C-3PO",
-          species: "Droid",
-          homeworld: "Tatooine",
-          population: "200000"
-        },
-        {
-          name: "R2-D2",
-          species: "Droid",
-          homeworld: "Naboo",
-          population: "4500000000"
-        }
-      ];
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           json: () => Promise.resolve(mockPeople)
