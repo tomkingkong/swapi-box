@@ -44,7 +44,6 @@ describe('FetchApi', () => {
       }
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
-
     it('returns a planet object people when provided planet type and result from fetch', async () => {
       const initialFetch = await fetchSpecific('planets', mockResultPlanet);
       const expectedObjectPromise = {
@@ -56,7 +55,6 @@ describe('FetchApi', () => {
       }
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
-
     it('returns a vehicle object people when provided vehicle type and result from fetch', async () => {
       const initialFetch = await fetchSpecific('vehicles', mockResultVehicle);
       const expectedObjectPromise = { 
@@ -68,15 +66,13 @@ describe('FetchApi', () => {
 
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
-
     it.skip('returns a film object people when provided film type and result from fetch', async () => {
       const initialFetch = await fetchSpecific('films', mockResultFilm);
       const expectedObjectPromise = {};
 
       expect(initialFetch).toEqual(expectedObjectPromise);
-  });
+    });
   })
-  
   describe('fetchResidents', () => {
     it('should take a url and fetch residents array', async () => {
       window.fetch = jest.fn().mockImplementation(() => {
