@@ -24,11 +24,13 @@ describe('FetchApi', () => {
     expect(initialFetch.length).toEqual(expectedLength);
   });
 
-  it.skip('throws an error if the response is not okay', async () => {
+  it('throws an error if the response is not okay', async () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.reject(new Error('failed'))
     })
+    let expected = new Error('failed')
 
-    await expect(addGrocery(mockGrocery)).rejects.toEqual(expected)
+    await expect(FetchApi('people', '')).rejects.toEqual(expected)
+  });
   });
 })
