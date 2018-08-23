@@ -30,3 +30,9 @@ describe("NavBar", () => {
 
     expect(navWrapper).toMatchSnapshot();
   });
+
+  it.skip("should match snapshot with activeButton types", () => {
+
+    expect(navWrapper).toMatchSnapshot();
+  });
+});
