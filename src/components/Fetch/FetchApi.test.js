@@ -11,11 +11,10 @@ describe('FetchApi', () => {
   })
 
   it('should call fetch with the correct params', async () => {
-    const mockUrl = 'people';
     const expected = [
-      'https://swapi.co/api/people'
+      'https://swapi.co/api/people/?page='
     ]
-    await FetchApi(mockUrl);
+    await FetchApi('people', '');
     expect(window.fetch).toHaveBeenCalledWith(...expected)
   });
 
