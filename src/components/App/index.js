@@ -95,7 +95,7 @@ class App extends Component {
       default:
       return
     }
-
+    
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
