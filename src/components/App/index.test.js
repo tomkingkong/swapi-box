@@ -167,4 +167,12 @@ describe("App", () => {
       });
 
       describe('handlePage', () => {
+        it("should increment state's pageCount by one", () => {
+          wrapper = shallow(<App />);
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2);
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(3);
+        });
+
 });
