@@ -2,25 +2,7 @@ import { FetchApi, fetchSpecific, fetchResidents } from './FetchApi.js'
 import { mockPeople, mockResultPlanet, mockResultVehicle, mockResultsPerson, mockResultResident } from "../../MockData/MockData";
 
 describe('FetchApi', () => {
-  let mockResults;
   beforeEach(() => {
-    mockResults = [ 
-      { name: 'Luke Skywalker',
-        species: 'Human',
-        homeworld: 'Tatooine',
-        population: '200000' 
-      },
-      { name: 'C-3PO',
-        species: 'Droid',
-        homeworld: 'Tatooine',
-        population: '200000' 
-      },
-      { name: 'R2-D2',
-        species: 'Droid',
-        homeworld: 'Naboo',
-        population: '4500000000' 
-      } 
-    ];
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         json: () => Promise.resolve(mockResults)
