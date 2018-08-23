@@ -54,9 +54,12 @@ describe("ContentCard", () => {
     wrapper = shallow(
     <ContentCard 
       key={0} 
-      card={mockData} 
-      toggleFavorites={toggleFavorites}
-    />);
+        card={mockPlanetData}
+        toggleFavorites={mockToggleFavorites}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
   })
 
