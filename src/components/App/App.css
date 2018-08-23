@@ -23,27 +23,15 @@
 }
 
 .planets {
-  background-image: url(../../images/BattleFront.jpg);
-  background-repeat: no-repeat;
-  background-position-y: 1rem;
+  background: url(../../images/BattleFront.jpg) no-repeat;
 }
 
 .people {
-  background: #000 url(../../images/sw-people.jpg);
-  background-size: 100rem;
-  background-repeat: no-repeat;
+  background: url(../../images/sw-people.jpg) no-repeat;
 }
 
 .vehicles {
-  background-image: url(../../images/star-wars-droid.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
-
-  background-position: center;
-
-  border-radius: 10px;
+  background: url(../../images/star-wars-droid.jpg) no-repeat;
 }
 
-body {
-  background-color: #171717;
-}
+
