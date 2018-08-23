@@ -9,7 +9,8 @@ export const CardContainer = ({
   savedFavorites,
   handlePage
 }) => {
-  if (!data) return <section>nada</section>;
+  console.log(savedFavorites);
+  if (!data) return <section img src="../../images/BattleFront.jpg" />;
   const cards = data.map((card, index) => {
     card.favorite = savedFavorites.includes(card.name);
     return (
