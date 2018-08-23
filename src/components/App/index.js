@@ -58,7 +58,9 @@ class App extends Component {
   };
 
   setButtonPressed = string => {
-    this.setState({ activeButton: string });
+    if (string !== this.state.activeButton) {
+      this.setState({ activeButton: string, pageCounter: 1 });
+    }
   };
 
   toggleFavorites = cardData => {
@@ -85,16 +87,15 @@ class App extends Component {
     const pageContent = { target: { name: activeButton } };
     let pageCount = pageCounter;
 
-    if (boolean && (pageCount === "" || pageCount === 1)) {
-      pageCount = 2;
-    } else if (!boolean && pageCount === 2) {
-      pageCount = "";
-    } else if (boolean) {
-      pageCount++;
-    } else if (!boolean && pageCount >= 1) {
-      pageCount--;
-    } else {
-      return;
+    switch(boolean) {
+      case true:
+      !pageCount ? pageCount = 2 : pageCount++
+      break;
+      case false:
+      pageCount > 2 ?  pageCount--  : pageCount = ""
+      break;
+      default:
+      return
     }
 
     this.setState({ pageCounter: pageCount });
@@ -120,8 +121,10 @@ class App extends Component {
     } = this.state;
 
     return (
-      <div className={activeButton}>
-        <h1 className="App__TITLE">SWAPI BOX</h1>
+      <div className={`${activeButton} App`}>
+        <header className="App__TITLE">
+          <h1>SWAPI BOX</h1>
+        </header>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}

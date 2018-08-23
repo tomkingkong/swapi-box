@@ -19,7 +19,7 @@ export const ContentCard = ({ card, toggleFavorites }) => {
       className={card.favorite ? "content_card favorite" : "content_card"}
     >
       {content}
-      <button onClick={() => toggleFavorites(card)}>Favorite</button>
+      <button className="button" onClick={() => toggleFavorites(card)}></button>
     </article>
   );
 };

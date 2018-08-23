@@ -1,42 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 
 .App {
-  grid-template-rows: 2fr 1fr 7fr;
+  margin: 0;
+  position: absolute;
 }
 
 .App__TITLE {
   border: 0.2rem solid #9c816b;
   border-radius: 0.4rem;
-  color: #9c816b;
-  font-size: 3rem;
-  font-family: "Cinzel", "STJEDISE", serif;
   margin: 2rem auto;
   padding: 1rem;
   width: 16.5rem;
 }
+.App__TITLE h1 {
+  color: #9c816b;
+  font-size: 3rem;
+  font-family: "Cinzel", "STJEDISE", serif;
+  margin: 0;
+}
 
 .planets {
-  background-image: url(../../images/BattleFront.jpg);
-  background-repeat: no-repeat;
-  background-position-y: rem;
+  background: url(../../images/BattleFront.jpg) no-repeat;
 }
 
 .people {
-  background: #000 url(../../images/sw-people.jpg);
-  background-size: 100rem;
-  background-repeat: no-repeat;
+  background: url(../../images/sw-people.jpg) no-repeat;
 }
 
 .vehicles {
-  background-image: url(../../images/star-wars-droid.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
-
-  background-position: center;
-
-  border-radius: 10px;
+  background: url(../../images/star-wars-droid.jpg) no-repeat;
 }
 
-body {
-  background-color: #171717;
-}
+

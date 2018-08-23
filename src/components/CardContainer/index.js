@@ -9,13 +9,15 @@ export const CardContainer = ({
   savedFavorites,
   handlePage
 }) => {
-  if (!data) return <section img src="../../images/BattleFront.jpg" />;
-  const cards = data.map((card, index) => {
-    card.favorite = savedFavorites.includes(card.name);
-    return (
-      <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
-    );
-  });
+
+if (!data) return <section>{}</section>;
+  const cards =  
+    data.map((card, index) => {
+      card.favorite = savedFavorites.includes(card.name);
+      return (
+        <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
+      );
+    })
 
   return (
     <section className="card_container">
