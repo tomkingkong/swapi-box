@@ -122,4 +122,29 @@ describe("ContentCard", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+  it("should call toggleFavorites on click", () => {
+    mockToggleFavorites = jest.fn();
+    wrapper = shallow(
+      <ContentCard
+        toggleFavorites={mockToggleFavorites}
+        card={mockPersonData}
+        key={"0"}
+      />
+    );
+    wrapper.find("button").simulate("click");
+    expect(mockToggleFavorites).toHaveBeenCalled();
+  });
+});
+  it("should call toggleFavorites on click", () => {
+    mockToggleFavorites = jest.fn();
+    wrapper = shallow(
+      <ContentCard
+        toggleFavorites={mockToggleFavorites}
+        card={mockPersonData}
+        key={"0"}
+      />
+    );
+    wrapper.find("button").simulate("click");
+    expect(mockToggleFavorites).toHaveBeenCalled();
+  });
 });
