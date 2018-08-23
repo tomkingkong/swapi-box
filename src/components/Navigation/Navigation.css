@@ -35,8 +35,6 @@
   background: silver;
 }
 
-
-
 @media only screen and (max-width: 400px) {
   .navigation_bar {
     display: flex;
