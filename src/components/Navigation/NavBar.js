@@ -72,6 +72,6 @@ export const NavBar = ({ getData, activeButton, favorites }) => {
 
 NavBar.propTypes = {
   getData: PropTypes.func, 
-  pressed: PropTypes.string, 
+  activeButton: PropTypes.string, 
   favorites: PropTypes.array
 };
