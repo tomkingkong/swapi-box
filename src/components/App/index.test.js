@@ -83,6 +83,13 @@ describe("App", () => {
     });
 
     describe('setRandomFilm', () => {
+      it.skip("should be called on componentDidMount", async () => {
+        wrapper = shallow(<App />);
+        let setRandomFilm = wrapper.instance().setRandomFilm
+        setRandomFilm = jest.fn()
+        await wrapper.instance().componentDidMount()
+        expect(setRandomFilm).toHaveBeenCalled()
+      });
 
     // it.skip("should ", () => {});
 
