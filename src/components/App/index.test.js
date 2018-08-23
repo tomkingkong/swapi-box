@@ -128,5 +128,13 @@ describe("App", () => {
           wrapper.instance().toggleFavorites(mockCard)
           expect(mockCard.favorite).toEqual(true)
         });
+
+        it("handleFavorites should add a card to favorites array in state ", () => {
+          const mockCard = {name: 'four', favorite: true}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          expect(wrapper.state('favorites').length).toEqual(4);
+        });
+
   });
 });
