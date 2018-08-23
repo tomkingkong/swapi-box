@@ -18,8 +18,10 @@ describe('FetchApi', () => {
     expect(window.fetch).toHaveBeenCalledWith(...expected)
   });
 
-  it.skip('returns an array if the response is okay', async () => {
-
+  it('returns an array if the response is okay', async () => {
+    const initialFetch = await FetchApi('people', '');
+    const expectedLength = Object.keys(mockPeople.results).length;
+    expect(initialFetch.length).toEqual(expectedLength);
   });
 
   it.skip('throws an error if the response is not okay', async () => {
