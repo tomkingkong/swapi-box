@@ -177,14 +177,7 @@ describe("App", () => {
 
         it("should decrement state's pageCount by one if pageCounter not the first page", () => {
           wrapper = shallow(<App />);
-          
-          wrapper.instance().handlePage(true);
-          expect(wrapper.state('pageCounter')).toEqual(2);
-          wrapper.instance().handlePage(false);
-          expect(wrapper.state('pageCounter')).toEqual('');
 
-          wrapper.instance().handlePage(false);
-          expect(wrapper.state('pageCounter')).toEqual('');
           wrapper.instance().handlePage(true);
           wrapper.instance().handlePage(true);
           wrapper.instance().handlePage(true);
@@ -192,6 +185,31 @@ describe("App", () => {
           expect(wrapper.state('pageCounter')).toEqual(3);
         });
 
+        it("should become empty string if dercremented on first page", () => {
+          wrapper = shallow(<App />);
+
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');  
+        });
+
+        it("should set pageCounter to 2 if incrementing on empty string or 0", () => {
+          wrapper = shallow(<App />);
+
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');  
+
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2); 
+          
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual(1);  
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');  
+
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2); 
+        });
+        
       });
   });
 });

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match snapshot with data object passed 1`] = `
+<section
+  className="card_container"
+>
+  <Component
+    card={
+      Object {
+        "favorite": false,
+        "homeworld": "Tatooine",
+        "name": "Luke Skywalker",
+        "population": "200000",
+        "species": "Human",
+      }
+    }
+    key="0"
+    toggleFavorites={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Previous Page
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Next Page
+  </button>
+</section>
+`;
+
+exports[`CardContainer should match snapshot without data object passed 1`] = `
+<section
+  className="card_container"
+>
+  <Component
+    card={
+      Object {
+        "favorite": false,
+        "homeworld": "Tatooine",
+        "name": "Luke Skywalker",
+        "population": "200000",
+        "species": "Human",
+      }
+    }
+    key="0"
+    toggleFavorites={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Previous Page
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Next Page
+  </button>
+</section>
+`;

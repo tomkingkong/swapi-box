@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentCard should match snapshot with data object passed 1`] = `
+<article
+  className="content_card"
+>
+  <h1
+    key="name0"
+  >
+    Luke Skywalker
+  </h1>
+  <p
+    key="species1"
+  >
+    species
+     : 
+    Human
+  </p>
+  <p
+    key="homeworld2"
+  >
+    homeworld
+     : 
+    Tatooine
+  </p>
+  <p
+    key="population3"
+  >
+    population
+     : 
+    200000
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
+
+exports[`ContentCard should match snapshot with favorite status true 1`] = `
+<article
+  className="content_card"
+>
+  <h1
+    key="name0"
+  >
+    Luke Skywalker
+  </h1>
+  <p
+    key="species1"
+  >
+    species
+     : 
+    Human
+  </p>
+  <p
+    key="homeworld2"
+  >
+    homeworld
+     : 
+    Tatooine
+  </p>
+  <p
+    key="population3"
+  >
+    population
+     : 
+    200000
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
+
+exports[`ContentCard should match snapshot without data object passed 1`] = `
+<article
+  className="content_card"
+>
+  <h1
+    key="name0"
+  >
+    Luke Skywalker
+  </h1>
+  <p
+    key="species1"
+  >
+    species
+     : 
+    Human
+  </p>
+  <p
+    key="homeworld2"
+  >
+    homeworld
+     : 
+    Tatooine
+  </p>
+  <p
+    key="population3"
+  >
+    population
+     : 
+    200000
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
