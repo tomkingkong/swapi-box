@@ -37,7 +37,19 @@
 }
 
 .previous-page-button {
-  left: 10rem;
+  background: url("../../Icons/green-saber.svg") no-repeat center / 25%;
+  border: none;
+  height: 8rem;
+  width: 10rem;
+  position: fixed;
+  top: 30rem;
+  left: 1rem;
+  transform: rotate(-90deg);
+}
+
+.previous-page-button:hover {
+  transform: rotate(-135deg);
+  transition: all 0.5s linear;
 }
 
 @keyframes bazinga {
