@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentCard should match snapshot with data object passed 1`] = `
+exports[`ContentCard should match snapshot with Person favorite status true 1`] = `
 <article
   className="content_card"
 >
@@ -38,7 +38,92 @@ exports[`ContentCard should match snapshot with data object passed 1`] = `
 </article>
 `;
 
-exports[`ContentCard should match snapshot with favorite status true 1`] = `
+exports[`ContentCard should match snapshot with Person favorite status true 2`] = `
+<article
+  className="content_card favorite"
+>
+  <p
+    key="climate0"
+  >
+    climate
+     : 
+    temperate
+  </p>
+  <h1
+    key="name2"
+  >
+    Alderaan
+  </h1>
+  <p
+    key="populaton3"
+  >
+    populaton
+     : 
+    2000000000
+  </p>
+  <p
+    key="residents4"
+  >
+    residents
+     : 
+    Leia Organa
+    Bail Prestor Organa
+    Raymus Antilles
+  </p>
+  <p
+    key="terrain5"
+  >
+    terrain
+     : 
+    grasslands, mountains
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
+
+exports[`ContentCard should match snapshot with Person favorite status true 3`] = `
+<article
+  className="content_card favorite"
+>
+  <h1
+    key="name0"
+  >
+    Sand Crawler
+  </h1>
+  <p
+    key="model1"
+  >
+    model
+     : 
+    Digger Crawler
+  </p>
+  <p
+    key="class2"
+  >
+    class
+     : 
+    wheeled
+  </p>
+  <p
+    key="numberof_passengers3"
+  >
+    numberof_passengers
+     : 
+    30
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
+
+exports[`ContentCard should match snapshot with people data object passed 1`] = `
 <article
   className="content_card"
 >
@@ -76,35 +161,82 @@ exports[`ContentCard should match snapshot with favorite status true 1`] = `
 </article>
 `;
 
-exports[`ContentCard should match snapshot without data object passed 1`] = `
+exports[`ContentCard should match snapshot with planet data object passed 1`] = `
+<article
+  className="content_card"
+>
+  <p
+    key="climate0"
+  >
+    climate
+     : 
+    temperate
+  </p>
+  <h1
+    key="name2"
+  >
+    Alderaan
+  </h1>
+  <p
+    key="populaton3"
+  >
+    populaton
+     : 
+    2000000000
+  </p>
+  <p
+    key="residents4"
+  >
+    residents
+     : 
+    Leia Organa
+    Bail Prestor Organa
+    Raymus Antilles
+  </p>
+  <p
+    key="terrain5"
+  >
+    terrain
+     : 
+    grasslands, mountains
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</article>
+`;
+
+exports[`ContentCard should match snapshot with vehicle data object passed 1`] = `
 <article
   className="content_card"
 >
   <h1
     key="name0"
   >
-    Luke Skywalker
+    Sand Crawler
   </h1>
   <p
-    key="species1"
+    key="model1"
   >
-    species
+    model
      : 
-    Human
+    Digger Crawler
   </p>
   <p
-    key="homeworld2"
+    key="class2"
   >
-    homeworld
+    class
      : 
-    Tatooine
+    wheeled
   </p>
   <p
-    key="population3"
+    key="numberof_passengers3"
   >
-    population
+    numberof_passengers
      : 
-    200000
+    30
   </p>
   <button
     onClick={[Function]}
