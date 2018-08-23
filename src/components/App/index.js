@@ -103,7 +103,7 @@ class App extends Component {
 
   setFavoritesFromStorage = () => {
     if (localStorage.getItem("favorites")) {
-      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const favorites = JSON.parse(localStorage.getItem("favorites"));
       this.setState({ favorites });
     }
     return;
