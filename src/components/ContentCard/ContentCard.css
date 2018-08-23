@@ -1,13 +1,14 @@
-h1 {
+.content_card h1 {
+  animation: fade 0.7s ease-in;
   color: white;
-  animation: bazinga 0.7s ease-in;
+  margin: 0.5rem 0 2rem 0;
 }
 
-p {
+.content_card p {
   color: antiquewhite;
   font-family: equinox-bold;
-  animation: bazinga 1.5s ease-out;
-  animation: bazinga 1.5s ease-in;
+  animation: fade 0.5s ease-out;
+  animation: fade 0.5s ease-in;
 }
 
 .content_card {
