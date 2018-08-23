@@ -97,23 +97,7 @@ class App extends Component {
       default:
       return
     }
-<<<<<<< HEAD
-
-    // if (boolean && (pageCount === "" || pageCount === 1)) {
-    //   pageCount = 2;
-    // } else if (!boolean && pageCount === 2) {
-    //   pageCount = "";
-    // } else if (boolean) {
-    //   pageCount++;
-    // } else if (!boolean && pageCount >= 1) {
-    //   pageCount--;
-    // } else {
-    //   return;
-    // }
-
-=======
     
->>>>>>> testing-components
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
