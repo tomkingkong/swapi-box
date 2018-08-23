@@ -84,7 +84,7 @@ class App extends Component {
     const { pageCounter, activeButton } = this.state;
     const pageContent = { target: { name: activeButton } };
     let pageCount = pageCounter;
-    
+
     if (boolean && (pageCount === "" || pageCount === 1)) {
       pageCount = 2;
     } else if (!boolean && (pageCount === 2 || pageCount === 1)) {
