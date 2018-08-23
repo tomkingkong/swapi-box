@@ -32,7 +32,18 @@ describe('FetchApi', () => {
 
     await expect(FetchApi('people', '')).rejects.toEqual(expected)
   });
+
   describe('fetchSpecific', () => {
+    it('returns a person object people when provided person type and result from fetch', async () => {
+      const initialFetch = await fetchSpecific('people', mockResultsPerson);
+      const expectedObjectPromise = { 
+        name: 'Luke Skywalker',
+        species: undefined,
+        homeworld: undefined,
+        population: undefined 
+      }
+      expect(initialFetch).toEqual(expectedObjectPromise);
+    });
   });
   describe('fetchResidents', () => {
     it('should take a url and fetch residents array', async () => {
