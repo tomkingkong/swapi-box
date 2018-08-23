@@ -1,3 +1,63 @@
+export const mockResultFilm = {
+  characters: [
+    "https://swapi.co/api/people/1/",
+    "https://swapi.co/api/people/2/",
+    "https://swapi.co/api/people/3/",
+    "https://swapi.co/api/people/4/",
+    "https://swapi.co/api/people/5/",
+    "https://swapi.co/api/people/6/",
+    "https://swapi.co/api/people/7/",
+    "https://swapi.co/api/people/8/",
+    "https://swapi.co/api/people/9/",
+    "https://swapi.co/api/people/10/",
+    "https://swapi.co/api/people/12/",
+    "https://swapi.co/api/people/13/",
+    "https://swapi.co/api/people/14/",
+    "https://swapi.co/api/people/15/",
+    "https://swapi.co/api/people/16/",
+    "https://swapi.co/api/people/18/",
+    "https://swapi.co/api/people/19/",
+    "https://swapi.co/api/people/81/"
+  ],
+  created: "2014-12-10T14:23:31.880000Z",
+  director: "George Lucas",
+  edited: "2015-04-11T09:46:52.774897Z",
+  episode_id: 4,
+  opening_crawl: "It is a period of civil war.",
+  planets: [
+    "https://swapi.co/api/planets/2/",
+    "https://swapi.co/api/planets/3/",
+    "https://swapi.co/api/planets/1/"
+  ],
+  producer: "Gary Kurtz, Rick McCallum",
+  release_date: "1977-05-25",
+  species: [
+    "https://swapi.co/api/species/5/",
+    "https://swapi.co/api/species/3/",
+    "https://swapi.co/api/species/2/",
+    "https://swapi.co/api/species/1/",
+    "https://swapi.co/api/species/4/"
+  ],
+  starships: [
+    "https://swapi.co/api/starships/2/",
+    "https://swapi.co/api/starships/3/",
+    "https://swapi.co/api/starships/5/",
+    "https://swapi.co/api/starships/9/",
+    "https://swapi.co/api/starships/10/",
+    "https://swapi.co/api/starships/11/",
+    "https://swapi.co/api/starships/12/",
+    "https://swapi.co/api/starships/13/"
+  ],
+  title: "A New Hope",
+  url: "https://swapi.co/api/films/1/",
+  vehicles: [
+    "https://swapi.co/api/vehicles/4/",
+    "https://swapi.co/api/vehicles/6/",
+    "https://swapi.co/api/vehicles/7/",
+    "https://swapi.co/api/vehicles/8/"
+  ]
+};
+
 export const mockPlanets = {
   count: 61,
   next: "https://swapi.co/api/planets/?page=2",
@@ -764,130 +824,142 @@ export const mockVehicles = {
   ]
 };
 
-export const mockResultsPerson = { name: 'Luke Skywalker',
-height: '172',
-mass: '77',
-hair_color: 'blond',
-skin_color: 'fair',
-eye_color: 'blue',
-birth_year: '19BBY',
-gender: 'male',
-homeworld:
- { name: 'Tatooine',
-   rotation_period: '23',
-   orbital_period: '304',
-   diameter: '10465',
-   climate: 'arid',
-   gravity: '1 standard',
-   terrain: 'desert',
-   surface_water: '1',
-   population: '200000',
-   residents:
-    [ 'https://swapi.co/api/people/1/',
-      'https://swapi.co/api/people/2/',
-      'https://swapi.co/api/people/4/',
-      'https://swapi.co/api/people/6/',
-      'https://swapi.co/api/people/7/',
-      'https://swapi.co/api/people/8/',
-      'https://swapi.co/api/people/9/',
-      'https://swapi.co/api/people/11/',
-      'https://swapi.co/api/people/43/',
-      'https://swapi.co/api/people/62/' ],
-   films:
-    [ 'https://swapi.co/api/films/5/',
-      'https://swapi.co/api/films/4/',
-      'https://swapi.co/api/films/6/',
-      'https://swapi.co/api/films/3/',
-      'https://swapi.co/api/films/1/' ],
-   created: '2014-12-09T13:50:49.641000Z',
-   edited: '2014-12-21T20:48:04.175778Z',
-   url: 'https://swapi.co/api/planets/1/' },
-films:
- [ 'https://swapi.co/api/films/2/',
-   'https://swapi.co/api/films/6/',
-   'https://swapi.co/api/films/3/',
-   'https://swapi.co/api/films/1/',
-   'https://swapi.co/api/films/7/' ],
-species:
- [ { name: 'Human',
-     classification: 'mammal',
-     designation: 'sentient',
-     average_height: '180',
-     skin_colors: 'caucasian, black, asian, hispanic',
-     hair_colors: 'blonde, brown, black, red',
-     eye_colors: 'brown, blue, green, hazel, grey, amber',
-     average_lifespan: '120',
-     homeworld: [Object],
-     language: 'Galactic Basic',
-     people: [Array],
-     films: [Array],
-     created: '2014-12-10T13:52:11.567000Z',
-     edited: '2015-04-17T06:59:55.850671Z',
-     url: 'https://swapi.co/api/species/1/' } ],
-vehicles:
- [ 'https://swapi.co/api/vehicles/14/',
-   'https://swapi.co/api/vehicles/30/' ],
-starships:
- [ 'https://swapi.co/api/starships/12/',
-   'https://swapi.co/api/starships/22/' ],
-created: '2014-12-09T13:50:51.644000Z',
-edited: '2014-12-20T21:17:56.891000Z',
-url: 'https://swapi.co/api/people/1/' }
+export const mockResultsPerson = {
+  name: "Luke Skywalker",
+  height: "172",
+  mass: "77",
+  hair_color: "blond",
+  skin_color: "fair",
+  eye_color: "blue",
+  birth_year: "19BBY",
+  gender: "male",
+  homeworld: {
+    name: "Tatooine",
+    rotation_period: "23",
+    orbital_period: "304",
+    diameter: "10465",
+    climate: "arid",
+    gravity: "1 standard",
+    terrain: "desert",
+    surface_water: "1",
+    population: "200000",
+    residents: [
+      "https://swapi.co/api/people/1/",
+      "https://swapi.co/api/people/2/",
+      "https://swapi.co/api/people/4/",
+      "https://swapi.co/api/people/6/",
+      "https://swapi.co/api/people/7/",
+      "https://swapi.co/api/people/8/",
+      "https://swapi.co/api/people/9/",
+      "https://swapi.co/api/people/11/",
+      "https://swapi.co/api/people/43/",
+      "https://swapi.co/api/people/62/"
+    ],
+    films: [
+      "https://swapi.co/api/films/5/",
+      "https://swapi.co/api/films/4/",
+      "https://swapi.co/api/films/6/",
+      "https://swapi.co/api/films/3/",
+      "https://swapi.co/api/films/1/"
+    ],
+    created: "2014-12-09T13:50:49.641000Z",
+    edited: "2014-12-21T20:48:04.175778Z",
+    url: "https://swapi.co/api/planets/1/"
+  },
+  films: [
+    "https://swapi.co/api/films/2/",
+    "https://swapi.co/api/films/6/",
+    "https://swapi.co/api/films/3/",
+    "https://swapi.co/api/films/1/",
+    "https://swapi.co/api/films/7/"
+  ],
+  species: [
+    {
+      name: "Human",
+      classification: "mammal",
+      designation: "sentient",
+      average_height: "180",
+      skin_colors: "caucasian, black, asian, hispanic",
+      hair_colors: "blonde, brown, black, red",
+      eye_colors: "brown, blue, green, hazel, grey, amber",
+      average_lifespan: "120",
+      homeworld: [Object],
+      language: "Galactic Basic",
+      people: [Array],
+      films: [Array],
+      created: "2014-12-10T13:52:11.567000Z",
+      edited: "2015-04-17T06:59:55.850671Z",
+      url: "https://swapi.co/api/species/1/"
+    }
+  ],
+  vehicles: [
+    "https://swapi.co/api/vehicles/14/",
+    "https://swapi.co/api/vehicles/30/"
+  ],
+  starships: [
+    "https://swapi.co/api/starships/12/",
+    "https://swapi.co/api/starships/22/"
+  ],
+  created: "2014-12-09T13:50:51.644000Z",
+  edited: "2014-12-20T21:17:56.891000Z",
+  url: "https://swapi.co/api/people/1/"
+};
 
-export const mockResultPlanet = { name: 'Alderaan',
-rotation_period: '24',
-orbital_period: '364',
-diameter: '12500',
-climate: 'temperate',
-gravity: '1 standard',
-terrain: 'grasslands, mountains',
-surface_water: '40',
-population: '2000000000',
-residents:
- [ 'https://swapi.co/api/people/5/',
-   'https://swapi.co/api/people/68/',
-   'https://swapi.co/api/people/81/' ],
-films:
- [ 'https://swapi.co/api/films/6/',
-   'https://swapi.co/api/films/1/' ],
-created: '2014-12-10T11:35:48.479000Z',
-edited: '2014-12-20T20:58:18.420000Z',
-url: 'https://swapi.co/api/planets/2/' }
+export const mockResultPlanet = {
+  name: "Alderaan",
+  rotation_period: "24",
+  orbital_period: "364",
+  diameter: "12500",
+  climate: "temperate",
+  gravity: "1 standard",
+  terrain: "grasslands, mountains",
+  surface_water: "40",
+  population: "2000000000",
+  residents: [
+    "https://swapi.co/api/people/5/",
+    "https://swapi.co/api/people/68/",
+    "https://swapi.co/api/people/81/"
+  ],
+  films: ["https://swapi.co/api/films/6/", "https://swapi.co/api/films/1/"],
+  created: "2014-12-10T11:35:48.479000Z",
+  edited: "2014-12-20T20:58:18.420000Z",
+  url: "https://swapi.co/api/planets/2/"
+};
 
-export const mockResultVehicle = { name: 'Sand Crawler',
-model: 'Digger Crawler',
-manufacturer: 'Corellia Mining Corporation',
-cost_in_credits: '150000',
-length: '36.8',
-max_atmosphering_speed: '30',
-crew: '46',
-passengers: '30',
-cargo_capacity: '50000',
-consumables: '2 months',
-vehicle_class: 'wheeled',
-pilots: [],
-films:
- [ 'https://swapi.co/api/films/5/',
-   'https://swapi.co/api/films/1/' ],
-created: '2014-12-10T15:36:25.724000Z',
-edited: '2014-12-22T18:21:15.523587Z',
-url: 'https://swapi.co/api/vehicles/4/' }
+export const mockResultVehicle = {
+  name: "Sand Crawler",
+  model: "Digger Crawler",
+  manufacturer: "Corellia Mining Corporation",
+  cost_in_credits: "150000",
+  length: "36.8",
+  max_atmosphering_speed: "30",
+  crew: "46",
+  passengers: "30",
+  cargo_capacity: "50000",
+  consumables: "2 months",
+  vehicle_class: "wheeled",
+  pilots: [],
+  films: ["https://swapi.co/api/films/5/", "https://swapi.co/api/films/1/"],
+  created: "2014-12-10T15:36:25.724000Z",
+  edited: "2014-12-22T18:21:15.523587Z",
+  url: "https://swapi.co/api/vehicles/4/"
+};
 
-export const mockResultResident = { 
-  name: 'Leia Organa',
-  height: '150',
-  mass: '49',
-  hair_color: 'brown',
-  skin_color: 'light',
-  eye_color: 'brown',
-  birth_year: '19BBY',
-  gender: 'female',
-  homeworld: 'https://swapi.co/api/planets/2/',
+export const mockResultResident = {
+  name: "Leia Organa",
+  height: "150",
+  mass: "49",
+  hair_color: "brown",
+  skin_color: "light",
+  eye_color: "brown",
+  birth_year: "19BBY",
+  gender: "female",
+  homeworld: "https://swapi.co/api/planets/2/",
   films: [Array],
   species: [Array],
   vehicles: [Array],
   starships: [],
-  created: '2014-12-10T15:20:09.791000Z',
-  edited: '2014-12-20T21:17:50.315000Z',
-  url: 'https://swapi.co/api/people/5/' 
-}
+  created: "2014-12-10T15:20:09.791000Z",
+  edited: "2014-12-20T21:17:50.315000Z",
+  url: "https://swapi.co/api/people/5/"
+};
