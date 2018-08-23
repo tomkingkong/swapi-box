@@ -83,7 +83,7 @@ describe("ContentCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with Person favorite status true", () => {
+  it("should match snapshot with Planet favorite status true", () => {
     mockPlanetData = {
       climate: "temperate",
       favorite: true,
