@@ -143,5 +143,11 @@ describe("App", () => {
           expect(wrapper.state('favorites').length).toEqual(2);
         });
 
+        it("handleFavorites should update localStorage with a new favorites array ", () => {
+          const mockCard = {name: 'four', favorite: true}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          const expected = JSON.parse(localStorage.getItem('favorites')).length;
+          expect(expected).toEqual(4);
   });
 });
