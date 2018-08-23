@@ -20,9 +20,11 @@ class App extends Component {
       errorStatus: ""
     };
   }
+  
   componentDidUpdate() {
     this.state.pageCounter;
   }
+
   async componentDidMount() {
     const backgroundScroll = { target: { name: "films" } };
     await this.getData(backgroundScroll);
@@ -60,7 +62,9 @@ class App extends Component {
   };
 
   setButtonPressed = string => {
-    this.setState({ activeButton: string });
+    if (string !== this.state.activeButton) {
+      this.setState({ activeButton: string, pageCounter: 1 });
+    }
   };
 
   toggleFavorites = cardData => {
