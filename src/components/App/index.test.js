@@ -115,5 +115,6 @@ describe("App", () => {
         expect(wrapper.state('activeButton')).toEqual('people')
       });
     });
+      describe('handleFavorites and toggleFavorites and setFavoritesFromStorage', () => {
   });
 });
