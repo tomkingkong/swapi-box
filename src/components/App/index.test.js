@@ -82,8 +82,7 @@ describe("App", () => {
       expect(wrapper.state("people").length).toEqual(10);
     });
 
-    describe();
-    it.skip("should ", () => {});
+    describe('setRandomFilm', () => {
 
     // it.skip("should ", () => {});
 
