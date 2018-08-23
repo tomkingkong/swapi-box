@@ -41,6 +41,7 @@
   animation: bazinga;
   position: sticky;
   top: 0;
+  flex-wrap: wrap;
 }
 
 .pressed {
@@ -50,3 +51,15 @@
 a {
   width: 5rem;
 }
+
+.planets__CONTAINER,
+.people__CONTAINER,
+.vehicles__CONTAINER,
+.favorites__CONTAINER {
+  margin: 1rem 0;
+}
+
+/* .people__CONTAINER {
+}
+.vehicles__CONTAINER {
+} */
