@@ -1,5 +1,12 @@
-import { FetchApi, fetchSpecific, fetchResidents } from './FetchApi.js'
-import { mockPeople, mockResultPlanet, mockResultVehicle, mockResultsPerson, mockResultResident } from "../../MockData/MockData";
+import { FetchApi, fetchSpecific, fetchResidents } from "./FetchApi.js";
+import {
+  mockPeople,
+  mockResultPlanet,
+  mockResultVehicle,
+  mockResultsPerson,
+  mockResultResident,
+  mockResultFilm
+} from "../../MockData/MockData";
 
 describe('FetchApi', () => {
   beforeEach(() => {
