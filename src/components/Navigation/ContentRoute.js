@@ -12,21 +12,22 @@ export const ContentRoute = ({
   favorites,
   handlePage
 }) => {
-  console.log(favorites);
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
     <Switch>
       <Route
         exact
         path="/planets"
-        render={() => (
-          <CardContainer
-            data={planets}
-            handlePage={handlePage}
-            toggleFavorites={toggleFavorites}
-            savedFavorites={savedFavorites}
-          />
-        )}
+        render={() => {
+          return (
+            <CardContainer
+              data={planets}
+              handlePage={handlePage}
+              toggleFavorites={toggleFavorites}
+              savedFavorites={savedFavorites}
+            />
+          );
+        }}
       />
       <Route
         exact
@@ -76,7 +77,7 @@ ContentRoute.propTypes = {
       favorite: bool,
       name: string,
       populaton: string,
-      residents: arrayOf(object),
+      residents: arrayOf(string),
       terrain: string
     })
   ),
