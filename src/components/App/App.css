@@ -15,6 +15,12 @@
   padding: 1rem;
   width: 16.5rem;
 }
+.App__TITLE h1 {
+  color: #9c816b;
+  font-size: 3rem;
+  font-family: "Cinzel", "STJEDISE", serif;
+  margin: 0;
+}
 
 .planets {
   background-image: url(../../images/BattleFront.jpg);
