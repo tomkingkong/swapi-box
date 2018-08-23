@@ -114,6 +114,13 @@ describe("App", () => {
         wrapper.instance().setButtonPressed('people')
         expect(wrapper.state('activeButton')).toEqual('people')
       });
+
+      it("should revert pageCounter to 1", () => {
+        wrapper = shallow(<App />);
+        wrapper.setState({ pageCounter: 2 });
+        wrapper.instance().setButtonPressed('people')
+        expect(wrapper.state('pageCounter')).toEqual(1)
+      });
     });
 
       describe('handleFavorites and toggleFavorites and setFavoritesFromStorage', () => {
