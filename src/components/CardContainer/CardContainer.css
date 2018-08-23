@@ -1,5 +1,45 @@
 .card_container {
   display: flex;
   flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
   justify-content: center;
+  animation: bazinga 1.5s ease-in;
+  animation: bazinga 1.5s ease-out;
+  margin: auto;
+  width: 50rem;
+}
+
+.previous-page-button,
+.next-page-button {
+  position: absolute;
+  top: 4rem;
+  opacity: 0.8rem;
+  cursor: pointer;
+}
+
+.next-page-button {
+  right: 10rem;
+}
+
+.previous-page-button {
+  left: 10rem;
+}
+
+@keyframes bazinga {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .card_container {
+    grid-template-columns: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30rem;
+  }
 }
