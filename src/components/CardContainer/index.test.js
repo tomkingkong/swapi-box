@@ -10,10 +10,18 @@ describe("CardContainer", () => {
   let handlePage;
 
   beforeEach(() => {
-    mockData = [{name: "Luke Skywalker", species: "Human", homeworld: "Tatooine", population: "200000", favorite: false}]
-    toggleFavorites = jest.fn()
-    savedFavorites = []
-    handlePage = jest.fn()
+    mockData = [
+      {
+        name: "Luke Skywalker",
+        species: "Human",
+        homeworld: "Tatooine",
+        population: "200000",
+        favorite: false
+      }
+    ];
+    toggleFavorites = jest.fn();
+    savedFavorites = [];
+    handlePage = jest.fn();
 
     wrapper = shallow(
     <CardContainer 
