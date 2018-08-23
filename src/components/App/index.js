@@ -87,17 +87,17 @@ class App extends Component {
     const pageContent = { target: { name: activeButton } };
     let pageCount = pageCounter;
 
-    if (boolean && (pageCount === "" || pageCount === 1)) {
-      pageCount = 2;
-    } else if (!boolean && (pageCount === 2 || pageCount === 1)) {
-      pageCount = "";
-    } else if (boolean) {
-      pageCount++;
-    } else if (!boolean && pageCount >= 1) {
-      pageCount--;
-    } else {
-      return;
+    switch(boolean) {
+      case true:
+      !pageCount ? pageCount = 2 : pageCount++
+      break;
+      case false:
+      pageCount > 1 ?  pageCount--  : pageCount = ""
+      break;
+      default:
+      return
     }
+<<<<<<< HEAD
 
     // if (boolean && (pageCount === "" || pageCount === 1)) {
     //   pageCount = 2;
@@ -111,6 +111,9 @@ class App extends Component {
     //   return;
     // }
 
+=======
+    
+>>>>>>> testing-components
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
@@ -139,9 +142,8 @@ class App extends Component {
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}
-          pressed={activeButton}
-          favorites={favorites}
           activeButton={activeButton}
+          favorites={favorites}
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}

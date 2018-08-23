@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundScroll should match snapshot with data object passed 1`] = `
+<div
+  className="Background__Container"
+>
+  <div
+    className="Background__Fade"
+  />
+  <section
+    className="Background__Scroll"
+  >
+    <div
+      className="Background__Crawl"
+    >
+      <div
+        className="Background__Title"
+      >
+        <p>
+          Episode 
+          5
+        </p>
+        <h1>
+          The Empire Strikes Back
+        </h1>
+      </div>
+      <p>
+        wooooorrrrds
+      </p>
+      <p>
+        1980-05-17
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`BackgroundScroll should match snapshot without data object passed 1`] = `
+<div
+  className="Background__Container"
+>
+  <div
+    className="Background__Fade"
+  />
+  <section
+    className="Background__Scroll"
+  >
+    <div
+      className="Background__Crawl"
+    >
+      <div
+        className="Background__Title"
+      >
+        <p>
+          Episode 
+        </p>
+        <h1 />
+      </div>
+      <p />
+      <p />
+    </div>
+  </section>
+</div>
+`;
