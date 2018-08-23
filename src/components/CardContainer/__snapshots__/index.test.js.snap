@@ -18,26 +18,24 @@ exports[`CardContainer should match snapshot with data object passed 1`] = `
     toggleFavorites={[Function]}
   />
   <button
+    className="previous-page-button"
     onClick={[Function]}
-  >
-    Previous Page
-  </button>
+  />
   <button
+    className="next-page-button"
     onClick={[Function]}
-  >
-    Next Page
-  </button>
+  />
 </section>
 `;
 
-exports[`CardContainer should match snapshot without data object passed 1`] = `
+exports[`CardContainer should match snapshot with favorites 1`] = `
 <section
   className="card_container"
 >
   <Component
     card={
       Object {
-        "favorite": false,
+        "favorite": true,
         "homeworld": "Tatooine",
         "name": "Luke Skywalker",
         "population": "200000",
@@ -48,14 +46,19 @@ exports[`CardContainer should match snapshot without data object passed 1`] = `
     toggleFavorites={[Function]}
   />
   <button
+    className="previous-page-button"
     onClick={[Function]}
-  >
-    Previous Page
-  </button>
+  />
   <button
+    className="next-page-button"
     onClick={[Function]}
-  >
-    Next Page
-  </button>
+  />
 </section>
+`;
+
+exports[`CardContainer should match snapshot without data object passed 1`] = `
+<section
+  img={true}
+  src="../../images/BattleFront.jpg"
+/>
 `;
