@@ -12,7 +12,7 @@ export const ContentRoute = ({
   favorites,
   handlePage
 }) => {
-  console.log(favorites);
+
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
     <Switch>
