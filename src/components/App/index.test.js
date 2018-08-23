@@ -6,8 +6,6 @@ import { mockPeople } from "../../MockData/MockData";
 describe("App", () => {
   let wrapper;
   let mockEvent;
-  let mockResults;
-  let FetchApi;
 
   beforeEach(async () => {
     localStorage.clear();
