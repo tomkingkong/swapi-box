@@ -158,4 +158,12 @@ describe("App", () => {
           expect(expected).toEqual(3);
         });
 
+        it("setFavoritesFromStorage should return if favorites from localStorage does not exist", () => {
+          favorites = ['NOTHING HERE']
+          wrapper.setState({ favorites });
+          wrapper.instance().setFavoritesFromStorage();
+          expect(wrapper.state('favorites')).toEqual(['NOTHING HERE']);
+        });
+      });
+
 });
