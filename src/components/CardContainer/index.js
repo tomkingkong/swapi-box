@@ -33,9 +33,11 @@ export const CardContainer = ({
   );
 };
 
+const { arrayOf, func, object, string } = PropTypes;
+
 CardContainer.propTypes = {
-  data: PropTypes.array,
-  savedFavorites: PropTypes.array,
-  toggleFavorites: PropTypes.func,
-  handlePage: PropTypes.func
-}
+  data: arrayOf(object),
+  savedFavorites: arrayOf(string),
+  toggleFavorites: func,
+  handlePage: func
+};
