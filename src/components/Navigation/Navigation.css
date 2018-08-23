@@ -2,32 +2,51 @@
 .people__NAV,
 .vehicles__NAV,
 .favorites__NAV {
+  font-family: equinox;
   border: 0.1rem solid rgb(111, 118, 104);
-  padding: 4px;
+  padding: 6px;
   border-radius: 3px;
   text-decoration: none;
   font-size: 2rem;
   letter-spacing: 3px;
   color: white;
+  height: 2rem;
+  width: 5rem;
 }
 
 .planets__NAV:hover {
+  font-family: equinox-bold;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
+
   background-color: rgb(92, 59, 59);
 }
 
 .people__NAV:hover {
+  font-family: equinox-bold;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
+
   background-color: rgb(92, 59, 59);
 }
 
 .vehicles__NAV:hover {
+  font-family: equinox-bold;
+  box-shadow: 1px 1px 1px 1px gray;
+
   background-color: rgb(92, 59, 59);
 }
 
 .navigation_bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+  animation: bazinga;
+  position: sticky;
+  top: 0;
 }
 
 .pressed {
   background: purple;
+}
+
+a {
+  width: 5rem;
 }
