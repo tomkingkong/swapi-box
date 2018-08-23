@@ -4,8 +4,10 @@ import { ContentCard } from "./index";
 
 describe("ContentCard", () => {
   let wrapper;
-  let mockData;
-  let toggleFavorites;
+  let mockPersonData;
+  let mockPlanetData;
+  let mockVehicleData;
+  let mockToggleFavorites;
 
   beforeEach(() => {
     mockData = {name: "Luke Skywalker", species: "Human", homeworld: "Tatooine", population: "200000", favorite: false}
