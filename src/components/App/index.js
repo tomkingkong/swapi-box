@@ -89,7 +89,7 @@ class App extends Component {
 
     if (boolean && (pageCount === "" || pageCount === 1)) {
       pageCount = 2;
-    } else if (!boolean && pageCount === 2) {
+    } else if (!boolean && (pageCount === 2 || pageCount === 1)) {
       pageCount = "";
     } else if (boolean) {
       pageCount++;
@@ -117,7 +117,7 @@ class App extends Component {
 
   setFavoritesFromStorage = () => {
     if (localStorage.getItem("favorites")) {
-      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const favorites = JSON.parse(localStorage.getItem("favorites"));
       this.setState({ favorites });
     }
     return;

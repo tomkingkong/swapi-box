@@ -1,17 +1,11 @@
 import React from "react";
 
-import NavBar from "../Navigation/NavBar";
-import ContentRoute from "../Navigation/ContentRoute";
-import { FetchApi } from "../Fetch/FetchApi";
-import BackgroundScroll from "../BackgroundScroll";
 import App from "./index.js";
-import { mockPeople } from "../../MockData/MockPeople";
+import { mockPeople } from "../../MockData/MockData";
 
 describe("App", () => {
   let wrapper;
   let mockEvent;
-  let mockResults;
-  let FetchApi;
 
   beforeEach(async () => {
     localStorage.clear();
@@ -23,30 +17,16 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot with background scroll in state ", () => {
+    const backgroundFilm = {dont: 'stop'}
+    wrapper.setState({backgroundFilm})
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe("getData", () => {
     beforeEach(() => {
       wrapper = shallow(<App />);
       mockEvent = { target: { name: "people" } };
-      mockResults = [
-        {
-          name: "Luke Skywalker",
-          species: "Human",
-          homeworld: "Tatooine",
-          population: "200000"
-        },
-        {
-          name: "C-3PO",
-          species: "Droid",
-          homeworld: "Tatooine",
-          population: "200000"
-        },
-        {
-          name: "R2-D2",
-          species: "Droid",
-          homeworld: "Naboo",
-          population: "4500000000"
-        }
-      ];
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           json: () => Promise.resolve(mockPeople)
@@ -102,11 +82,116 @@ describe("App", () => {
       expect(wrapper.state("people").length).toEqual(10);
     });
 
-    describe();
-    it.skip("should ", () => {});
+    describe('setRandomFilm', () => {
+      it.skip("should be called on componentDidMount", async () => {
+        wrapper = shallow(<App />);
+        let setRandomFilm = wrapper.instance().setRandomFilm
+        setRandomFilm = jest.fn()
+        await wrapper.instance().componentDidMount()
+        expect(setRandomFilm).toHaveBeenCalled()
+      });
 
-    // it.skip("should ", () => {});
+      it("should set state backgroundFilm of single film from the films array in state", () => {
+        wrapper = shallow(<App />);
+        const films = [{},{},{}]
+        wrapper.setState({ films })
+        wrapper.instance().setRandomFilm()
+        expect(wrapper.state('backgroundFilm')).toEqual({})
+      });
 
-    // it.skip("should ", () => {});
+      it("should return if films array in state is null", () => {
+        wrapper = shallow(<App />);
+        const films = null
+        wrapper.setState({ films })
+        wrapper.instance().setRandomFilm()
+        expect(wrapper.state('backgroundFilm')).toEqual(null)
+      });
+    });
+
+    describe('setButtonPressed', () => {
+      it("should take a string and set activeButton state", () => {
+        wrapper = shallow(<App />);
+        wrapper.instance().setButtonPressed('people')
+        expect(wrapper.state('activeButton')).toEqual('people')
+      });
+    });
+
+      describe('handleFavorites and toggleFavorites and setFavoritesFromStorage', () => {
+        let favorites;
+        beforeEach(() => {
+          wrapper = shallow(<App />);
+          favorites = [{name: 'one', favorite: true}, {name: 'two', favorite: true}, {name: 'three', favorite: true}]
+        })
+
+        it("toggleFavorites should toggle card's favorite property ", () => {
+          const mockCard = {favorite: false}
+          wrapper.instance().toggleFavorites(mockCard)
+          expect(mockCard.favorite).toEqual(true)
+        });
+
+        it("handleFavorites should add a card to favorites array in state ", () => {
+          const mockCard = {name: 'four', favorite: true}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          expect(wrapper.state('favorites').length).toEqual(4);
+        });
+
+        it("handleFavorites should remove a card to favorites array in state ", () => {
+          const mockCard = {name: 'three', favorite: false}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          expect(wrapper.state('favorites').length).toEqual(2);
+        });
+
+        it("handleFavorites should update localStorage with a new favorites array ", () => {
+          const mockCard = {name: 'four', favorite: true}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          const expected = JSON.parse(localStorage.getItem('favorites')).length;
+          expect(expected).toEqual(4);
+        });
+
+        it("setFavoritesFromStorage retreive favorites from localStorage and set to state", () => {
+          localStorage.setItem('favorites', JSON.stringify(favorites))
+          wrapper.instance().setFavoritesFromStorage();
+          let expected = JSON.parse(localStorage.getItem('favorites')).length
+          expect(expected).toEqual(3);
+        });
+
+        it("setFavoritesFromStorage should return if favorites from localStorage does not exist", () => {
+          favorites = ['NOTHING HERE']
+          wrapper.setState({ favorites });
+          wrapper.instance().setFavoritesFromStorage();
+          expect(wrapper.state('favorites')).toEqual(['NOTHING HERE']);
+        });
+      });
+
+      describe('handlePage', () => {
+        it("should increment state's pageCount by one", () => {
+          wrapper = shallow(<App />);
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2);
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(3);
+        });
+
+        it("should decrement state's pageCount by one if pageCounter not the first page", () => {
+          wrapper = shallow(<App />);
+          
+          wrapper.instance().handlePage(true);
+          expect(wrapper.state('pageCounter')).toEqual(2);
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');
+
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual('');
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(true);
+          wrapper.instance().handlePage(false);
+          expect(wrapper.state('pageCounter')).toEqual(3);
+        });
+
+      });
   });
 });
