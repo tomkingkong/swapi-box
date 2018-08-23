@@ -1,4 +1,4 @@
-import { FetchApi } from './FetchApi.js'
+import { FetchApi, fetchSpecific, fetchResidents } from './FetchApi.js'
 
 describe('FetchApi', () => {
   let mockResults;
