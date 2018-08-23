@@ -99,6 +99,14 @@ describe("App", () => {
         expect(wrapper.state('backgroundFilm')).toEqual({})
       });
 
-    // it.skip("should ", () => {});
+      it("should return if films array in state is null", () => {
+        wrapper = shallow(<App />);
+        const films = null
+        wrapper.setState({ films })
+        wrapper.instance().setRandomFilm()
+        expect(wrapper.state('backgroundFilm')).toEqual(null)
+      });
+    });
+
   });
 });
