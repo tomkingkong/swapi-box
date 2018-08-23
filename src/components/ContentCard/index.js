@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./ContentCard.css";
 
 export const ContentCard = ({ card, toggleFavorites }) => {
+  console.log(card);
   const content = Object.keys(card).map((key, index) => {
     if (key !== "favorite") {
       return key === "name" ? (
@@ -24,7 +25,9 @@ export const ContentCard = ({ card, toggleFavorites }) => {
   );
 };
 
-// ContentCard.propTypes = {
-//   card: ProptTypes.object, 
-//   toggleFavorites: PropTypes.func
-// }
+const { object, func } = PropTypes;
+
+ContentCard.propTypes = {
+  card: object,
+  toggleFavorites: func
+};

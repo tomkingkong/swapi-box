@@ -12,6 +12,7 @@ export const ContentRoute = ({
   favorites,
   handlePage
 }) => {
+  console.log(favorites);
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
     <Switch>
@@ -73,11 +74,38 @@ export const ContentRoute = ({
   );
 };
 
+const { arrayOf, object, func, string, bool, shape } = PropTypes;
+
 ContentRoute.propTypes = {
-  people: PropTypes.array,
-  planets: PropTypes.array,
-  vehicles: PropTypes.array,
-  favorites: PropTypes.array,
-  handlePage: PropTypes.func,
-  toggleFavorites: PropTypes.func
-}
+  planets: arrayOf(
+    shape({
+      climate: string,
+      favorite: bool,
+      name: string,
+      populaton: string,
+      residents: arrayOf(object),
+      terrain: string
+    })
+  ),
+  people: arrayOf(
+    shape({
+      favorite: bool,
+      homeworld: string,
+      name: string,
+      population: string,
+      species: string
+    })
+  ),
+  vehicles: arrayOf(
+    shape({
+      class: string,
+      favorite: bool,
+      model: string,
+      name: string,
+      numberof_passengers: string
+    })
+  ),
+  favorites: arrayOf(object),
+  handlePage: func,
+  toggleFavorites: func
+};

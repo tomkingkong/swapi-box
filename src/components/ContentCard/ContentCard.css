@@ -1,9 +1,13 @@
 h1 {
   color: white;
+  animation: bazinga 0.7s ease-in;
 }
 
 p {
   color: antiquewhite;
+  font-family: equinox-bold;
+  animation: bazinga 1.5s ease-out;
+  animation: bazinga 1.5s ease-in;
 }
 
 .content_card {
@@ -13,4 +17,13 @@ p {
 
 .favorite {
   background-color: aqua;
+}
+
+@keyframes bazinga {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

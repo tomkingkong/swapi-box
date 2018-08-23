@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Navigation.css";
 
 export const NavBar = ({ getData, pressed, favorites }) => {
-
+  console.log(favorites);
   return (
     <div className="navigation_bar">
       <div className="planets__CONTAINER">
@@ -56,22 +56,22 @@ export const NavBar = ({ getData, pressed, favorites }) => {
           Favorites: {favorites.length}
         </NavLink>
       </div>
-      <div className="next_page__CONTAINER">
-        <NavLink
-          className={
-            pressed === "favorites"
-              ? "favorites__NAV pressed"
-              : "favorites__NAV"
-          }
-          to="/favorites"
-        />
-      </div>
     </div>
   );
 };
 
+const { func, string, shape, arrayOf, bool } = PropTypes;
+
 NavBar.propTypes = {
-  getData: PropTypes.func, 
-  pressed: PropTypes.string, 
-  favorites: PropTypes.array
+  getData: func,
+  pressed: string,
+  favorites: arrayOf(
+    shape({
+      class: string,
+      favorite: bool,
+      model: string,
+      name: string,
+      numberof_passengers: string
+    })
+  )
 };

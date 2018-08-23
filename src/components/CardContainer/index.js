@@ -9,7 +9,8 @@ export const CardContainer = ({
   savedFavorites,
   handlePage
 }) => {
-  if (!data) return <section>nada</section>;
+  console.log(savedFavorites);
+  if (!data) return <section img src="../../images/BattleFront.jpg" />;
   const cards = data.map((card, index) => {
     card.favorite = savedFavorites.includes(card.name);
     return (
@@ -20,15 +21,24 @@ export const CardContainer = ({
   return (
     <section className="card_container">
       {cards && cards}
-      <button onClick={() => handlePage(false)}>Previous Page</button>
-      <button onClick={() => handlePage(true)}>Next Page</button>
+      <button
+        className="previous-page-button"
+        onClick={() => handlePage(false)}
+      >
+        Previous Page
+      </button>
+      <button className="next-page-button" onClick={() => handlePage(true)}>
+        Next Page
+      </button>
     </section>
   );
 };
 
+const { arrayOf, func, object, string } = PropTypes;
+
 CardContainer.propTypes = {
-  data: PropTypes.array,
-  savedFavorites: PropTypes.array,
-  toggleFavorites: PropTypes.func,
-  handlePage: PropTypes.func
-}
+  data: arrayOf(object),
+  savedFavorites: arrayOf(string),
+  toggleFavorites: func,
+  handlePage: func
+};

@@ -20,7 +20,9 @@ class App extends Component {
       errorStatus: ""
     };
   }
-
+  componentDidUpdate() {
+    this.state.pageCounter;
+  }
   async componentDidMount() {
     const backgroundScroll = { target: { name: "films" } };
     await this.getData(backgroundScroll);
@@ -97,6 +99,18 @@ class App extends Component {
       return;
     }
 
+    // if (boolean && (pageCount === "" || pageCount === 1)) {
+    //   pageCount = 2;
+    // } else if (!boolean && pageCount === 2) {
+    //   pageCount = "";
+    // } else if (boolean) {
+    //   pageCount++;
+    // } else if (!boolean && pageCount >= 1) {
+    //   pageCount--;
+    // } else {
+    //   return;
+    // }
+
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
@@ -120,7 +134,7 @@ class App extends Component {
     } = this.state;
 
     return (
-      <div className="App">
+      <div className={activeButton}>
         <h1 className="App__TITLE">SWAPI BOX</h1>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
