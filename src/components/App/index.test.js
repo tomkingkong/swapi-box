@@ -17,6 +17,12 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot with background scroll in state ", () => {
+    const backgroundFilm = {dont: 'stop'}
+    wrapper.setState({backgroundFilm})
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe("getData", () => {
     beforeEach(() => {
       wrapper = shallow(<App />);
