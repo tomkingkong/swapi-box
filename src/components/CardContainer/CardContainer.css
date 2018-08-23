@@ -12,8 +12,7 @@
 
 .previous-page-button,
 .next-page-button {
-  position: absolute;
-  top: 4rem;
+  top: 1rem;
   opacity: 0.8rem;
   cursor: pointer;
 }
