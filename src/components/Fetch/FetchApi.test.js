@@ -41,11 +41,11 @@ describe("FetchApi", () => {
   describe("fetchSpecific", () => {
     it("returns a person object people when provided person type and result from fetch", async () => {
       const initialFetch = await fetchSpecific("people", mockResultsPerson);
-      const expectedObjectPromise = { 
+      const expectedObjectPromise = {
         name: "Luke Skywalker",
         species: undefined,
         homeworld: undefined,
-        population: undefined 
+        population: undefined
       };
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
@@ -64,7 +64,7 @@ describe("FetchApi", () => {
 
     it("returns a vehicle object people when provided vehicle type and result from fetch", async () => {
       const initialFetch = await fetchSpecific("vehicles", mockResultVehicle);
-      const expectedObjectPromise = { 
+      const expectedObjectPromise = {
         name: "Sand Crawler",
         model: "Digger Crawler",
         class: "wheeled",
@@ -74,23 +74,40 @@ describe("FetchApi", () => {
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
 
-    it.skip('returns a film object people when provided film type and result from fetch', async () => {
-      const initialFetch = await fetchSpecific('films', mockResultFilm);
-      const expectedObjectPromise = {};
+    it("returns a film object people when provided film type and result from fetch", async () => {
+      const initialFetch = await fetchSpecific("films", mockResultFilm);
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () => Promise.resolve(mockResultFilm)
+        });
+      });
 
-      expect(initialFetch).toEqual(expectedObjectPromise);
+      const expectedFilmPromise = {
+        title: "A New Hope",
+        openingCrawl: "It is a period of civil war.",
+        episode: 4,
+        releaseDate: "1977-05-25"
+      };
+      expect(initialFetch).toEqual(expectedFilmPromise);
     });
-  })
-  
-  describe('fetchResidents', () => {
-    it('should take a url and fetch residents array', async () => {
+
+    it("returns undefined if given an invalid type", async () => {
+      let expected = await Promise.resolve(fetchSpecific("stuff", {}));
+      expect(expected).toEqual(undefined);
+    });
+  });
+
+  describe("fetchResidents", () => {
+    it("should take a url and fetch residents array", async () => {
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
           json: () => Promise.resolve(mockResultResident)
-        })
-      })
-      const initialFetch = await fetchResidents('https://swapi.co/api/people/5/');
+        });
+      });
+      const initialFetch = await fetchResidents(
+        "https://swapi.co/api/people/5/"
+      );
       expect(initialFetch).toEqual(mockResultResident);
     });
-  })
-})
+  });
+});
