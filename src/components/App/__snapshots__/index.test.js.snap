@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App should match snapshot with background scroll in state  1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="App__TITLE"
+  >
+    SWAPI BOX
+  </h1>
+  <Component
+    dont="stop"
+  />
+  <Component
+    activeButton="films"
+    favorites={Array []}
+    getData={[Function]}
+    pressed="films"
+  />
+  <Component
+    favorites={Array []}
+    handlePage={[Function]}
+    people={null}
+    planets={null}
+    toggleFavorites={[Function]}
+    vehicles={null}
+  />
+</div>
+`;
+
 exports[`App should match snapshot with default states 1`] = `
 <div
   className="App"
