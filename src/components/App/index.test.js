@@ -123,5 +123,10 @@ describe("App", () => {
           favorites = [{name: 'one', favorite: true}, {name: 'two', favorite: true}, {name: 'three', favorite: true}]
         })
 
+        it("toggleFavorites should toggle card's favorite property ", () => {
+          const mockCard = {favorite: false}
+          wrapper.instance().toggleFavorites(mockCard)
+          expect(mockCard.favorite).toEqual(true)
+        });
   });
 });
