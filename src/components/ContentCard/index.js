@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./ContentCard.css";
 
 export const ContentCard = ({ card, toggleFavorites }) => {
-  console.log(card);
   const content = Object.keys(card).map((key, index) => {
     if (key !== "favorite") {
       return key === "name" ? (
