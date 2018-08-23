@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 
 .App {
+  grid-template-rows: 2fr 1fr 7fr;
 }
 
 .App__TITLE {
@@ -12,4 +13,30 @@
   margin: 2rem auto;
   padding: 1rem;
   width: 16.5rem;
+}
+
+.planets {
+  background-image: url(../../images/BattleFront.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 1rem;
+}
+
+.people {
+  background: #000 url(../../images/sw-people.jpg);
+  background-size: 100rem;
+  background-repeat: no-repeat;
+}
+
+.vehicles {
+  background-image: url(../../images/star-wars-droid.jpg);
+  background-repeat: no-repeat;
+  background-size: 100rem;
+
+  background-position: center;
+
+  border-radius: 10px;
+}
+
+body {
+  background-color: #171717;
 }
