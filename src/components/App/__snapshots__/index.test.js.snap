@@ -2,7 +2,7 @@
 
 exports[`App should match snapshot with background scroll in state  1`] = `
 <div
-  className="App"
+  className="films"
 >
   <h1
     className="App__TITLE"
@@ -16,7 +16,6 @@ exports[`App should match snapshot with background scroll in state  1`] = `
     activeButton="films"
     favorites={Array []}
     getData={[Function]}
-    pressed="films"
   />
   <Component
     favorites={Array []}
@@ -31,7 +30,7 @@ exports[`App should match snapshot with background scroll in state  1`] = `
 
 exports[`App should match snapshot with default states 1`] = `
 <div
-  className="App"
+  className="films"
 >
   <h1
     className="App__TITLE"
@@ -42,7 +41,6 @@ exports[`App should match snapshot with default states 1`] = `
     activeButton="films"
     favorites={Array []}
     getData={[Function]}
-    pressed="films"
   />
   <Component
     favorites={Array []}
