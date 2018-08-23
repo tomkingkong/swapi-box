@@ -10,8 +10,41 @@ describe("ContentCard", () => {
   let mockToggleFavorites;
 
   beforeEach(() => {
-    mockData = {name: "Luke Skywalker", species: "Human", homeworld: "Tatooine", population: "200000", favorite: false}
-    toggleFavorites = jest.fn()
+    mockPersonData = {
+      name: "Luke Skywalker",
+      species: "Human",
+      homeworld: "Tatooine",
+      population: "200000",
+      favorite: false
+    };
+
+    mockPlanetData = {
+      climate: "temperate",
+      favorite: false,
+      name: "Alderaan",
+      populaton: "2000000000",
+      residents: ["Leia Organa", "Bail Prestor Organa", "Raymus Antilles"],
+      terrain: "grasslands, mountains"
+    };
+
+    mockVehicleData = {
+      name: "Sand Crawler",
+      model: "Digger Crawler",
+      class: "wheeled",
+      numberof_passengers: "30",
+      favorite: false
+    };
+
+    mockToggleFavorites = jest.fn();
+
+    wrapper = shallow(
+      <ContentCard
+        key={0}
+        card={mockPersonData}
+        toggleFavorites={mockToggleFavorites}
+      />
+    );
+  });
 
     wrapper = shallow(
     <ContentCard 
