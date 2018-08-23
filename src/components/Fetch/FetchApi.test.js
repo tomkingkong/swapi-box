@@ -32,6 +32,7 @@ describe('FetchApi', () => {
 
     await expect(FetchApi('people', '')).rejects.toEqual(expected)
   });
+  describe('fetchSpecific', () => {
   });
   describe('fetchResidents', () => {
     it('should take a url and fetch residents array', async () => {
