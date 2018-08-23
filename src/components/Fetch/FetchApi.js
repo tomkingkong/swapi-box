@@ -10,7 +10,7 @@ export const FetchApi = async (type, page = "") => {
   const url = `https://swapi.co/api/${type}/?page=${newPage}`;
   const response = await fetch(url);
   const fetchResponse = await response.json();
-  const { results, next, previous } = fetchResponse;
+  const { results } = fetchResponse;
 
   const dataResults = results.map(result => {
     return fetchSpecific(type, result);
@@ -19,7 +19,7 @@ export const FetchApi = async (type, page = "") => {
   return await Promise.all(dataResults);
 };
 
-const fetchSpecific = async (type, result) => {
+export const fetchSpecific = async (type, result) => {
   let compiledData;
   switch (type) {
     case "films":
@@ -54,20 +54,8 @@ const fetchSpecific = async (type, result) => {
   return compiledData;
 };
 
-const fetchResidents = async url => {
+export const fetchResidents = async url => {
   const response = await fetch(url);
   const resident = await response.json();
   return resident;
 };
-
-// const FetchNextPage = async (url, prevResults) => {
-//   let nextUrl = url;
-//   const response = await axios.get(url);
-//   const { next, results } = response.data;
-//   const data = [...prevResults, results];
-//   if (next) {
-//     nextUrl = next;
-//     FetchNextPage(nextUrl, data);
-//   }
-//   return data;
-// };
