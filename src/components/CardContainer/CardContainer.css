@@ -12,18 +12,43 @@
 
 .previous-page-button,
 .next-page-button {
-  position: absolute;
-  top: 4rem;
+  top: 1rem;
   opacity: 0.8rem;
   cursor: pointer;
 }
 
 .next-page-button {
-  right: 10rem;
+  background: url("../../Icons/red-saber.svg") no-repeat center / 25%;
+  /* animation: spin 1s linear; */
+  border: none;
+  height: 8rem;
+  width: 10rem;
+  position: fixed;
+  top: 30rem;
+  right: 1rem;
+
+  /* animation: spin 0.5s ease-in-out; */
+}
+
+.next-page-button:hover {
+  transform: rotate(45deg);
+  transition: all 0.5s linear;
 }
 
 .previous-page-button {
-  left: 10rem;
+  background: url("../../Icons/green-saber.svg") no-repeat center / 25%;
+  border: none;
+  height: 8rem;
+  width: 10rem;
+  position: fixed;
+  top: 30rem;
+  left: 1rem;
+  transform: rotate(-90deg);
+}
+
+.previous-page-button:hover {
+  transform: rotate(-135deg);
+  transition: all 0.5s linear;
 }
 
 @keyframes bazinga {

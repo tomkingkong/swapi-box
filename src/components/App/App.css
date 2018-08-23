@@ -18,7 +18,7 @@
 .planets {
   background-image: url(../../images/BattleFront.jpg);
   background-repeat: no-repeat;
-  background-position-y: 1rem;
+  background-position-y: rem;
 }
 
 .people {

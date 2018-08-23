@@ -20,9 +20,7 @@ class App extends Component {
       errorStatus: ""
     };
   }
-  componentDidUpdate() {
-    this.state.pageCounter;
-  }
+
   async componentDidMount() {
     const backgroundScroll = { target: { name: "films" } };
     await this.getData(backgroundScroll);
@@ -87,24 +85,25 @@ class App extends Component {
     const pageContent = { target: { name: activeButton } };
     let pageCount = pageCounter;
 
-    switch(boolean) {
-      case true:
-      !pageCount ? pageCount = 2 : pageCount++
-      break;
-      case false:
-      pageCount > 1 ?  pageCount--  : pageCount = ""
-      break;
-      default:
-      return
+    if (boolean && (pageCount === "" || pageCount === 1)) {
+      pageCount = 2;
+    } else if (!boolean && pageCount === 2) {
+      pageCount = "";
+    } else if (boolean) {
+      pageCount++;
+    } else if (!boolean && pageCount >= 1) {
+      pageCount--;
+    } else {
+      return;
     }
-    
+
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
 
   setFavoritesFromStorage = () => {
     if (localStorage.getItem("favorites")) {
-      const favorites = JSON.parse(localStorage.getItem("favorites"));
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
       this.setState({ favorites });
     }
     return;
@@ -126,8 +125,9 @@ class App extends Component {
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}
-          activeButton={activeButton}
+          pressed={activeButton}
           favorites={favorites}
+          activeButton={activeButton}
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}

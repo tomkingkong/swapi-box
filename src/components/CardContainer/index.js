@@ -9,7 +9,6 @@ export const CardContainer = ({
   savedFavorites,
   handlePage
 }) => {
-  console.log(savedFavorites);
   if (!data) return <section img src="../../images/BattleFront.jpg" />;
   const cards = data.map((card, index) => {
     card.favorite = savedFavorites.includes(card.name);
@@ -24,12 +23,8 @@ export const CardContainer = ({
       <button
         className="previous-page-button"
         onClick={() => handlePage(false)}
-      >
-        Previous Page
-      </button>
-      <button className="next-page-button" onClick={() => handlePage(true)}>
-        Next Page
-      </button>
+      />
+      <button className="next-page-button" onClick={() => handlePage(true)} />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import {
   peopleScrape,
   planetScrape,
   vehicleScrape
-} from "./DataCleaner";
+} from "../DataCleaner/DataCleaner";
 
 export const FetchApi = async (type, page = "") => {
   const newPage = page;
@@ -15,7 +15,6 @@ export const FetchApi = async (type, page = "") => {
   const dataResults = results.map(result => {
     return fetchSpecific(type, result);
   });
-
   return await Promise.all(dataResults);
 };
 
@@ -51,7 +50,7 @@ export const fetchSpecific = async (type, result) => {
       compiledData = vehicleObj;
       break;
     default:
-    return
+      return undefined;
   }
   return compiledData;
 };
