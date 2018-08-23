@@ -38,27 +38,14 @@
 
 
 @media only screen and (max-width: 400px) {
-.navigation_bar {
-  display: flex;
+  .navigation_bar {
+    display: flex;
     flex-direction: column;
+  }
+  .CONTAINER {
+    margin: 0.5rem 0;
+  }
+  .NAV {
+    padding-right: 20vw;
+  }
 }
-
-.pressed {
-  background: purple;
-}
-
-a {
-  width: 5rem;
-}
-
-.planets__CONTAINER,
-.people__CONTAINER,
-.vehicles__CONTAINER,
-.favorites__CONTAINER {
-  margin: 1rem 0;
-}
-
-/* .people__CONTAINER {
-}
-.vehicles__CONTAINER {
-} */
