@@ -19,7 +19,7 @@
 
 .next-page-button {
   background: url("../../Icons/red-saber.svg") no-repeat center / 25%;
-
+  /* animation: spin 1s linear; */
   border: none;
   height: 8rem;
   width: 10rem;
@@ -27,7 +27,7 @@
   top: 30rem;
   right: 1rem;
 
-
+  /* animation: spin 0.5s ease-in-out; */
 }
 
 .next-page-button:hover {
