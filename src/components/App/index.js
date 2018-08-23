@@ -96,7 +96,7 @@ class App extends Component {
       !pageCount ? pageCount = 2 : pageCount++
       break;
       case false:
-      pageCount > 1 ?  pageCount--  : pageCount = ""
+      pageCount > 2 ?  pageCount--  : pageCount = ""
       break;
       default:
       return
