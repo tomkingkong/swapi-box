@@ -44,6 +44,19 @@ describe('FetchApi', () => {
       }
       expect(initialFetch).toEqual(expectedObjectPromise);
     });
+
+    it('returns a planet object people when provided planet type and result from fetch', async () => {
+      const initialFetch = await fetchSpecific('planets', mockResultPlanet);
+      const expectedObjectPromise = {
+        name: 'Alderaan',
+        populaton: '2000000000',
+        terrain: 'grasslands, mountains',
+        climate: 'temperate',
+        residents: [ undefined, undefined, undefined ] 
+      }
+      expect(initialFetch).toEqual(expectedObjectPromise);
+    });
+
   });
   describe('fetchResidents', () => {
     it('should take a url and fetch residents array', async () => {
