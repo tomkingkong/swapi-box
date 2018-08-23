@@ -33,4 +33,15 @@ describe('FetchApi', () => {
     await expect(FetchApi('people', '')).rejects.toEqual(expected)
   });
   });
+  describe('fetchResidents', () => {
+    it('should take a url and fetch residents array', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () => Promise.resolve(mockResultResident)
+        })
+      })
+      const initialFetch = await fetchResidents('https://swapi.co/api/people/5/');
+      expect(initialFetch).toEqual(mockResultResident);
+    });
+  })
 })
