@@ -109,5 +109,11 @@ describe("App", () => {
     });
 
     describe('setButtonPressed', () => {
+      it("should take a string and set activeButton state", () => {
+        wrapper = shallow(<App />);
+        wrapper.instance().setButtonPressed('people')
+        expect(wrapper.state('activeButton')).toEqual('people')
+      });
+    });
   });
 });
