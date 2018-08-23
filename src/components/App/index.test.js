@@ -136,5 +136,12 @@ describe("App", () => {
           expect(wrapper.state('favorites').length).toEqual(4);
         });
 
+        it("handleFavorites should remove a card to favorites array in state ", () => {
+          const mockCard = {name: 'three', favorite: false}
+          wrapper.setState({ favorites });
+          wrapper.instance().handleFavorites(mockCard);
+          expect(wrapper.state('favorites').length).toEqual(2);
+        });
+
   });
 });
