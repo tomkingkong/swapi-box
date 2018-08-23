@@ -46,6 +46,11 @@ describe("ContentCard", () => {
     );
   });
 
+  it("should match snapshot with people data object passed", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match snapshot with planet data object passed", () => {
     wrapper = shallow(
     <ContentCard 
       key={0} 
