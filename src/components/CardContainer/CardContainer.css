@@ -1,20 +1,16 @@
 .card_container {
   display: flex;
   flex-wrap: wrap;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
   justify-content: center;
-  animation: bazinga 1.5s ease-in;
-  animation: bazinga 1.5s ease-out;
-  margin: auto;
-  width: 50rem;
+  width: 100%;
 }
 
 .previous-page-button,
 .next-page-button {
-  top: 1rem;
-  opacity: 0.8rem;
   cursor: pointer;
+  position: absolute;
+  opacity: 0.8rem;
+  top: 4rem;
 }
 
 .next-page-button {

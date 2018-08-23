@@ -121,8 +121,10 @@ class App extends Component {
     } = this.state;
 
     return (
-      <div className={activeButton}>
-        <h1 className="App__TITLE">SWAPI BOX</h1>
+      <div className={`${activeButton} App`}>
+        <header className="App__TITLE">
+          <h1>SWAPI BOX</h1>
+        </header>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}

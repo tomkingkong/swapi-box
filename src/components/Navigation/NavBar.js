@@ -3,16 +3,14 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Navigation.css";
 
-export const NavBar = ({ getData, activeButton, favorites }) => {
+export const NavBar = ({ getData, favorites }) => {
 
   return (
     <div className="navigation_bar">
-      <div className="planets__CONTAINER">
+      <div className="CONTAINER">
         <NavLink
+          className="NAV"
           name="planets"
-          className={
-            activeButton === "planets" ? "planets__NAV pressed" : "planets__NAV"
-          }
           exact
           to="/planets"
           onClick={getData}
@@ -20,40 +18,32 @@ export const NavBar = ({ getData, activeButton, favorites }) => {
           planets
         </NavLink>
       </div>
-      <div className="people__CONTAINER">
+      <div className="CONTAINER">
         <NavLink
+          className="NAV"
           name="people"
-          className={
-            activeButton === "people" ? "people__NAV pressed" : "people__NAV"
-          }
           to="/people"
           onClick={getData}
         >
           people
         </NavLink>
       </div>
-      <div className="vehicles__CONTAINER">
+      <div className="CONTAINER">
         <NavLink
+          className="NAV"
           name="vehicles"
-          className={
-            activeButton === "vehicles" ? "vehicles__NAV pressed" : "vehicles__NAV"
-          }
           to="/vehicles"
           onClick={getData}
         >
           vehicles
         </NavLink>
       </div>
-      <div className="favorites__CONTAINER">
+      <div className="CONTAINER">
         <NavLink
-          className={
-            activeButton === "favorites"
-              ? "favorites__NAV pressed"
-              : "favorites__NAV"
-          }
+          className="NAV"
           to="/favorites"
         >
-          Favorites: {favorites.length}
+          favorites {favorites.length}
         </NavLink>
       </div>
     </div>
