@@ -20,10 +20,6 @@ class App extends Component {
       errorStatus: ""
     };
   }
-  
-  componentDidUpdate() {
-    this.state.pageCounter;
-  }
 
   async componentDidMount() {
     const backgroundScroll = { target: { name: "films" } };
@@ -101,14 +97,14 @@ class App extends Component {
       default:
       return
     }
-    
+
     this.setState({ pageCounter: pageCount });
     await this.getData(pageContent, pageCount);
   };
 
   setFavoritesFromStorage = () => {
     if (localStorage.getItem("favorites")) {
-      const favorites = JSON.parse(localStorage.getItem("favorites"));
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
       this.setState({ favorites });
     }
     return;
@@ -130,8 +126,9 @@ class App extends Component {
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
         <NavBar
           getData={this.getData}
-          activeButton={activeButton}
+          pressed={activeButton}
           favorites={favorites}
+          activeButton={activeButton}
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
