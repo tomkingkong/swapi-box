@@ -1,4 +1,5 @@
 import { FetchApi, fetchSpecific, fetchResidents } from './FetchApi.js'
+import { mockPeople, mockResultPlanet, mockResultVehicle, mockResultsPerson, mockResultResident } from "../../MockData/MockData";
 
 describe('FetchApi', () => {
   let mockResults;
