@@ -87,15 +87,15 @@ class App extends Component {
     const pageContent = { target: { name: activeButton } };
     let pageCount = pageCounter;
 
-    switch(boolean) {
+    switch (boolean) {
       case true:
-      !pageCount ? pageCount = 2 : pageCount++
+        !pageCount ? pageCount = 2 : pageCount++;
       break;
       case false:
-      pageCount > 2 ?  pageCount--  : pageCount = ""
+        pageCount > 2 ?  pageCount--  : pageCount = "";
       break;
       default:
-      return
+        return;
     }
 
     this.setState({ pageCounter: pageCount });
