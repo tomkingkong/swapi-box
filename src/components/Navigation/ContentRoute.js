@@ -32,41 +32,6 @@ export const ContentRoute = ({
           );
         }}
       />
-      <Route
-        exact
-        path="/people"
-        render={() => (
-          <CardContainer
-            data={people}
-            handlePage={handlePage}
-            toggleFavorites={toggleFavorites}
-            savedFavorites={savedFavorites}
-          />
-        )}
-      />
-      <Route
-        exact
-        path="/vehicles"
-        render={() => (
-          <CardContainer
-            data={vehicles}
-            handlePage={handlePage}
-            toggleFavorites={toggleFavorites}
-            savedFavorites={savedFavorites}
-          />
-        )}
-      />
-      <Route
-        exact
-        path="/favorites"
-        render={() => (
-          <CardContainer
-            data={favorites}
-            toggleFavorites={toggleFavorites}
-            savedFavorites={savedFavorites}
-          />
-        )}
-      />
     </Switch>
   );
 };
