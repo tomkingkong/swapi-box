@@ -35,11 +35,12 @@ export const CardContainer = ({
   );
 };
 
-const { arrayOf, func, object, string } = PropTypes;
+const { arrayOf, func, object, string, bool } = PropTypes;
 
 CardContainer.propTypes = {
   data: arrayOf(object),
   savedFavorites: arrayOf(string),
   toggleFavorites: func,
-  handlePage: func
+  handlePage: func,
+  isFavorites: bool
 };
