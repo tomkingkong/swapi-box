@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.favorites .previous-page-button,
+.favorites .next-page-button { 
+  display: none;
+}
+
 .previous-page-button,
 .next-page-button {
   cursor: pointer;
