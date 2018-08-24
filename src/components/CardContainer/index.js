@@ -24,15 +24,12 @@ export const CardContainer = ({
       return (
         <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
       );
-    })
+  });
 
   return (
-    <section className="card_container">
+    <section className={isFavorites ? "favorites card_container" : "card_container"}>
       {cards && cards}
-      <button
-        className="previous-page-button"
-        onClick={() => handlePage(false)}
-      />
+      <button className="previous-page-button" onClick={() => handlePage(false)} />
       <button className="next-page-button" onClick={() => handlePage(true)} />
     </section>
   );
