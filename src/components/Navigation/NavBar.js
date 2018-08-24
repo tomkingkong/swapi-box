@@ -10,9 +10,8 @@ export const NavBar = ({ getData, favorites }) => {
       <div className="CONTAINER" key={i}>
         <NavLink
           className="NAV"
-          name="planets"
-          exact
-          to="/planets"
+          name={linkType}
+          exact to={`/${linkType}`}
           onClick={getData}
         >
           planets
