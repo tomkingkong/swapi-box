@@ -20,10 +20,10 @@ export const CardContainer = ({
   if (!data) return (<section className="card_container">{}</section>);
   
   const cards = data.map((card, index) => {
-      card.favorite = savedFavorites.includes(card.name);
-      return (
-        <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
-      );
+    card.favorite = savedFavorites.includes(card.name);
+    return (
+      <ContentCard key={index} card={card} toggleFavorites={toggleFavorites} />
+    );
   });
 
   return (
