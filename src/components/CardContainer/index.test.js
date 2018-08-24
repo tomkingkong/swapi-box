@@ -29,6 +29,7 @@ describe("CardContainer", () => {
         handlePage={handlePage}
         toggleFavorites={toggleFavorites}
         savedFavorites={savedFavorites}
+        isFavorites={false}
       />
     );
   });
@@ -45,6 +46,7 @@ describe("CardContainer", () => {
         handlePage={handlePage}
         toggleFavorites={toggleFavorites}
         savedFavorites={savedFavorites}
+        isFavorites={false}
       />
     );
     expect(wrapper).toMatchSnapshot();
