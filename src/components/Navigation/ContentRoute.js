@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import { HomePage } from '../HomePage';
 import { CardContainer } from "../CardContainer";
 
 export const ContentRoute = ({
