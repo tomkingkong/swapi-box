@@ -55,12 +55,12 @@ exports[`NavBar should match snapshot when activeButton is favorites 1`] = `
   className="navigation_bar"
 >
   <div
-    className="planets__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="planets__NAV"
+      className="NAV"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -70,12 +70,12 @@ exports[`NavBar should match snapshot when activeButton is favorites 1`] = `
     </NavLink>
   </div>
   <div
-    className="people__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV"
+      className="NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -84,12 +84,12 @@ exports[`NavBar should match snapshot when activeButton is favorites 1`] = `
     </NavLink>
   </div>
   <div
-    className="vehicles__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="vehicles__NAV"
+      className="NAV"
       name="vehicles"
       onClick={[Function]}
       to="/vehicles"
@@ -98,15 +98,15 @@ exports[`NavBar should match snapshot when activeButton is favorites 1`] = `
     </NavLink>
   </div>
   <div
-    className="favorites__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="favorites__NAV pressed"
+      className="NAV"
       to="/favorites"
     >
-      Favorites: 
+      favorites 
       0
     </NavLink>
   </div>
@@ -118,12 +118,12 @@ exports[`NavBar should match snapshot when activeButton is people 1`] = `
   className="navigation_bar"
 >
   <div
-    className="planets__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="planets__NAV"
+      className="NAV"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -133,12 +133,12 @@ exports[`NavBar should match snapshot when activeButton is people 1`] = `
     </NavLink>
   </div>
   <div
-    className="people__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV pressed"
+      className="NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -147,12 +147,12 @@ exports[`NavBar should match snapshot when activeButton is people 1`] = `
     </NavLink>
   </div>
   <div
-    className="vehicles__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="vehicles__NAV"
+      className="NAV"
       name="vehicles"
       onClick={[Function]}
       to="/vehicles"
@@ -161,15 +161,15 @@ exports[`NavBar should match snapshot when activeButton is people 1`] = `
     </NavLink>
   </div>
   <div
-    className="favorites__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="favorites__NAV"
+      className="NAV"
       to="/favorites"
     >
-      Favorites: 
+      favorites 
       0
     </NavLink>
   </div>
@@ -181,12 +181,12 @@ exports[`NavBar should match snapshot when activeButton is planets 1`] = `
   className="navigation_bar"
 >
   <div
-    className="planets__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="planets__NAV pressed"
+      className="NAV"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -196,12 +196,12 @@ exports[`NavBar should match snapshot when activeButton is planets 1`] = `
     </NavLink>
   </div>
   <div
-    className="people__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV"
+      className="NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -210,12 +210,12 @@ exports[`NavBar should match snapshot when activeButton is planets 1`] = `
     </NavLink>
   </div>
   <div
-    className="vehicles__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="vehicles__NAV"
+      className="NAV"
       name="vehicles"
       onClick={[Function]}
       to="/vehicles"
@@ -224,15 +224,15 @@ exports[`NavBar should match snapshot when activeButton is planets 1`] = `
     </NavLink>
   </div>
   <div
-    className="favorites__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="favorites__NAV"
+      className="NAV"
       to="/favorites"
     >
-      Favorites: 
+      favorites 
       0
     </NavLink>
   </div>
@@ -244,12 +244,12 @@ exports[`NavBar should match snapshot when activeButton is vehicles 1`] = `
   className="navigation_bar"
 >
   <div
-    className="planets__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="planets__NAV"
+      className="NAV"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -259,12 +259,12 @@ exports[`NavBar should match snapshot when activeButton is vehicles 1`] = `
     </NavLink>
   </div>
   <div
-    className="people__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="people__NAV"
+      className="NAV"
       name="people"
       onClick={[Function]}
       to="/people"
@@ -273,12 +273,12 @@ exports[`NavBar should match snapshot when activeButton is vehicles 1`] = `
     </NavLink>
   </div>
   <div
-    className="vehicles__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="vehicles__NAV pressed"
+      className="NAV"
       name="vehicles"
       onClick={[Function]}
       to="/vehicles"
@@ -287,15 +287,15 @@ exports[`NavBar should match snapshot when activeButton is vehicles 1`] = `
     </NavLink>
   </div>
   <div
-    className="favorites__CONTAINER"
+    className="CONTAINER"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="favorites__NAV"
+      className="NAV"
       to="/favorites"
     >
-      Favorites: 
+      favorites 
       0
     </NavLink>
   </div>
