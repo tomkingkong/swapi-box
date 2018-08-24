@@ -5,9 +5,9 @@ import "./Navigation.css";
 
 export const NavBar = ({ getData, favorites }) => {
   const linkTypes = ['planets', 'people', 'vehicles', 'favorites'];
+  const displayNavLinks = linkTypes.map((linkType, i) => {
   return (
-    <div className="navigation_bar">
-      <div className="CONTAINER">
+      <div className="CONTAINER" key={i}>
         <NavLink
           className="NAV"
           name="planets"
@@ -17,35 +17,8 @@ export const NavBar = ({ getData, favorites }) => {
         >
           planets
         </NavLink>
-      </div>
-      <div className="CONTAINER">
-        <NavLink
-          className="NAV"
-          name="people"
-          to="/people"
-          onClick={getData}
-        >
-          people
-        </NavLink>
-      </div>
-      <div className="CONTAINER">
-        <NavLink
-          className="NAV"
-          name="vehicles"
-          to="/vehicles"
-          onClick={getData}
-        >
-          vehicles
-        </NavLink>
-      </div>
-      <div className="CONTAINER">
-        <NavLink
-          className="NAV"
-          to="/favorites"
-        >
-          favorites {favorites.length}
-        </NavLink>
-      </div>
+      </div>);
+  });
     </div>
   );
 };
