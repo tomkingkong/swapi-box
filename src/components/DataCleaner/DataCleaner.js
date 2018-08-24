@@ -34,7 +34,7 @@ export const vehicleScrape = vehicle => {
     name: vehicle.name,
     model: vehicle.model,
     class: vehicle.vehicle_class,
-    numberof_passengers: vehicle.passengers
+    'number of passengers': vehicle.passengers
   };
   return modifiedObj;
 };
