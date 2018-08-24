@@ -17,9 +17,7 @@ export const ContentRoute = ({
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route
-        exact
-        path="/planets"
-        render={() => {
+        exact path={`/${activeButton}`}
           return (
             <CardContainer
               data={planets}
