@@ -16,8 +16,9 @@
 }
 .App__TITLE h1 {
   color: #9c816b;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Cinzel", "STJEDISE", serif;
+  text-align: center;
   margin: 0;
 }
 
