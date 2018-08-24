@@ -66,6 +66,15 @@ describe("CardContainer", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot with favorites and no data", () => {
+    savedFavorites = ["Luke Skywalker"];
+    wrapper = shallow(
+      <CardContainer
+        data={[]}
+        handlePage={handlePage}
+        toggleFavorites={toggleFavorites}
+        savedFavorites={savedFavorites}
+        isFavorites={true}
       />
     );
     expect(wrapper).toMatchSnapshot();
