@@ -52,3 +52,20 @@
   margin: 3rem;
 }
 
+@media only screen and (max-width: 400px) {
+  .card_container {
+    width: 70%;
+  }
+  .previous-page-button,
+  .next-page-button {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .next-page-button {
+    right: 0.5rem;
+  }
+  .previous-page-button {
+    left: 0.5rem;
+  }
+}
