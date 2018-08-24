@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Navigation.css";
 
 export const NavBar = ({ getData, favorites }) => {
-
+  const linkTypes = ['planets', 'people', 'vehicles', 'favorites'];
   return (
     <div className="navigation_bar">
       <div className="CONTAINER">
