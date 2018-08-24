@@ -14,7 +14,7 @@ export const CardContainer = ({
   if (isFavorites && !data.length) { 
     return (
       <section className="card_container">
-        <p className="empty-fav">These are not the favorites you're looking for...</p>
+        <p className="empty-fav">These are not the favorites you are looking for...</p>
       </section>);
   }
   if (!data) return (<section className="card_container">{}</section>);
