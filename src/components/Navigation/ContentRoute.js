@@ -6,9 +6,6 @@ import { HomePage } from '../HomePage';
 import { CardContainer } from "../CardContainer";
 
 export const ContentRoute = ({
-  planets,
-  people,
-  vehicles,
   toggleFavorites,
   favorites,
   handlePage
