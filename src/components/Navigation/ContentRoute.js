@@ -18,6 +18,9 @@ export const ContentRoute = ({
       <Route exact path='/' component={HomePage} />
       <Route
         exact path={`/${activeButton}`}
+        render={({match}) => {
+          const { path } = match;
+          const chosenPath = path.slice(1);
           return (
             <CardContainer
               data={planets}
