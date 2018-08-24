@@ -18,6 +18,9 @@ export const NavBar = ({ getData, favorites }) => {
         </NavLink>
       </div>);
   });
+  return (
+    <div className="navigation_bar">
+      {displayNavLinks}
     </div>
   );
 };
