@@ -23,7 +23,7 @@ export const ContentRoute = ({
           const chosenPath = path.slice(1);
           return (
             <CardContainer
-              data={planets}
+              data={dataType[chosenPath]}
               handlePage={handlePage}
               toggleFavorites={toggleFavorites}
               savedFavorites={savedFavorites}
