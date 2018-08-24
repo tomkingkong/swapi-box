@@ -31,10 +31,9 @@ exports[`ContentCard should match snapshot with Person favorite status true 1`] 
     200000
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
 
@@ -78,10 +77,9 @@ exports[`ContentCard should match snapshot with Person favorite status true 2`] 
     grasslands, mountains
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
 
@@ -116,10 +114,9 @@ exports[`ContentCard should match snapshot with Person favorite status true 3`] 
     30
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
 
@@ -154,10 +151,9 @@ exports[`ContentCard should match snapshot with people data object passed 1`] = 
     200000
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
 
@@ -201,10 +197,9 @@ exports[`ContentCard should match snapshot with planet data object passed 1`] = 
     grasslands, mountains
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
 
@@ -239,9 +234,8 @@ exports[`ContentCard should match snapshot with vehicle data object passed 1`] =
     30
   </p>
   <button
+    className="button"
     onClick={[Function]}
-  >
-    Favorite
-  </button>
+  />
 </article>
 `;
