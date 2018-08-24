@@ -23,6 +23,22 @@
   margin: 0;
 }
 
+.header {
+  color: #c9c0b5;
+  background: rgba(100, 100, 100, 0.623);
+  letter-spacing: 3px;
+  padding: 0.8rem 0;
+  margin: 1rem auto;
+  min-width: 5rem;
+  width: 100%;
+  max-width: 32rem;
+  text-align: center;
+  border-radius: .7rem;
+}
+
+.header h1, .header h4 {
+  margin: 0.2rem;
+}
 .planets {
   background: url(../../images/BattleFront.jpg) no-repeat;
 }
