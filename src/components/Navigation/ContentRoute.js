@@ -8,7 +8,9 @@ import { CardContainer } from "../CardContainer";
 export const ContentRoute = ({
   toggleFavorites,
   favorites,
-  handlePage
+  handlePage,
+  dataType,
+  activeButton
 }) => {
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
