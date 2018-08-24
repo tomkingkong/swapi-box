@@ -15,16 +15,15 @@
   cursor: pointer;
   position: absolute;
   opacity: 0.8rem;
-  top: 4rem;
+  top: 15rem;
+  border: none;
+  height: 8rem;
+  width: 10rem;
 }
 
 .next-page-button {
   background: url("../../Icons/red-saber.svg") no-repeat center / 25%;
-  border: none;
-  height: 8rem;
-  width: 10rem;
   position: fixed;
-  top: 30rem;
   right: 1rem;
 }
 
@@ -35,11 +34,7 @@
 
 .previous-page-button {
   background: url("../../Icons/green-saber.svg") no-repeat center / 25%;
-  border: none;
-  height: 8rem;
-  width: 10rem;
   position: fixed;
-  top: 30rem;
   left: 1rem;
   transform: rotate(-90deg);
 }
