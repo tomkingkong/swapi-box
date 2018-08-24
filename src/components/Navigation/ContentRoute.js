@@ -27,6 +27,7 @@ export const ContentRoute = ({
               handlePage={handlePage}
               toggleFavorites={toggleFavorites}
               savedFavorites={savedFavorites}
+              isFavorites={activeButton === 'favorites'}
             />
           );
         }}
