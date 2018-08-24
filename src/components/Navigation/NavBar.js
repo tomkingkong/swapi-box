@@ -6,9 +6,9 @@ import "./Navigation.css";
 export const NavBar = ({ getData, favorites }) => {
   const linkTypes = ['planets', 'people', 'vehicles', 'favorites'];
   const displayNavLinks = linkTypes.map((linkType, i) => {
-  return (
+    return (
       <div className="CONTAINER" key={i}>
-        <NavLink
+        <NavLink 
           className="NAV"
           name={linkType}
           exact to={`/${linkType}`}
