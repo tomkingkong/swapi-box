@@ -67,7 +67,7 @@ describe("DataCleaner", () => {
       class: "wheeled",
       model: "Digger Crawler",
       name: "Sand Crawler",
-      numberof_passengers: "30"
+      'number of passengers': "30"
     };
     const modifiedVehicleObject = vehicleScrape(mockResultData);
     expect(modifiedVehicleObject).toEqual(expected);
