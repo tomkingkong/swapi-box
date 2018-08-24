@@ -134,9 +134,6 @@ class App extends Component {
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
-          people={people}
-          planets={planets}
-          vehicles={vehicles}
           dataType={{people, planets, vehicles, favorites}}
           favorites={favorites}
           handlePage={this.handlePage}
