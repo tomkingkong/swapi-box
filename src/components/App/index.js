@@ -90,10 +90,10 @@ class App extends Component {
     switch (boolean) {
       case true:
         !pageCount ? pageCount = 2 : pageCount++;
-      break;
+        break;
       case false:
         pageCount > 2 ?  pageCount--  : pageCount = "";
-      break;
+        break;
       default:
         return;
     }
@@ -134,11 +134,10 @@ class App extends Component {
         />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
-          people={people}
-          planets={planets}
-          vehicles={vehicles}
+          dataType={{people, planets, vehicles, favorites}}
           favorites={favorites}
           handlePage={this.handlePage}
+          activeButton={activeButton}
         />
       </div>
     );
