@@ -7,7 +7,8 @@ export const CardContainer = ({
   data,
   toggleFavorites,
   savedFavorites,
-  handlePage
+  handlePage,
+  isFavorites
 }) => {
 
 if (!data) return <section>{}</section>;
