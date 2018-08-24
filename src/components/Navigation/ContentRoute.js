@@ -15,6 +15,7 @@ export const ContentRoute = ({
   const savedFavorites = favorites.map(favorite => favorite.name);
   return (
     <Switch>
+      <Route exact path='/' component={HomePage} />
       <Route
         exact
         path="/planets"
