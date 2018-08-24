@@ -16,10 +16,11 @@
   cursor: pointer;
   position: absolute;
   opacity: 0.8rem;
-  top: 15rem;
+  top: 19rem;
   border: none;
-  height: 8rem;
-  width: 10rem;
+  height: 3rem;
+  width: 3rem;
+  outline: 0;
 }
 
 .next-page-button {
