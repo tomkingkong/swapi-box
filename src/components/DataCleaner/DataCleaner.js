@@ -24,7 +24,7 @@ export const planetScrape = (result, residents) => {
     populaton: result.population,
     terrain: result.terrain,
     climate: result.climate,
-    residents: residents
+    residents: residents.join(', ')
   };
   return modifiedObj;
 };
