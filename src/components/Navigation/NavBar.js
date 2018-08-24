@@ -14,7 +14,7 @@ export const NavBar = ({ getData, favorites }) => {
           exact to={`/${linkType}`}
           onClick={getData}
         >
-          planets
+          {linkType} {linkType === 'favorites' ? favorites.length : ''}
         </NavLink>
       </div>);
   });
