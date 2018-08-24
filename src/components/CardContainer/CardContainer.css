@@ -24,9 +24,9 @@
 }
 
 .next-page-button {
-  background: url("../../Icons/red-saber.svg") no-repeat center / 25%;
+  background: url("../../Icons/red-saber.svg") no-repeat center / 100%;
   position: fixed;
-  right: 1rem;
+  right: 2rem;
 }
 
 .next-page-button:hover {
@@ -35,9 +35,9 @@
 }
 
 .previous-page-button {
-  background: url("../../Icons/green-saber.svg") no-repeat center / 25%;
+  background: url("../../Icons/green-saber.svg") no-repeat center / 100%;
   position: fixed;
-  left: 1rem;
+  left: 2rem;
   transform: rotate(-90deg);
 }
 
