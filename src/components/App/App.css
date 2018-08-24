@@ -39,16 +39,20 @@
 .header h1, .header h4 {
   margin: 0.2rem;
 }
+
 .planets {
-  background: url(../../images/BattleFront.jpg) no-repeat;
+  background: url(../../images/BattleFront.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 .people {
-  background: url(../../images/sw-people.jpg) no-repeat;
+  background: url(../../images/sw-people.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 .vehicles {
-  background: url(../../images/star-wars-droid.jpg) no-repeat;
+  background: url(../../images/star-wars-droid.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 
