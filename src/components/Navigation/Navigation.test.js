@@ -21,52 +21,15 @@ describe("NavBar", () => {
     );
   });
 
-  it("should match snapshot when activeButton is people", () => {
-    expect(navWrapper).toMatchSnapshot();
-  });
-  it("should match snapshot when activeButton is planets", () => {
-    activeButton = "planets";
-    navWrapper = shallow(
-      <NavBar
-        getData={getData}
-        activeButton={activeButton}
-        favorites={favorites}
-      />
-    );
-    expect(navWrapper).toMatchSnapshot();
-  });
-
-  it("should match snapshot when activeButton is vehicles", () => {
-    activeButton = "vehicles";
-    navWrapper = shallow(
-      <NavBar
-        getData={getData}
-        activeButton={activeButton}
-        favorites={favorites}
-      />
-    );
-    expect(navWrapper).toMatchSnapshot();
-  });
-
-  it("should match snapshot when activeButton is favorites", () => {
-    activeButton = "favorites";
-    navWrapper = shallow(
-      <NavBar
-        getData={getData}
-        activeButton={activeButton}
-        favorites={favorites}
-      />
-    );
+  it("should match snapshot", () => {
     expect(navWrapper).toMatchSnapshot();
   });
 
   it("should call getData on click", () => {
-    activeButton = "people";
     const mockGetData = jest.fn();
     navWrapper = shallow(
       <NavBar
         getData={mockGetData}
-        activeButton={activeButton}
         favorites={favorites}
       />
     );
@@ -78,22 +41,28 @@ describe("NavBar", () => {
     expect(mockGetData).toHaveBeenCalled();
   });
 });
+
 describe("ContentRoute", () => {
   let contentWrapper;
   let toggleFavorites;
+  let dataType;
   let people;
-  let planets;
   let vehicles;
+  let planets;
   let favorites;
   let handlePage;
+  let activeButton;
 
   beforeEach(() => {
     toggleFavorites = jest.fn();
-    people = [];
-    planets = [];
-    vehicles = [];
-    favorites = [];
+    people = [{}, {}, {}];
+    planets = [{}, {}, {}];
+    vehicles = [{}, {}, {}];
+    favorites = [{}, {}, {}];
+    dataType = {people, vehicles, planets, favorites};
     handlePage = jest.fn();
+    activeButton = '';
+  });
     contentWrapper = shallow(
       <ContentRoute
         toggleFavorites={toggleFavorites}
