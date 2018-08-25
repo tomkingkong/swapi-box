@@ -114,9 +114,29 @@ describe("ContentRoute", () => {
     expect(contentWrapper).toMatchSnapshot();
   });
 
+
+  it("should match snapshot with the /planets path", () => {
+    activeButton = 'planets';
+    contentWrapper = shallow(
+      <ContentRoute
+        dataType={dataType}
+        toggleFavorites={toggleFavorites}
         handlePage={handlePage}
+        activeButton={activeButton}
       />
     );
+
+    render(
+      <MemoryRouter initialEntries={['/planets']}>
+        <ContentRoute
+          dataType={dataType}
+          toggleFavorites={toggleFavorites}
+          handlePage={handlePage}
+          activeButton={activeButton}
+        />
+      </MemoryRouter>
+    ); 
+    expect(contentWrapper).toMatchSnapshot();
   });
 
   it("should match snapshot without data object passed", () => {
