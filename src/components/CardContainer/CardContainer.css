@@ -27,7 +27,8 @@
 }
 
 .next-page-button {
-  background: url("../../Icons/red-saber.svg") no-repeat center / 100%;
+  background: rgba(253, 214, 214, 0.397) url("../../Icons/red-saber.svg") no-repeat center / 65%;
+  border: 0.05rem solid red;
   position: fixed;
   right: 2rem;
 }
