@@ -88,13 +88,32 @@ describe("ContentRoute", () => {
     expect(contentWrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot with the /people path", () => {
+    activeButton = 'people';
     contentWrapper = shallow(
+      
       <ContentRoute
+        dataType={dataType}
         toggleFavorites={toggleFavorites}
-        people={people}
-        planets={planets}
-        vehicles={vehicles}
-        favorites={favorites}
+        handlePage={handlePage}
+        activeButton={activeButton}
+      />
+      
+    );
+
+    render(
+      <MemoryRouter initialEntries={['/people']}>
+      <ContentRoute
+          dataType={dataType}
+        toggleFavorites={toggleFavorites}
+          handlePage={handlePage}
+          activeButton={activeButton}
+        />
+      </MemoryRouter>
+    ); 
+    expect(contentWrapper).toMatchSnapshot();
+  });
+
         handlePage={handlePage}
       />
     );
