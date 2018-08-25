@@ -103,9 +103,9 @@ describe("ContentRoute", () => {
 
     render(
       <MemoryRouter initialEntries={['/people']}>
-      <ContentRoute
+        <ContentRoute
           dataType={dataType}
-        toggleFavorites={toggleFavorites}
+          toggleFavorites={toggleFavorites}
           handlePage={handlePage}
           activeButton={activeButton}
         />
@@ -164,7 +164,28 @@ describe("ContentRoute", () => {
     expect(contentWrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot with data object passed", () => {
+
+  it("should match snapshot with the /favorites path and no favorite objects", () => {
+    activeButton = 'favorites';
+    dataType.favorites = [];
+    contentWrapper = shallow(
+      <ContentRoute
+        dataType={dataType}
+        toggleFavorites={toggleFavorites}
+        handlePage={handlePage}
+        activeButton={activeButton}
+      />
+    );
+    render(
+      <MemoryRouter initialEntries={['/favorites']}>
+        <ContentRoute
+          dataType={dataType}
+          toggleFavorites={toggleFavorites}
+          handlePage={handlePage}
+          activeButton={activeButton}
+        />
+      </MemoryRouter>
+    ); 
     expect(contentWrapper).toMatchSnapshot();
   });
 });
