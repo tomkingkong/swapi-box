@@ -16,12 +16,13 @@
 .previous-page-button,
 .next-page-button {
   cursor: pointer;
+  
+  border-radius: 10rem;
   position: absolute;
   opacity: 0.8rem;
   top: 19rem;
-  border: none;
-  height: 3rem;
-  width: 3rem;
+  height: 3.2rem;
+  width: 3.2rem;
   outline: 0;
 }
 
