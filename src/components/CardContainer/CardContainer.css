@@ -4,6 +4,8 @@
   justify-content: center;
   margin: 0 auto;
   width: 80%;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .favorites .previous-page-button,
