@@ -139,7 +139,28 @@ describe("ContentRoute", () => {
     expect(contentWrapper).toMatchSnapshot();
   });
 
-  it("should match snapshot without data object passed", () => {
+  it("should match snapshot with the /favorites path with favorites data", () => {
+    activeButton = 'favorites';
+    dataType.favorites = [{name:'tom'}, {name:'paul'}];
+    contentWrapper = shallow(
+      <ContentRoute
+        dataType={dataType}
+        toggleFavorites={toggleFavorites}
+        handlePage={handlePage}
+        activeButton={activeButton}
+      />
+    );
+
+    render(
+      <MemoryRouter initialEntries={['/favorites']}>
+        <ContentRoute
+          dataType={dataType}
+          toggleFavorites={toggleFavorites}
+          handlePage={handlePage}
+          activeButton={activeButton}
+        />
+      </MemoryRouter>
+    ); 
     expect(contentWrapper).toMatchSnapshot();
   });
 
