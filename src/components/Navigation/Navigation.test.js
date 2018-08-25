@@ -1,8 +1,9 @@
 import React from "react";
 import { MemoryRouter } from "react-router";
-import { shallow } from "enzyme";
-import { NavBar } from "./NavBar.js";
-import { ContentRoute } from "./ContentRoute.js";
+import { shallow, render } from "enzyme";
+
+import { NavBar } from "./NavBar";
+import { ContentRoute } from "./ContentRoute";
 
 describe("NavBar", () => {
   let navWrapper;
