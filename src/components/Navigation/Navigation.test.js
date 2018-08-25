@@ -63,6 +63,31 @@ describe("ContentRoute", () => {
     handlePage = jest.fn();
     activeButton = '';
   });
+
+  it("should match snapshot with the / path", () => {
+    activeButton = '';
+    contentWrapper = shallow(
+      <ContentRoute
+        dataType={dataType}
+        toggleFavorites={toggleFavorites}
+        handlePage={handlePage}
+        activeButton={activeButton}
+      />
+    );
+
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <ContentRoute
+          dataType={dataType}
+          toggleFavorites={toggleFavorites}
+          handlePage={handlePage}
+          activeButton={activeButton}
+        />
+      </MemoryRouter>
+    ); 
+    expect(contentWrapper).toMatchSnapshot();
+  });
+
     contentWrapper = shallow(
       <ContentRoute
         toggleFavorites={toggleFavorites}
