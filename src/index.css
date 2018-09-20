@@ -137,6 +137,11 @@ body {
   width: 100%;
 }
 
+.center_card_container::-webkit-scrollbar,
+.center_card_container::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 .center_card_container {
   overflow: scroll;
   display: flex;
@@ -212,6 +217,16 @@ body {
 }
 
 /* CONTENT CARD */
+
+.content_card::-webkit-scrollbar,
+.content_card::-webkit-scrollbar-corner {
+  background: transparent;
+  width: 0.5rem;
+}
+
+.content_card::-webkit-scrollbar-thumb {
+  background: rgba(173, 216, 230, 0.303);
+}
 
 .content_card {
   background: rgba(133, 142, 148, 0.9);
