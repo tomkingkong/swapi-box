@@ -4,7 +4,7 @@ import "./ContentCard.css";
 
 export const ContentCard = ({ card, toggleFavorites }) => {
   const content = Object.keys(card).map((key, i) => {
-    if (key === "favorite") return;
+    if (key === "favorite") { return '' };
     return key === "name" 
       ? (<h1 key={key + i}>{card[key]}</h1>) 
       : (<p key={key + i}>{key}: {card[key] || 'None'}</p>);
