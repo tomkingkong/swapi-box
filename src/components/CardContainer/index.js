@@ -17,7 +17,10 @@ export const CardContainer = ({
         <p className="empty-fav">These are not the favorites you are looking for...</p>
       </section>);
   }
-  if (!data) return (<section className="card_container loading"><img src="https://media2.giphy.com/media/10MKHgkZMDlQ4M/giphy.gif" width="100px" height="100px"/></section>);
+  if (!data) return (
+  <section className="card_container loading">
+    <img src="https://media2.giphy.com/media/10MKHgkZMDlQ4M/giphy.gif" alt="loading" width="100px" height="100px"/>
+  </section>);
   
   const cards = data.map((card, index) => {
     card.favorite = savedFavorites.includes(card.name);
