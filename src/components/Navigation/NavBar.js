@@ -7,9 +7,9 @@ export const NavBar = ({ getData, favorites }) => {
   const linkTypes = ['planets', 'people', 'vehicles', 'favorites'];
   const displayNavLinks = linkTypes.map((linkType, i) => {
     return (
-      <div className="CONTAINER" key={i}>
+      <div className="NAV__BUTTON" key={i}>
         <NavLink 
-          className="NAV"
+          className="NAV__LINK"
           name={linkType}
           exact to={`/${linkType}`}
           onClick={getData}
@@ -19,7 +19,7 @@ export const NavBar = ({ getData, favorites }) => {
       </div>);
   });
   return (
-    <div className="navigation_bar">
+    <div className="NAV__BAR">
       {displayNavLinks}
     </div>
   );
