@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1535405901850" clover="3.2.0">
+  <project timestamp="1535405901850" name="All files">
+    <metrics statements="159" coveredstatements="159" conditionals="51" coveredconditionals="50" methods="39" coveredmethods="39" elements="249" coveredelements="248" complexity="0" loc="159" ncloc="159" packages="10" files="11" classes="11">
+      <package name="src">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <file name="setupTests.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/setupTests.js">
+          <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="16" count="74" type="stmt"/>
+          <line num="20" count="5" type="stmt"/>
+          <line num="24" count="24" type="stmt"/>
+          <line num="28" count="8" type="stmt"/>
+          <line num="29" count="8" type="stmt"/>
+          <line num="30" count="8" type="stmt"/>
+          <line num="31" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.MockData">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="MockData.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/MockData/MockData.js">
+          <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="61" count="3" type="stmt"/>
+          <line num="266" count="3" type="stmt"/>
+          <line num="630" count="3" type="stmt"/>
+          <line num="827" count="3" type="stmt"/>
+          <line num="908" count="3" type="stmt"/>
+          <line num="929" count="3" type="stmt"/>
+          <line num="948" count="3" type="stmt"/>
+          <line num="967" count="3" type="stmt"/>
+          <line num="993" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.App">
+        <metrics statements="50" coveredstatements="50" conditionals="25" coveredconditionals="25" methods="12" coveredmethods="12"/>
+        <file name="index.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/App/index.js">
+          <metrics statements="50" coveredstatements="50" conditionals="25" coveredconditionals="25" methods="12" coveredmethods="12"/>
+          <line num="10" count="61" type="stmt"/>
+          <line num="11" count="61" type="stmt"/>
+          <line num="25" count="61" type="stmt"/>
+          <line num="26" count="61" type="stmt"/>
+          <line num="27" count="59" type="stmt"/>
+          <line num="28" count="59" type="stmt"/>
+          <line num="32" count="61" type="stmt"/>
+          <line num="33" count="61" type="cond" truecount="2" falsecount="0"/>
+          <line num="34" count="56" type="stmt"/>
+          <line num="35" count="56" type="stmt"/>
+          <line num="36" count="56" type="stmt"/>
+          <line num="40" count="80" type="stmt"/>
+          <line num="41" count="80" type="stmt"/>
+          <line num="42" count="80" type="stmt"/>
+          <line num="44" count="80" type="cond" truecount="4" falsecount="0"/>
+          <line num="47" count="80" type="cond" truecount="2" falsecount="0"/>
+          <line num="48" count="77" type="stmt"/>
+          <line num="51" count="80" type="cond" truecount="2" falsecount="0"/>
+          <line num="52" count="79" type="stmt"/>
+          <line num="53" count="79" type="stmt"/>
+          <line num="54" count="72" type="stmt"/>
+          <line num="56" count="5" type="stmt"/>
+          <line num="61" count="81" type="cond" truecount="2" falsecount="0"/>
+          <line num="62" count="69" type="stmt"/>
+          <line num="67" count="1" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="74" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="75" count="3" type="stmt"/>
+          <line num="77" count="1" type="stmt"/>
+          <line num="78" count="3" type="stmt"/>
+          <line num="81" count="4" type="stmt"/>
+          <line num="82" count="4" type="stmt"/>
+          <line num="86" count="14" type="stmt"/>
+          <line num="87" count="14" type="stmt"/>
+          <line num="88" count="14" type="stmt"/>
+          <line num="90" count="14" type="cond" truecount="3" falsecount="0"/>
+          <line num="92" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="93" count="7" type="stmt"/>
+          <line num="95" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="96" count="5" type="stmt"/>
+          <line num="98" count="2" type="stmt"/>
+          <line num="101" count="12" type="stmt"/>
+          <line num="102" count="12" type="stmt"/>
+          <line num="106" count="61" type="cond" truecount="2" falsecount="0"/>
+          <line num="107" count="11" type="stmt"/>
+          <line num="108" count="11" type="stmt"/>
+          <line num="110" count="61" type="stmt"/>
+          <line num="121" count="301" type="stmt"/>
+          <line num="123" count="301" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.BackgroundScroll">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="index.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/BackgroundScroll/index.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.CardContainer">
+        <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+        <file name="index.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/CardContainer/index.js">
+          <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="14" count="13" type="cond" truecount="4" falsecount="0"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="20" count="11" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="10" type="stmt"/>
+          <line num="23" count="15" type="stmt"/>
+          <line num="24" count="15" type="stmt"/>
+          <line num="29" count="10" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="40" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.ContentCard">
+        <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <file name="index.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/ContentCard/index.js">
+          <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="20" type="stmt"/>
+          <line num="7" count="72" type="cond" truecount="2" falsecount="0"/>
+          <line num="8" count="52" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="20" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="22" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.DataCleaner">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <file name="DataCleaner.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/DataCleaner/DataCleaner.js">
+          <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="672" type="stmt"/>
+          <line num="8" count="672" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="12" count="72" type="stmt"/>
+          <line num="18" count="72" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="39" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Fetch">
+        <metrics statements="37" coveredstatements="37" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <file name="FetchApi.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/Fetch/FetchApi.js">
+          <metrics statements="37" coveredstatements="37" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+          <line num="8" count="2" type="cond" truecount="1" falsecount="0"/>
+          <line num="9" count="82" type="stmt"/>
+          <line num="10" count="82" type="stmt"/>
+          <line num="11" count="82" type="stmt"/>
+          <line num="12" count="74" type="stmt"/>
+          <line num="13" count="74" type="stmt"/>
+          <line num="15" count="74" type="stmt"/>
+          <line num="16" count="740" type="stmt"/>
+          <line num="18" count="74" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="23" count="745" type="cond" truecount="5" falsecount="0"/>
+          <line num="25" count="671" type="stmt"/>
+          <line num="26" count="671" type="stmt"/>
+          <line num="27" count="671" type="stmt"/>
+          <line num="30" count="71" type="stmt"/>
+          <line num="31" count="71" type="stmt"/>
+          <line num="32" count="71" type="stmt"/>
+          <line num="33" count="71" type="stmt"/>
+          <line num="34" count="71" type="stmt"/>
+          <line num="35" count="71" type="stmt"/>
+          <line num="36" count="71" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="57" count="744" type="stmt"/>
+          <line num="60" count="2" type="stmt"/>
+          <line num="61" count="4" type="stmt"/>
+          <line num="62" count="4" type="stmt"/>
+          <line num="63" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.HomePage">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="index.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/HomePage/index.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Navigation">
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <file name="ContentRoute.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/Navigation/ContentRoute.js">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="14" count="22" type="stmt"/>
+          <line num="15" count="10" type="stmt"/>
+          <line num="21" count="4" type="stmt"/>
+          <line num="22" count="4" type="stmt"/>
+          <line num="23" count="4" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="40" count="2" type="stmt"/>
+        </file>
+        <file name="NavBar.js" path="/Users/tomking/Desktop/Turing/Module3/swapi-box/src/components/Navigation/NavBar.js">
+          <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="9" count="12" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
