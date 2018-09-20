@@ -45,7 +45,7 @@ ContentRoute.propTypes = {
         favorite: bool,
         name: string,
         populaton: string,
-        residents: arrayOf(string),
+        residents: string,
         terrain: string
       })
     ),
