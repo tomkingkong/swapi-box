@@ -2,7 +2,7 @@
 
 exports[`HomePage should match snapshot 1`] = `
 <div
-  className="header"
+  className="welcome"
 >
   <h1>
     Welcome

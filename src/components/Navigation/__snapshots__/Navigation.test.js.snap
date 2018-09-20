@@ -77,16 +77,16 @@ exports[`ContentRoute should match snapshot with the /planets path 1`] = `
 
 exports[`NavBar should match snapshot 1`] = `
 <div
-  className="navigation_bar"
+  className="NAV__BAR"
 >
   <div
-    className="CONTAINER"
+    className="NAV__BUTTON"
     key="0"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="NAV"
+      className="NAV__LINK"
       exact={true}
       name="planets"
       onClick={[Function]}
@@ -97,13 +97,13 @@ exports[`NavBar should match snapshot 1`] = `
     </NavLink>
   </div>
   <div
-    className="CONTAINER"
+    className="NAV__BUTTON"
     key="1"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="NAV"
+      className="NAV__LINK"
       exact={true}
       name="people"
       onClick={[Function]}
@@ -114,13 +114,13 @@ exports[`NavBar should match snapshot 1`] = `
     </NavLink>
   </div>
   <div
-    className="CONTAINER"
+    className="NAV__BUTTON"
     key="2"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="NAV"
+      className="NAV__LINK"
       exact={true}
       name="vehicles"
       onClick={[Function]}
@@ -131,13 +131,13 @@ exports[`NavBar should match snapshot 1`] = `
     </NavLink>
   </div>
   <div
-    className="CONTAINER"
+    className="NAV__BUTTON"
     key="3"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
-      className="NAV"
+      className="NAV__LINK"
       exact={true}
       name="favorites"
       onClick={[Function]}

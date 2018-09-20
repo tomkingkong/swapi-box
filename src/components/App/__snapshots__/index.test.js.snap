@@ -5,11 +5,18 @@ exports[`App should match snapshot with background scroll in state  1`] = `
   className="films App"
 >
   <header
-    className="App__TITLE"
+    className="HEADER"
   >
-    <h1>
-      SWAPI BOX
-    </h1>
+    <div
+      className="TITLE"
+    >
+      <h1>
+        SWAPI BOX
+      </h1>
+      <p>
+        a STARWARS api
+      </p>
+    </div>
   </header>
   <Component
     dont="stop"
@@ -39,11 +46,18 @@ exports[`App should match snapshot with default states 1`] = `
   className="films App"
 >
   <header
-    className="App__TITLE"
+    className="HEADER"
   >
-    <h1>
-      SWAPI BOX
-    </h1>
+    <div
+      className="TITLE"
+    >
+      <h1>
+        SWAPI BOX
+      </h1>
+      <p>
+        a STARWARS api
+      </p>
+    </div>
   </header>
   <Component
     favorites={Array []}
