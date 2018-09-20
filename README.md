@@ -3,6 +3,17 @@
 
 SWAPI Box is a paired project designed to challenge my skills at manipulating data and creating small, reusable React components, as well as obtaining complete testing coverage through unit and assurance tests.  
 
+## Set Up
+
+Clone this project
+
+Run `npm install` from the root directory
+
+Run `npm start` and visit localhost:3000 in your browser
+
+You can run tests with `npm test`
+
+
 ## Goals for this project
 
 * Get comfortable fetching APIs, testing, and cleaning data.
