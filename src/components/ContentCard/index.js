@@ -7,7 +7,7 @@ export const ContentCard = ({ card, toggleFavorites }) => {
     if (key === "favorite") return;
     return key === "name" 
       ? (<h1 key={key + i}>{card[key]}</h1>) 
-      : (<p key={key + i}>{key}: {card[key]}</p>);
+      : (<p key={key + i}>{key}: {card[key] || 'None'}</p>);
   });
   return (
     <article className={card.favorite ? "content_card favorite" : "content_card"}>

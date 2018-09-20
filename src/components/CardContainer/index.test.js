@@ -92,13 +92,13 @@ describe("CardContainer", () => {
       />
     );
     wrapper
-      .find(".previous-page-button")
+      .find(".prev-page-btn")
       .first()
       .simulate("click");
     expect(mockHandlePage).toHaveBeenCalled();
 
     wrapper
-      .find(".next-page-button")
+      .find(".next-page-btn")
       .first()
       .simulate("click");
     expect(mockHandlePage).toHaveBeenCalled();

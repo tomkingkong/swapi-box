@@ -17,7 +17,7 @@ export const CardContainer = ({
         <p className="empty-fav">These are not the favorites you are looking for...</p>
       </section>);
   }
-  if (!data) return (<section className="card_container"><img src="https://media2.giphy.com/media/10MKHgkZMDlQ4M/giphy.gif" width="100px" height="100px"/></section>);
+  if (!data) return (<section className="card_container loading"><img src="https://media2.giphy.com/media/10MKHgkZMDlQ4M/giphy.gif" width="100px" height="100px"/></section>);
   
   const cards = data.map((card, index) => {
     card.favorite = savedFavorites.includes(card.name);
@@ -28,9 +28,11 @@ export const CardContainer = ({
 
   return (
     <section className={isFavorites ? "favorites card_container" : "card_container"}>
-      {cards && cards}
-      <button className="previous-page-button" onClick={() => handlePage(false)} />
-      <button className="next-page-button" onClick={() => handlePage(true)} />
+      <div className="buttons">
+        <button className="prev-page-btn" onClick={() => handlePage(false)}>Prev</button>
+        <button className="next-page-btn" onClick={() => handlePage(true)}>Next</button>
+      </div>
+      <div className="center_card_container">{cards && cards}</div>
     </section>
   );
 };

@@ -122,14 +122,14 @@ class App extends Component {
 
     return (
       <div className={`${activeButton} App`}>
-        <header className="App__TITLE">
-          <h1>SWAPI BOX</h1>
+        <header className="HEADER">
+          <div className="TITLE">
+            <h1>SWAPI BOX</h1>
+            <p>a STARWARS api</p>
+          </div>
         </header>
         {backgroundFilm && <BackgroundScroll {...backgroundFilm} />}
-        <NavBar
-          getData={this.getData}
-          favorites={favorites}
-        />
+        <NavBar getData={this.getData} favorites={favorites} />
         <ContentRoute
           toggleFavorites={this.toggleFavorites}
           dataType={{people, planets, vehicles, favorites}}
