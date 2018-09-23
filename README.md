@@ -24,8 +24,7 @@ You can run tests with `npm test`
 * Implement React Router.
 
 
-## Demo 
-https://tomkingkong.github.io/swapi-box/
+## [Demo](https://tomkingkong.github.io/swapi-box/)
 
 ## Functionality
 <img src="https://raw.githubusercontent.com/tomkingkong/swapi-box/master/public/Swapi-box_1.gif" width="600px" />
