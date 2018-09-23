@@ -1,7 +1,10 @@
 
 # SWAPI Box
 
-SWAPI Box is a paired project designed to challenge my skills at manipulating data and creating small, reusable React components, as well as obtaining complete testing coverage through unit and assurance tests.  
+Utilizing the StarWars API, SWAPI-box is a single page application that allows its users to explore the rich world of StarWars, as well as bookmark their favorite characters, planets, and vehicles.   
+This project utilizes ReactJS, Router, and has been fully tested with Enzyme/Jest.  
+
+SWAPI Box is project designed to challenge my skills at manipulating data and creating small, reusable React components, as well as obtaining complete testing coverage through unit and assurance tests.  
 
 ## Set Up
 
